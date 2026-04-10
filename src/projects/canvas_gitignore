@@ -1,0 +1,19 @@
+# Secrets — never commit these
+.env
+
+# Generated output
+canvas_data.db
+canvas_summary.md
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store

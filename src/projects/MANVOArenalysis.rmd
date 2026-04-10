@@ -1,0 +1,257 @@
+---
+title: "Supplemental Analysis: Iris Dataset - Post-hoc Testing, MANOVA, and LDA"
+author: "Phinn Markson"
+date: "December 5, 2025"
+output:
+  html_document:
+    self_contained: true
+    df_print: paged
+    toc: true
+    toc_float: true
+---
+
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  cache = FALSE
+)
+
+library(multcomp)
+library(car)
+library(MASS)
+library(dplyr)
+library(knitr)
+```
+
+# Introduction
+
+This supplemental analysis provides additional statistical testing for the Iris dataset to complement the initial analysis. The procedures include post-hoc Tukey tests for each morphological measurement, MANOVA to assess multivariate differences among species, and linear discriminant analysis (LDA) to evaluate species classification.
+
+# Data and Methods
+
+The Iris dataset contains four morphological measurements (sepal length, sepal width, petal length, petal width) for 150 flowers across three species (setosa, versicolor, virginica). All analyses were conducted in R.
+
+---
+
+# Post-hoc Testing: Tukey HSD
+
+## Individual ANOVAs
+
+Individual ANOVAs were conducted for each of the four morphological variables, followed by Tukey Honest Significant Difference (HSD) post-hoc tests to identify specific pairwise differences between species groups.
+
+```{r anova}
+# Individual ANOVAs for each variable
+aov_sl <- aov(Sepal.Length ~ Species, data = iris)
+aov_sw <- aov(Sepal.Width ~ Species, data = iris)
+aov_pl <- aov(Petal.Length ~ Species, data = iris)
+aov_pw <- aov(Petal.Width ~ Species, data = iris)
+
+# Summary of ANOVAs
+cat("=== Sepal Length ANOVA ===\n")
+summary(aov_sl)
+
+cat("\n=== Sepal Width ANOVA ===\n")
+summary(aov_sw)
+
+cat("\n=== Petal Length ANOVA ===\n")
+summary(aov_pl)
+
+cat("\n=== Petal Width ANOVA ===\n")
+summary(aov_pw)
+par(mfrow=c(2,2))
+boxplot(Sepal.Length ~ Species, data=iris, main="Sepal Length by Species")
+boxplot(Sepal.Width ~ Species, data=iris, main="Sepal Width by Species")
+boxplot(Petal.Length ~ Species, data=iris, main="Petal Length by Species")
+boxplot(Petal.Width ~ Species, data=iris, main="Petal Width by Species")
+par(mfrow=c(1,1))
+```
+
+## Tukey HSD Results
+
+Tukey HSD tests were conducted for each variable to identify significant pairwise differences between species.
+
+### Chunk 1: Calculate Tukey Objects
+```{r tukey-calculate}
+tukey_sl <- TukeyHSD(aov_sl)
+tukey_sw <- TukeyHSD(aov_sw)
+tukey_pl <- TukeyHSD(aov_pl)
+tukey_pw <- TukeyHSD(aov_pw)
+```
+
+### Chunk 2: Build Combined Tukey Table
+```{r tukey-table}
+# Function to extract Tukey results into a data frame
+extract_tukey <- function(tukey_result, variable_name) {
+  tukey_df <- as.data.frame(tukey_result[[1]])
+  tukey_df$comparison <- rownames(tukey_df)
+  tukey_df$variable <- variable_name
+  tukey_df[, c("comparison", "variable", "diff", "lwr", "upr", "p adj")]
+}
+
+# Combine all results into one table
+tukey_results <- rbind(
+  extract_tukey(tukey_sl, "Sepal Length"),
+  extract_tukey(tukey_sw, "Sepal Width"),
+  extract_tukey(tukey_pl, "Petal Length"),
+  extract_tukey(tukey_pw, "Petal Width")
+)
+
+# Display combined results table
+knitr::kable(tukey_results,
+             caption = "Tukey HSD Post-hoc Tests for Iris Dataset Variables",
+             digits = 3,
+             row.names = FALSE)
+```
+
+### Chunk 3: Define Clean Plotting Function
+```{r tukey-plot-function}
+plot_tukey_clean <- function(tukey_obj, variable_name, units = "cm") {
+  tuk_df <- as.data.frame(tukey_obj[[1]])
+  tuk_df$comparison <- rownames(tuk_df)
+  
+  # Factor → integer positions (reversed for top-to-bottom order)
+  tuk_df$comparison <- factor(tuk_df$comparison, levels = rev(tuk_df$comparison))
+  y_positions <- as.numeric(tuk_df$comparison)
+  
+  # Expand left margin for y-axis labels
+  par(mar = c(5, 12, 4, 2))
+  
+  plot(
+    x = tuk_df$diff,
+    y = y_positions,
+    xlab = paste0("Difference in Mean (", units, ")"),
+    ylab = "",
+    pch = 19,
+    cex = 1.2,
+    main = paste("Tukey HSD:", variable_name),
+    xlim = range(c(tuk_df$lwr, tuk_df$upr)) * 1.15,
+    yaxt = "n"
+  )
+  
+  # Confidence interval segments
+  segments(
+    x0 = tuk_df$lwr,
+    x1 = tuk_df$upr,
+    y0 = y_positions,
+    y1 = y_positions,
+    col = "gray40",
+    lwd = 2
+  )
+  
+  # Y-axis labels (species comparisons)
+  axis(
+    side = 2,
+    at = y_positions,
+    labels = tuk_df$comparison,
+    las = 1,
+    cex.axis = 0.85
+  )
+  
+  # Zero reference line
+  abline(v = 0, lty = 2, col = "red", lwd = 1.5)
+}
+```
+
+### Chunk 4: Generate All Tukey Plots
+```{r tukey-plots, fig.width=8, fig.height=5}
+plot_tukey_clean(tukey_sl, "Sepal Length", "cm")
+plot_tukey_clean(tukey_sw, "Sepal Width", "cm")
+plot_tukey_clean(tukey_pl, "Petal Length", "cm")
+plot_tukey_clean(tukey_pw, "Petal Width", "cm")
+
+# Reset margins
+par(mar = c(5, 4, 4, 2))
+```
+
+The Tukey HSD results indicate significant differences between species for all measured variables (all p-values < 0.001), with the exception of the difference between versicolor and virginica in sepal width (p = 0.009), which remains significant after multiple comparison adjustment.
+
+---
+
+# MANOVA Analysis
+
+Multivariate analysis of variance was conducted to examine species differences across all four morphological variables simultaneously.
+
+```{r manova}
+# MANOVA with Pillai's trace
+manova_model <- manova(
+  cbind(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width) ~ Species,
+  data = iris
+)
+
+# Summary with Pillai test statistic
+manova_summary <- summary(manova_model, test = "Pillai")
+print(manova_summary)
+pairs(iris[,1:4], col=as.numeric(iris$Species), pch=19)
+```
+
+The MANOVA results indicate a highly significant multivariate effect of species on the combination of morphological variables (Pillai's trace), confirming that species groups differ significantly across the measured characteristics.
+
+---
+
+# Linear Discriminant Analysis (LDA)
+
+Linear discriminant analysis was conducted to determine the linear combinations of variables that best separate the three species.
+
+```{r lda}
+# LDA model
+lda_model <- lda(
+  Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width,
+  data = iris
+)
+
+# Display LDA model summary
+print(lda_model)
+```
+
+```{r lda-predictions}
+# Generate predictions
+lda_predictions <- predict(lda_model, iris)
+
+# Create results data frame
+lda_results <- data.frame(
+  observed = iris$Species,
+  predicted = lda_predictions$class,
+  LD1 = lda_predictions$x[, 1],
+  LD2 = lda_predictions$x[, 2]
+)
+
+# Classification accuracy
+accuracy <- mean(lda_results$observed == lda_results$predicted)
+cat("Classification accuracy:", round(accuracy * 100, 2), "%\n")
+```
+
+```{r lda-confusion}
+# Confusion matrix
+cat("\nConfusion Matrix:\n")
+table(Observed = lda_results$observed, Predicted = lda_results$predicted)
+```
+
+```{r lda-plot, fig.width=8, fig.height=6}
+# Plot LDA results
+plot(
+  lda_results$LD1, lda_results$LD2,
+  col = as.numeric(lda_results$observed),
+  pch = 19,
+  xlab = "LD1",
+  ylab = "LD2",
+  main = "LDA Projection of Iris Dataset (MANOVA Visualization)"
+)
+legend(
+  "topright",
+  legend = levels(iris$Species),
+  col = 1:3,
+  pch = 19
+)
+```
+
+---
+
+# Discussion
+
+The supplemental analyses confirm and extend the findings from the initial analysis. All four morphological variables show significant species differences in univariate tests, with Tukey HSD identifying specific pairwise comparisons. The MANOVA confirms significant multivariate differences between species, and LDA demonstrates high classification accuracy (98%), indicating that the measured variables effectively distinguish between the three Iris species.
+
+The high classification accuracy from LDA suggests that the morphological differences between species are substantial and consistent, which aligns with the large effect sizes observed in the post-hoc tests. These results provide a more comprehensive understanding of the species differences in the Iris dataset than univariate analyses alone.

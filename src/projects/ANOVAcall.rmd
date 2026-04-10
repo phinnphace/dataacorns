@@ -1,0 +1,83 @@
+---
+title: "Consulting Project"
+author: "Redacted"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(VGAM)
+library(ggplot2)
+```
+
+The aim of the project is to first identify whether there is a significant difference in features for different species and to come up with a model that can predict the species based on their features.
+
+# Testing difference in features for different species
+## Sepal Length
+```{r}
+data(iris)
+model1 = lm(Sepal.Length ~ Species, data = iris)
+summary(model1)
+```
+
+## Petal Length
+```{r}
+model2 = lm(Petal.Length ~ Species, data = iris)
+summary(model2)
+```
+
+## Petal Width
+```{r}
+model3 = lm(Petal.Width ~ Species, data = iris)
+summary(model3)
+```
+
+
+## Pincipal Component Analysis
+As noted from the EDA, the first two principal components capture 95% of the total variability but have significant overlap between versicolor and virginica. We test whether we can come up with a summary statistic of the original data that statistically differ between species.
+
+Using principal component analysis (PCA), we end up with a linear combination of the original variables that capture the most variances among them. The first principal component is approximately proportional to 
+$$
+Sepal Length + Petal Length + Petal Width - \frac{1}{2}Sepal Width
+$$
+
+A similar ANOVA test shows that one can distinguish each species based on this first principal component significantly.
+
+```{r}
+pca = princomp(iris[,1:4], cor = T)
+pca$loadings[,1]
+pca1 = pca$scores[,1]
+ggplot(iris, aes(x = Species, y= pca1, col = Species)) +
+  geom_boxplot() +
+  geom_jitter(width = 0.1) +
+  theme(legend.position = "none")
+```
+```{r}
+model_pca = lm(pca1 ~ Species, data = iris)
+summary(model_pca)
+```
+
+```{r, warning=FALSE}
+data(iris)
+logistic_model <- vglm(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
+                       family = multinomial, data = iris)
+predict_probs <- predict(logistic_model, type = 'response')
+predict_class <- colnames(predict_probs)[apply(predict_probs, 1, which.max)]
+table(iris$Species, predict_class)
+```
+
+## Training and Test set
+
+```{r train_test_split, warning=FALSE}
+test_index <- seq(1, 150, by = 3)
+train <- iris[-test_index, ]
+test <- iris[test_index, ]
+
+logistic_train <- vglm(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
+                       family = multinomial, data = train)
+
+predict_probs <- predict(logistic_train, newdata = test, type = 'response')
+predict_class <- colnames(predict_probs)[apply(predict_probs, 1, which.max)]
+
+table(test$Species, predict_class)
+```

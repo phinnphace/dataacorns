@@ -1,0 +1,31 @@
+Warning :1 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :5 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :11 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :18 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :24 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :28 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :33 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :34 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :38 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :40 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :42 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :52 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :61 diagonal elements of the working weights variable 'wz' have been replaced by 1.819e-12
+Warning :fitted probabilities numerically 0 or 1 occurred
+Warning :fitted values close to 0 or 1
+Warning :fitted probabilities numerically 0 or 1 occurred
+Warning :fitted values close to 0 or 1
+Warning :fitted probabilities numerically 0 or 1 occurred
+Warning :fitted values close to 0 or 1
+Warning :fitted probabilities numerically 0 or 1 occurred
+Warning :fitted values close to 0 or 1
+Warning :fitted probabilities numerically 0 or 1 occurred
+Warning :fitted values close to 0 or 1
+Warning :fitted probabilities numerically 0 or 1 occurred
+Warning :fitted values close to 0 or 1
+Warning :some quantities such as z, residuals, SEs may be inaccurate due to convergence at a half-step
+            predict_class
+             setosa versicolor virginica
+  setosa         17          0         0
+  versicolor      0         17         0
+  virginica       0          1        15

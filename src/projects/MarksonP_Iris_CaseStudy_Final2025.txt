@@ -1,0 +1,259 @@
+Names: Jongha Lee+ Phinn Markson
+Course: GTDA 5401
+Date: December 12, 2025
+The Iris Dataset: An accidental Case Study in pedagogy, methodology and real-world
+implications
+* Author’s Note
+The consultant’s name has been redacted for privacy and professional courtesy. This case
+study examines two parallel analytical workflows as expressions of distinct STEM training
+lineages, not the individuals who performed them. Any consultant-generated artifacts appear
+only in anonymized form to illustrate methodological contrasts.
+“One class is linearly separable from the other 2; the latter are not linearly separable from
+each other.5”
+Introduction
+
+-- 1 of 11 --
+
+The Iris dataset is ubiquitous in introductory statistics and machine learning. It is typically
+presented as a parable of clean categorical separation: three distinct species (Iris setosa, I.
+versicolor, and I. virginica) perfectly distinguishable by their measurements. However, a
+closer examination reveals a more complicated truth. While I. setosa is distinct, I. versicolor
+and I. virginica overlap significantly—a nuance explicitly noted in the dataset’s canonical
+documentation yet frequently erased in introductory pedagogy. The Iris dataset's
+documentation explicitly states that two species overlap (“One class is linearly separable
+from the other; the latter are not linearly separable from each other”), yet it serves as the
+canonical example of perfect classification in statistics and machine learning education.2
+This contradiction is not accidental—it reveals how statistical pedagogy systematically
+erases empirical complexity to preserve the myth of clean categorical boundaries.
+Science is methodology, but methodology is not neutral. The tools we use to
+observe and interpret the world are shaped by the values and assumptions of their
+creators. Statistics, in particular, emerged from efforts by a small cohort of white men (non
+exhaustive: Galton, Pearson, and Fisher) seeking to validate the differences between white
+and black their ideologies insisted upon. Creating a measure would shift opinion into the
+domain of objectivity. Creating measures, scales and standards required a “from” or a point
+to measure proximity. How else would one know how close one was or was not to the
+mark? An idealized white, cisgender male body to quantify human “difference” was the
+benchmark. Everybody nonwhite, non-cisgender male has been measure to this. Medicine,
+even today still has its benchmarks (within normal limits) as a white cis male body. Oxygen
+saturation measuring, kidney function and pain presentation are not remnants of some
+past misstep.
+What often goes unexamined is how this logic of deviation from the presumed
+standard (central tendency) functions as alpha and omega by mirroring and reinforcing
+systems of social classification and hierarchy. Although Fisher later distanced himself from
+some extreme forms of biological determinism, the statistical frameworks he helped
+formalize were nonetheless forged in an era when eugenics, typological thinking, and
+colonial science were dominant paradigms 1.
+
+-- 2 of 11 --
+
+The core research question began simply: Are there significant differences between
+the species, and can they be accurately predicted? However, the divergence between one
+analysts’ findings conducted through a standard predictive lens (perfect separation) and a
+second analysis (structural overlap) reframed the inquiry.
+Because the consultant and I worked independently, our workflows accidentally became
+a natural experiment in statistical pedagogy. One analysis followed the predictive
+pipeline toward separability; the other used an exploratory-diagnostic lens to surface
+structural overlap. Their divergence was not a disagreement but the case study itself: a
+demonstration of how training shapes what analysts see and what they discard.
+Through a critical re-analysis, this report demonstrates how the choice of lens
+determines the visibility of the data. When we prioritize algorithmic separation over
+diagnostic complexity, we risk creating models that are mathematically accurate but
+structurally false—a legacy that extends from Fisher’s methodology to modern debates on
+biological determinism in population health, policy and our lives.
+A Note on Positionality and Reflexive Methodology
+I approach this dataset through a specific critical lens: one that seeks to uncover how
+ideological commitments become embedded in seemingly neutral statistical practice. This
+lens necessarily guides my methodological choices. Unlike the uncritical application of
+statistical procedures, I explicitly surface my theoretical commitments, following
+Kincheloe's (2008) notion of "critical transparency." I view the Iris dataset not as a neutral
+"Hello World" for machine learning, but as a seed crystal of a particular statistical
+ideology—one that prioritizes separation over overlap, purity over mixture, and prediction
+over understanding.
+I.I. Methods
+2.1 Data Source The Irisa dataset, sources on the UC Irvine Machine Learning homepage.
+The dataset contains 150 observations of iris flowers, divided equally among three
+classes/groups: Setosa, Versicolor, and Virginica. Four features were measured for each
+sample: Sepal Length, Sepal Width, Petal Length, and Petal Width 5.
+
+-- 3 of 11 --
+
+2.2 Exploratory Data Analysis (Client) To establish a baseline, an Exploratory Data
+Analysis (EDA) prioritizing discovery and visualization was conducted (EDA here). This
+included generating summary statistics, pairwise scatterplots to identify multicollinearity,
+and unsupervised K-Means clustering to test natural grouping without labels (see
+appendix for tables and secondary figures to reduce clutter in the main document)
+Figure 1 Distribution of Floral Measurements by Species. The horizontal orientation reveals a
+critical pattern: consistent whisker lengths across species suggest that within-group variation is similar, differing
+primarily in central tendency rather than distribution shape. This visual impression of "shifted" but similarly shaped
+distributions—rather than fundamentally different types—challenges the strict assumptions of normality and
+independence required for the consultant's standard ANOVA approach. Note specifically the substantial overlap in
+Sepal Width, which contradicts the hypothesis of clean categorical separation.
+.
+Figure 2. Principal Component Analysis (PCA) Colored by Species and K-Means Cluster
+Assignment Left panel: PCA of the Iris dataset colored by species (Setosa, Versicolor, Virginica), showing clear
+separation, particularly along PC1. Right panel: The same PCA plot colored by K-means cluster assignment (k=3),
+demonstrating approximate correspondence between unsupervised clusters and true species groups. Ellipses indicate
+95%
+
+-- 4 of 11 --
+
+confidence intervals for each group 4.
+2.3 Inferential Analysis (Consultant) The consultant operated independently drawing
+from a meeting with the client and left with background information, EDA, research
+question, and suggested methodologies for consideration in their approach. The
+consultants selected methodology involved (Output):
+Linear Regression: Three separate linear models were fitted for Sepal Length, Petal
+Length, and Petal Width. Notably, Sepal Width was omitted from this testing phase.
+Principal Component Analysis (PCA): A duplicative PCA was conducted, followed
+by a linear regression of the first principal component against species.
+Multinomial Logistic Regression: A supervised classification model was fit to
+predict species based on floral measurements.
+2.4 Remedial Inferential Analysis (Client) Upon receiving the consultant's report, the
+client identified significant methodological gaps and performed the following
+analyses(Here):
+● MANOVA: To account for the relationship between dependent variables, replacing
+the isolated linear regressions.
+
+-- 5 of 11 --
+
+● Tukey’s HSD: To provide the necessary post-hoc pairwise comparisons that the
+consultant omitted.
+● Linear Discriminant Analysis (LDA): To model the separation of classes using a
+method appropriate for the data structure.
+III. Results
+The investigation revealed a stark contrast between the illusion of clean separation
+presented in the consultant's initial report and the nuanced reality uncovered through re
+analysis.
+3.1 The consultant’s analysis painted a picture of definitive separability, but this conclusion
+relied on systemic methodological choices:
+The "Significance" of Omission: The consultant ran linear regressions (functionally
+equivalent to ANOVA) on three of the four variables: Sepal Length, Petal Length, and Petal
+Width. All returned high significance (p < 2e-16). However, the consultant excluded Sepal
+Width—the one variable that shows significant overlap between Versicolor and Virginica.
+By removing the "messy" data point, the analysis artificially inflated the clarity of the
+species boundaries.
+The Conflation of Prediction and Inference: While linear regression and ANOVA are
+mathematically equivalent (both represent the General Linear Model), the consultant
+utilized regression purely as a classification tool rather than a hypothesis test. A rigorous
+ANOVA framework asks, "Do specific group means differ?" and mandates assumption checks
+and post-hoc analysis. In contrast, the consultant’s approach implicitly asked, "Can I
+separate these groups?" By prioritizing separation over inference, the analysis treated the
+biological overlap in Sepal Width not as a diagnostic finding, but as "noise" to be discarded
+in pursuit of a cleaner, albeit less accurate, model.
+Circular PCA Logic: The consultant performed a regression using the first Principal
+Component (PC1) as the dependent variable against Species. Since PC1 is mathematically
+constructed to maximize variance (which is driven by species differences), this test was
+circular—it could only show that the species were different because the math defined them
+
+-- 6 of 11 --
+
+as such3.
+Figure 1 (Consultant Output). Principal Component Analysis (PC1) scores by Species. Principal
+Component Analysis (PCA) and visualized the scores of the first component (PC1) by species. PC1 accounts for 72.96%
+of the variance and effectively maximizes the separation between groups. This visualization serves as a summary of the
+primary variation, distinct from the bi-dimensional structural overlap (PC1 vs PC2) identified in the initial Exploratory
+Data Analysis (see Appendix)
+The Broken Classifier: The consultant presented a multinomial logistic regression with a
+"perfect" confusion matrix for the training set. However, a review of the raw code revealed
+that the model threw multiple warnings: fitted probabilities numerically 0 or 1 occurred and
+the algorithm did not converge. These warnings indicate "complete separation"—the model
+failed to converge because Setosa is too distinct, while the other classes overlapped. Rather
+than addressing this breakdown, the warnings were suppressed, and the "results" were
+presented as valid.
+Post-hoc tests would have revealed that versicolor/virginica do not significantly differ on
+sepal width—a direct contradiction to the 'clean separation' narrative. The system requires
+analysts to stop at p < 0.001 because deeper interrogation exposes the dataset's explicit
+warning about overlap. This isn't incompetence; it's the logical endpoint of teaching stats as
+'find significance, then stop.' In population health, this produces race-based models that
+
+-- 7 of 11 --
+
+'predict' disparities while ignoring structural drivers—because asking 'which groups differ?'
+would reveal continuous health gradients shaped by systemic racism. We can just as easily
+place gender in this continuum as well.
+In biology, we know versicolor and virginica are overlapping taxa—Fisher's dataset was
+curated to hide this. His logistic regression 'succeeds' (100% accuracy) because it treats
+Setosa's separability as the goal, not a diagnostic red flag. But in population health, if we
+treated race categories like Iris species—forcing separation while ignoring overlap—we
+produce models that 'accurately' predict Black infant mortality via race, while obscuring
+how structural racism shapes continuous health gradients (a preference for aggregation
+over disaggregation causes erasure of populations).
+3.2 Client Re-Analysis
+Client conducted omitted inferential tests
+● MANOVA and Tukey HSD: Unlike the isolated regressions, the MANOVA showa
+significant differences overall (p < 0.001). Crucially, the subsequent Tukey HSD tests
+revealed that while Setosa is distinct across all metrics, the difference between
+Versicolor and Virginica is nuanced, particularly in Sepal Width, where the mean
+difference is statistically smaller and distributions overlap.
+To visualize the structure of the data without artificial variable selection, the client
+performed a Linear Discriminant Analysis (LDA) using the complete four-variable feature
+set. The LDA provides a dimensionality reduction optimized for class discrimination while
+retaining the biological context of all measured traits
+Figure 3. Reintegration of excluded features reveals significant biological structure
+
+-- 8 of 11 --
+
+deployed in remedial analysis. (A) Tukey’s HSD pairwise comparisons of mean differences for all
+four morphological traits. Bars represent 95% confidence intervals. Intervals that do not intersect zero
+indicate statistical significance (p < 0.05). Variables colored blue were retained in the consultant’s model;
+Sepal Width (red) was omitted. Note that despite its exclusion, Sepal Width shows significant differences for
+multiple species pairs. (B) Linear Discriminant Analysis (LDA) projection utilizing the full 4-variable feature
+set. Ellipses indicate 95% confidence regions for I. setosa (red), I. versicolor (green), and I. virginica (blue).
+The latent structure confirms distinct clustering of I. setosa along LD1, while honestly depicting the biological
+proximity and slight overlap between I. versicolor and I. virginica, a reality obscured by aggressive feature
+selection
+● Linear Discriminant Analysis (LDA): Examination of the Linear Discriminant
+coefficients reveal the magnitude of the exclusion error. On the first discriminant axis
+(LD1), which accounts for 99.1% of the between-group variance, Sepal Width exhibits a
+coefficient of 1.53, nearly double that of the retained Sepal Length (0.83).
+● While Petal dimensions drive the negative direction of the axis (-2.20, -2.81), Sepal
+Width is the primary feature defining the positive direction. By excluding it, the
+consultant's model did not merely simplify the data; it removed the strongest
+positive discriminator in the feature set, forcing the model to rely on the weaker
+signal of Sepal Length.
+
+-- 9 of 11 --
+
+IV. Conclusion: Methodology as Ideology
+In population health, this produces race-based models that "predict" disparities
+while ignoring structural drivers. By asking "can I separate groups?" (classification) rather
+than "why do these groups differ?" (inference), analysts encourage the use of race as a
+biological proxy.
+We see this logic fail in high-stakes contexts, such as using race to predict infant mortality
+while ignoring social determinants, and in everyday policy, such as the debate in Wisconsin
+over when elders should stop shoveling snow. This is not merely a statistical shortcut; it is
+the very bedrock of biological determinism/essentialism.
+By treating Age as a binary cutoff for "shoveling ability," we ignore functional health. By
+treating race as a binary cutoff for health risk, we ignore racism. In both cases, the model
+creates a dangerous fiction: it reifies the category (age/race) as the cause, effectively hiding
+the actual mechanism (health/racism). This protects the system from scrutiny while
+pathologizing the individuals within it.
+It is critical to acknowledge that the consultant’s approach was not technically
+'incorrect' within the paradigm of standard data science training; rather, it was optimized
+for a different objective. The consultant’s methodology prioritized parsimony and
+separation—the hallmarks of efficient predictive modeling. By this metric, the removal of
+'noisy' variables like Sepal Width is a feature, not a bug, as it creates a cleaner, more
+definitive classification boundary 9.
+However, the client’s objective as an equity-centered scientist was not classification,
+but diagnosis and structural understanding. Through this lens, the 'noise' of overlapping
+groups is not waste to be discarded, but the primary signal of biological (or social) reality.
+The friction in this collaboration did not arise from errors, but from the distinct lineages of
+STEM training we came from: one shaped by the predictive logic of statistics, the other
+shaped by the structural and contextual demands of population health. Both approaches
+
+-- 10 of 11 --
+
+were internally coherent; their divergence simply revealed how training directs attention
+toward different forms of truth. The consultant succeeded in building a map that was easy
+to read; the client required a map that was true to the terrain10. This case study
+demonstrates that the Iris dataset is not a neutral teaching tool; it is a seed crystal for a
+statistical ideology that prioritizes separation over structural reality. The client and the
+consultant became a textbook example of this legacy in 2025, a convergence so precise it
+could not have been improved by orchestration. It’s very lack of orchestration is what
+makes it so revealing. Moving forward requires training equity-centered analysts not just
+to run code, but to recognize when a proxy is masking a mechanism11. We must learn to
+retain the "Sepal Widths"—the messy, overlapping variables—because that is often where
+the structural truth resides.
+
+-- 11 of 11 --
+

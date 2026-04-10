@@ -1,0 +1,183 @@
+---
+title: "Project 1: Exploratory Data Analysis of the Iris Dataset – A Critical Perspective"
+author: "Phinn Markson"
+date: "October 22, 2025"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## Introduction
+
+The Iris dataset originates from a 1936 publication by Ronald A. Fisher in the Annals of Eugenics.
+Fisher—while widely regarded for his contributions to statistics—was also an outspoken eugenicist.
+The dataset’s underlying aim was to demonstrate the separability of biological species based on morphological measurements, a framing that reinforces typological thinking and the flattening of biological variation.
+
+This project focuses on exploratory data analysis (EDA), examining the variability, relationships, and structure present in the dataset.
+No statistical inference or hypothesis testing is performed.
+
+#Key variables: • Sepal.Length: Numeric, length of sepal in cm • Sepal.Width: Numeric, width of sepal in cm • Petal.Length: Numeric, length of petal in cm • Petal.Width: Numeric, width of petal in cm • Species: Categorical, the species of iris (setosa, versicolor, virginica)
+
+#Research Questions 1.
+How do the four floral features vary across the three iris species?
+2.
+What combinations of features appear to best distinguish species, and where do overlaps emerge?
+3.
+What patterns of internal variability exist within each species?
+4.
+When reduced to principal components, does the structure suggest separation or overlap?
+5.
+To what extent do k-means clusters align with the species labels?
+
+#Methodology
+
+Exploratory Data Analysis (EDA) techniques were employed using summary statistics, visualizations (pairwise scatterplots, boxplots, density plots), PCA, and k-means clustering (k=3).
+This analysis also incorporates a critical examination of the dataset’s origins and implications.
+
+#Results #Data Setup
+
+```{r load-libraries}
+library(tidyverse)
+library(GGally)
+library(ggfortify)
+library(factoextra)
+library(cluster)
+library(gridExtra)
+library(knitr)
+library(ggplot2)
+
+data(iris)
+head(iris)
+```
+
+## Summary Statistics
+
+```{r summary-stats-table, echo=FALSE}
+summary_stats <- iris %>%
+  group_by(Species) %>%
+  summarise(
+    Sepal.Length_Mean = round(mean(Sepal.Length), 2),
+    Sepal.Length_SD   = round(sd(Sepal.Length), 2),
+    Sepal.Width_Mean  = round(mean(Sepal.Width), 2),
+    Sepal.Width_SD    = round(sd(Sepal.Width), 2),
+    Petal.Length_Mean = round(mean(Petal.Length), 2),
+    Petal.Length_SD   = round(sd(Petal.Length), 2),
+    Petal.Width_Mean  = round(mean(Petal.Width), 2),
+    Petal.Width_SD    = round(sd(Petal.Width), 2)
+  )
+
+kable(summary_stats, caption = "Table 1: Mean and Standard Deviation of Floral Features by Species")
+```
+
+## Pairwise Plots
+
+```{r pairwise-plots, message=FALSE, warning=FALSE}
+# Pairwise scatterplots and density plots by species
+ggpairs(
+  iris,
+  columns = 1:4,
+  aes(color = Species, alpha = 0.7)
+)
+```
+
+## Distribution of Petal Length by Species
+
+```{r boxplot-petal-length}
+p1 <- ggplot(iris, aes(x = Species, y = Petal.Length, fill = Species)) +
+  geom_boxplot() +
+  labs(title = "Petal Length Distribution by Species", y = "Petal Length (cm)") +
+  theme_minimal()
+
+print(p1)
+```
+
+## Distribution of Sepal Width by Species
+
+```{r boxplot-sepal-width}
+p2 <- ggplot(iris, aes(x = Species, y = Sepal.Width, fill = Species)) +
+  geom_boxplot() +
+  labs(title = "Sepal Width Distribution by Species", y = "Sepal Width (cm)") +
+  theme_minimal()
+
+print(p2)
+```
+
+## PCA Summary
+
+```{r pca-summary}
+pca_model <- prcomp(iris[, 1:4], scale. = TRUE)
+
+# Print textual summary
+summary(pca_model)
+
+# PCA Plot
+p3 <- autoplot(pca_model, data = iris, colour = 'Species', frame = TRUE, frame.type = 'norm') +
+  labs(title = "PCA Colored by Species")
+
+print(p3)
+```
+
+## PCA: Species vs K-Means Clusters
+
+```{r pca-clusters, fig.width=10, fig.height=4, message=FALSE, warning=FALSE}
+set.seed(123)
+k_result <- kmeans(iris[, 1:4], centers = 3, nstart = 25)
+iris$Cluster <- as.factor(k_result$cluster)
+
+p4 <- fviz_pca_ind(pca_model,
+                   geom.ind = "point",
+                   col.ind = iris$Species,
+                   palette = "jco",
+                   addEllipses = TRUE,
+                   ellipse.type = "norm",
+                   legend.title = "Species") +
+  ggtitle("PCA: Colored by Species")
+
+p5 <- fviz_pca_ind(pca_model,
+                   geom.ind = "point",
+                   col.ind = iris$Cluster,
+                   palette = "jco",
+                   addEllipses = TRUE,
+                   ellipse.type = "norm",
+                   legend.title = "K-Means Cluster") +
+  ggtitle("PCA: Colored by K-Means")
+
+grid.arrange(p4, p5, ncol = 2)
+```
+
+## K-Means Clustering and Species Alignment
+
+```{r kmeans-contingency-table, echo=FALSE}
+iris_clustered <- iris
+iris_clustered$Cluster <- as.factor(k_result$cluster)
+
+cluster_table <- table(iris_clustered$Cluster, iris_clustered$Species)
+
+kable(cluster_table, caption = "Table 2: Contingency Table – K-means Clusters vs. Species Labels")
+```
+
+# Summary of Results
+
+Summary of Results • Clear differences exist between species, particularly in petal measurements.
+• I.
+setosa is distinctly separate from I.
+versicolor and I.
+virginica.
+• I.
+versicolor and I.
+virginica show significant overlap, especially in PCA and clustering.
+• PCA confirms over 95% of variance captured in two components.
+• K-means clustering largely reproduces the setosa boundary but struggles with overlap between the other two species.
+
+------------------------------------------------------------------------
+
+## Conclusion
+
+This exploratory analysis demonstrates that the Iris dataset, while well-structured and easily separable, reflects deeper tensions in statistical pedagogy.
+Common analyses like PCA and k-means clustering reveal high separability of species, but researchers must remain attentive to how data is framed and interpreted — particularly when it originates from ethically complex or typologically motivated contexts.
+This analysis acknowledges the dataset’s eugenicist origins and urges caution in treating canonical datasets as ideologically neutral.
+Data is not apolitical; classification systems encode assumptions. The Iris dataset, while useful for pedagogical purposes, should not be treated as a neutral artifact.
+The question of where meaning resides in classification—whether in our taxonomies or in the data's underlying structure—remains relevant.
+Neutrality in analysis is not the absence of stance but the masking of one.
