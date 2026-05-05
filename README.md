@@ -1,35 +1,27 @@
-# Data Acorns | The Shell Game
+# Data Acorns
 
-A landing page for the **shellgame** and **geoDeltaAudit** R packages, providing documentation and quantification of perturbation in geographic population data workflows.
+**Data Acorns** is the visual story of a translational research analyst making, learning, and doing. It serves as a digital portfolio and a technical narrative of work that bridges the gap between raw data and real-world outcomes.
 
-## Overview
+## Project Ecosystem
 
-Data Acorns is dedicated to documenting and quantifying the uncertainties and perturbations introduced during population data processing, specifically focusing on geographic crosswalks and allocation methods.
+### shellgame & geoDeltaAudit
+These interdependent R packages bring to light what often gets relegated as footnotes but drives upstream policy and downstream outcomes.
 
-## Ecosystem
+*   **shellgame:** Lays out the conceptual framework and acts as a wrapper for the suite. It explains how data transformation across administrative boundaries causes perturbation, why we need to quantify this, and identifies key decision points in the population data workflow.
+*   **geoDeltaAudit:** The operationalized diagnostic tool for quantifying spatial and demographic perturbation. It helps researchers understand the "delta" as data moves through geographic crosswalks, auditing the fidelity of the process.
 
-### shellgame
-An R package designed to audit geographic crosswalks and evaluate the fidelity of population data as it moves between different spatial resolutions.
+### The Iris Case Study
+A technical analysis and a critique of inherited tools. This project argues that statistical methods do not exist in a vacuum—they are shaped by the social, political, and scientific paradigms of their time. If we are serious about equity in data science, we must be equally serious about interrogating the roots of the tools we use.
 
-### geoDeltaAudit
-A diagnostic tool for quantifying spatial and demographic perturbation in population data, helping researchers understand the "delta" between source and target geographies.
+### Canvas API
+A fully customizable tool designed to pull semester courses and due dates (filtered by submitted/outstanding status). It delivers academic data exactly how you need it, eliminating the time spent extricating information from the standard Canvas interface.
 
-## Methodology
+### School Closure API
+An automated application to notify users of public school closures. It runs through Google apps to deliver alerts via email or text without fees, ensuring timely communication for families.
 
-The "Shell Game" refers to the complex movement and reallocation of population data points across administrative boundaries. Our protocol provides:
-- **Relational Sync:** Ensuring data invariants are maintained during spatial transitions.
-- **Integrity Audits:** Quantifying the loss or shifting of demographic signals.
-- **Transparency:** Clear documentation of how allocation decisions impact end-state data quality.
-
-## Development
-
-This site is built with React and Tailwind CSS.
-
-### Getting Started
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
+### Mapping Food Vulnerability
+A second-iteration dashboard assessing tract-level food access vulnerability. This project integrates socioeconomic, transportation, and geographic indicators (Census/NaNDA) using a multi-dimensional scoring approach and custom GIS mapping layers to assess vulnerability at a granular level.
 
 ---
-*Built by [Data Acorns](https://dataacorns.com)*
+*Visit the live portfolio at [dataacorns.com](https://dataacorns.com)*
+
