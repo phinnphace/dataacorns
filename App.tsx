@@ -10,7 +10,7 @@ import FreeStuff from './src/projects/FreeStuff';
 const PROJECTS = [
   {
     id: 'shellgame',
-    name: 'ShellGame Suite',
+    name: 'Ecosystem Navigator',
     description: 'R Packages & Audit Protocol',
     icon: Database,
     status: 'active'
@@ -49,7 +49,7 @@ const GlobalNav = ({ activeProject, setActiveProject }: { activeProject: string,
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <span className="text-[10px] font-mono font-bold tracking-[0.3em] uppercase text-stone-400">
-              Data Journey
+              Data Acorns
             </span>
           </div>
           
@@ -65,7 +65,7 @@ const GlobalNav = ({ activeProject, setActiveProject }: { activeProject: string,
         </div>
         
         <div className="hidden md:flex items-center gap-4 text-[10px] font-mono uppercase tracking-widest text-stone-500">
-          <span>Ecosystem Navigator</span>
+          <span>Data Journey</span>
         </div>
       </div>
 
