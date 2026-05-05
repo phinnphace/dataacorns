@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Data Acorns | The Shell Game
 
-# Run and deploy your AI Studio app
+A landing page for the **shellgame** and **geoDeltaAudit** R packages, providing documentation and quantification of perturbation in geographic population data workflows.
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/df2d31a9-7c1b-432e-b2bb-1ae090a692f3
+Data Acorns is dedicated to documenting and quantifying the uncertainties and perturbations introduced during population data processing, specifically focusing on geographic crosswalks and allocation methods.
 
-## Run Locally
+## Ecosystem
 
-**Prerequisites:**  Node.js
+### shellgame
+An R package designed to audit geographic crosswalks and evaluate the fidelity of population data as it moves between different spatial resolutions.
 
+### geoDeltaAudit
+A diagnostic tool for quantifying spatial and demographic perturbation in population data, helping researchers understand the "delta" between source and target geographies.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Methodology
+
+The "Shell Game" refers to the complex movement and reallocation of population data points across administrative boundaries. Our protocol provides:
+- **Relational Sync:** Ensuring data invariants are maintained during spatial transitions.
+- **Integrity Audits:** Quantifying the loss or shifting of demographic signals.
+- **Transparency:** Clear documentation of how allocation decisions impact end-state data quality.
+
+## Development
+
+This site is built with React and Tailwind CSS.
+
+### Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+
+---
+*Built by [Data Acorns](https://dataacorns.com)*
