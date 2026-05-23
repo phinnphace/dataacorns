@@ -558,7 +558,7 @@ const VulnerabilityDashboard: React.FC = () => {
                 <BarChart 
                   data={comparisonChartData} 
                   margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
-                  onClick={(state) => {
+                  onClick={(state: any) => {
                     if (state && state.activePayload && state.activePayload.length > 0) {
                       setSelectedTract(state.activePayload[0].payload.GEOID);
                     }

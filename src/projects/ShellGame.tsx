@@ -78,7 +78,9 @@ const ShellGame: React.FC = () => {
             <a href="#packages" onClick={scrollToSection('packages')} className="hover:text-stone-900 transition-colors">Packages</a>
             <a href="#impact" onClick={scrollToSection('impact')} className="hover:text-stone-900 transition-colors">Impact</a>
             <a 
-              href="#" 
+              href="https://CRAN.R-project.org/package=geoDeltaAudit" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2 bg-stone-900 text-white hover:bg-stone-800 transition-colors shadow-sm"
             >
               R-CRAN
@@ -98,7 +100,7 @@ const ShellGame: React.FC = () => {
             <a href="#methodology" onClick={scrollToSection('methodology')} className="hover:text-nobel-gold transition-colors">Methodology</a>
             <a href="#packages" onClick={scrollToSection('packages')} className="hover:text-nobel-gold transition-colors">Packages</a>
             <a href="#impact" onClick={scrollToSection('impact')} className="hover:text-nobel-gold transition-colors">Impact</a>
-            <a href="#" className="px-8 py-3 bg-stone-900 text-white shadow-lg">R-CRAN</a>
+            <a href="https://CRAN.R-project.org/package=geoDeltaAudit" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-stone-900 text-white shadow-lg">R-CRAN</a>
         </div>
       )}
 
@@ -543,7 +545,7 @@ const ShellGame: React.FC = () => {
                 <ul className="space-y-3 text-sm font-medium">
                   <li><a href="#" className="hover:text-nobel-gold transition-colors">shellgame</a></li>
                   <li><a href="#" className="hover:text-nobel-gold transition-colors">geoDeltaAudit</a></li>
-                  <li><a href="#" className="hover:text-nobel-gold transition-colors">CRAN Repository</a></li>
+                  <li><a href="https://CRAN.R-project.org/package=geoDeltaAudit" target="_blank" rel="noopener noreferrer" className="hover:text-nobel-gold transition-colors">CRAN Repository</a></li>
                 </ul>
               </div>
               <div>

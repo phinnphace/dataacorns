@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Database, Layout, Sparkles, Map as MapIcon, BookOpen, Gift } from 'lucide-react';
+import { ChevronDown, Database, Layout, Sparkles, Map as MapIcon, BookOpen, Gift, Compass } from 'lucide-react';
 import ShellGame from './src/projects/ShellGame';
+import TransitAware from './src/projects/TransitAware';
 import TransitMap from './src/projects/TransitMap';
 import IrisCaseStudy from './src/projects/IrisCaseStudy';
 import FreeStuff from './src/projects/FreeStuff';
@@ -10,9 +11,16 @@ import FreeStuff from './src/projects/FreeStuff';
 const PROJECTS = [
   {
     id: 'shellgame',
-    name: 'Ecosystem Navigator',
+    name: 'Ecoverse',
     description: 'R Packages & Audit Protocol',
     icon: Database,
+    status: 'active'
+  },
+  {
+    id: 'transitaware',
+    name: 'TransitAware',
+    description: 'Layered Transit Analysis',
+    icon: Compass,
     status: 'active'
   },
   {
@@ -138,6 +146,18 @@ const App: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <ShellGame />
+          </motion.div>
+        )}
+        
+        {activeProject === 'transitaware' && (
+          <motion.div
+            key="transitaware"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <TransitAware />
           </motion.div>
         )}
         
