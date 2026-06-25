@@ -1,0 +1,312 @@
+ 
+ 
+ 
+Meaning and Rationale of        
+The road density variable, PROP_PRIM_SEC_ROADS (Proportion of Primary and Secondary 
+Roads), serves as a fundamental measure of the built environment's capacity to support 
+mobility, often acting as a proxy for walkability or vehicular efficiency. 
+Aspect      Rationale 
+Mobility 
+Proxy 
+In rural and micropolitan areas like Decatur County, this variable 
+indicates the quality and density of the network needed for driving, 
+cycling, or walking—especially where transit is absent. Low density 
+means poor infrastructure and reduced mobility. 
+Walkability 
+Proxy 
+High density of primary/secondary roads generally suggests a more 
+interconnected, grid-like network, which correlates with better 
+walkability than low-density, sprawling, or disconnected road 
+systems. 
+Vulnerability 
+Direction 
+For this component, low road density is treated as high vulnerability. 
+If there are fewer primary/secondary roads, access is inherently 
+more difficult. 
+ 
+Standardization and Direction 
+The     component is calculated using the global Z-score standardization method, ensuring 
+that a higher score means higher vulnerability: 
+1.  Z-Score: The raw PROP_PRIM_SEC_ROADS value is standardized using the global mean (
+). 
+2.  Directional Correction: Since high road density is a protective factor (low vulnerability), the resulting Z-score is 
+reversed (multiplied by -1). 
+----------------Page (0) Break----------------
+                
+ 
+ 
+Unweighted Final Score (For Comparison) 
+ 
+In the unweighted model,     is simply added with a weight of 1.0, treating the infrastructure deficit as equally 
+important as the other components: 
+ 
+ 
+ 
+The transport score (TVS) is calculated as: 
+ 
+ 
+ 
+ 
+RUCA (Rural-Urban Commuting Area) codes classify census tracts based on how people live and travel. Unlike 
+county-level categories, RUCA identifies whether a tract is urban, suburban, rural, or remote by looking at commuting 
+patterns and local connectivity. It gives a more realistic picture of access conditions, especially in areas where a single 
+county includes both dense urban centers and isolated rural communities. 
+RUCA helps interpret food access barriers in context rather than treating all “rural” or all “urban” places the same. 
+Component Methodology Breakdown 
+All standardization uses the global mean              derived from the master 
+dataset, ensuring the vulnerability score for Decatur County is measured against the broader contextual 
+landscape. 
+Scores derived from global Z-score standardization, Decatur County tracts (N=8) 
+Model Formula: 
+●  V_final_Weighted = C_Economic + C_Geographic + TVS 
+●  TVS = 0.4 * C_Vehicle + 0.3 * C_Transit + 0.2 * C_Internet + 0.1 * C_Roads 
+●  C_Transit_B = +3.0 (Systemic Transit Penalty - no public transit in county) 
+ 
+Unweighted Final Score (For Comparison) 
+----------------Page (1) Break----------------
+In the unweighted model,     is simply added with a weight of 1.0, treating the infrastructure deficit 
+as equally important as the other components 
+ 
+ 
+1.)  Economic Vulnerability (   ) 
+ 
+Aspect        Calculation (Formula)   Rationale 
+Variables Used     Income (Median Household 
+Income) and poverty_pct 
+(Poverty Rate). 
+A single metric (like median 
+income) is insufficient and can 
+mask high poverty. This 
+composite score prevents 
+economic flattening by 
+factoring in both affluence 
+(income) and deprivation 
+(poverty rate). 
+Scoring                   Low Income is a 
+vulnerability (reversed 
+Z-score). High Poverty is a 
+vulnerability (standard 
+Z-score). The scores are 
+summed to give a single, 
+robust economic measure. 
+ 
+ 
+2.) Geographic Vulnerability ( ) 
+ 
+Aspect        Calculation (Formula)  Rationale 
+Variable Used.      den_totalfoodstores (Density 
+of total food stores).Quantifies 
+physical access to food 
+resources beyond the binary 
+"food desert" definition. This is 
+a direct measure of resource 
+availability. 
+ 
+den_totalfoodstores 
+(Density of total food 
+stores).Quantifies physical 
+access to food resources 
+beyond the binary "food 
+desert" definition. This is a 
+direct measure of resource 
+availability. 
+ 
+Scoring 
+ 
+High Density is a protective 
+----------------Page (2) Break----------------
+factor (low vulnerability), so 
+the Z-score is reversed. A 
+low-density tract receives a 
+high positive vulnerability 
+score. 
+ 
+3.) Transport Vulnerability: Vehicle Access (   ) 
+ 
+Aspect        Calculation (Formula)  Rationale 
+Variable Used.      Vehicles_PctHH_NoVehicle 
+(Percentage of Households 
+with No Vehicle). 
+Measures dependence on 
+non-existent or unreliable 
+transport infrastructure. In 
+rural settings, this is often the 
+single greatest barrier to 
+access. 
+Scoring                   High Percentage of No-Vehicle 
+Households is a vulnerability, so 
+the Z-score direction is kept 
+positive. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4.) Transport Vulnerability: Transit Access (   ) 
+Aspect         Calculation (Formula)    Rationale 
+Variable Used.       STOPS_PER_CAPITA (Transit   Measures public transport service 
+----------------Page (3) Break----------------
+Stops per Capita      availability. 
+Scoring 
+with Imputation. 
+High Stops is a protective factor 
+(reversed Z-score). For tracts 
+with zero transit availability 
+(NaNs), the standardized Z-score 
+is imputed to $\mathbf{+3.0}$ to 
+reflect a Systemic Absence 
+Penalty (Extreme Vulnerability), 
+preventing the erasure of this 
+critical infrastructural deficit. 
+ 
+5.) Transport Vulnerability: Internet Access (   ) 
+ 
+Aspect  Calculation (Formula)            Rationale 
+Variable 
+Used. 
+est_NO_INT, pct_no_internet, and pct_cellular_broadband. Captures multiple 
+facets of digital 
+exclusion. ,Accessing 
+transit can be entirely 
+data access 
+dependent.Digital 
+connectivity 
+acknowledges this 
+contextual reality. 
+Lack-of-access 
+increases lack of 
+mobility potential. 
+Scoring                     The component is the 
+sum of two Lack of 
+Access variables (kept 
+positive) minus one 
+Access variable 
+(reversed/subtracted)
+, creating a single 
+robust digital 
+vulnerability score. 
+ 
+ 
+ 
+ 
+6.) Transport Vulnerability: Roads/Walkability (  ) 
+----------------Page (4) Break----------------
+ 
+ 
+Aspect        Calculation (Formula)   Rationale 
+Variable Used.      PROP_PRIM_SEC_ROADS 
+(Proportion of Primary and 
+Secondary Roads). 
+Serves as a proxy for mobility 
+infrastructure and 
+walkability. 
+Scoring                   High Road Density is a 
+protective factor, so the 
+Z-score is reversed. This 
+component allows for 
+identification of the 
+infrastructure deficit 
+component of mobility. 
+ 
+Global Scoring Methodology 
+The final scoring combines these components into two primary indices, allowing for the 
+critical comparison that demonstrates the need for contextualization. 
+A. Unweighted Final Score (   ) 
+This score treats all components as equally important (weight of 1.0) and serves as the 
+baseline for comparison. 
+ 
+ 
+B. RUCA-Weighted Final Score (  ) (The Authoritative Score) 
+This score incorporates the Context-Sensitive Weighting required for equity-informed 
+analysis. The Decatur County tracts (designated Micropolitan) are mapped to the "Large 
+Town" weighting matrix, which down-weights transit and up-weights vehicle access. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (5) Break----------------
+The final comparison of     and    forms the core argument of this project: 
+the weighted model is necessary to prevent the erasure of localized, high-impact transport 
+barriers. 
+ 
+ 
+All of these scoring matrices are imperfect and meant for refinement, critique and serve as 
+a starting point. The USDA definition of “food desert” was the impetus for this project and 
+my takeaway from the definition (though refinements regarding its limitations have been 
+improved that has not manifested in real world application), in plain language is that a food 
+desert is static, binary and measured by two variables; income and proximity to a food 
+resource.  
+ 
+ 
+ 
+### Standardization via Z-Scores 
+ 
+This model standardizes component variables using Z-scores to place heterogeneous 
+measures on a common scale prior to aggregation. This choice is pragmatic and 
+problematic. I do not pretend that it is not "inferential" because it carries several explicit 
+assumptions and limitations. I don't like it either and would very much like an alternative.  
+ 
+Z-score standardization assumes that variables are meaningfully centered around a global 
+mean and scaled by a global standard deviation. In classical applications, this approach is 
+often paired with assumptions of approximate normality, independence of observations, 
+and large-sample behavior (via the Central Limit Theorem). These conditions are **not 
+fully met** in this context. 
+ 
+First, the component variables are not assumed to be independent. Transportation access, 
+economic conditions, infrastructure, and connectivity are structurally entangled by design. 
+Z-scores are used here to standardize magnitude, not to imply orthogonality or causal 
+separability among components. 
+ 
+Second, normality is not assumed. Several variables exhibit skewed or bounded 
+distributions, particularly in rural or micropolitan contexts. Z-scores are employed as a 
+relative scaling mechanism rather than as a probabilistic model of the data-generating 
+process. 
+ 
+Third, this analysis does not rely on asymptotic inference. The use of Z-scores is not 
+intended to support hypothesis testing, confidence intervals, or population-level 
+----------------Page (6) Break----------------
+generalization. Instead, standardization enables within-model comparison of relative 
+position and contribution across components. 
+ 
+To mitigate small-sample distortion, all Z-scores are calculated using global reference 
+distributions rather than tract-level or county-level means. This anchors local observations 
+to a broader structural context and avoids artificially inflating variance in small geographic 
+samples. 
+ 
+In this model, Z-scores function as a **comparability device**, not a claim about statistical 
+independence, normality, or causal structure. Their use is justified insofar as the model’s 
+purpose is exploratory, comparative, and diagnostic rather than predictive or inferential. 
+ 
+### Assumption: Completeness and Accuracy of Grocery Store Data 
+ 
+ 
+This model assumes that grocery store locations drawn from publicly available datasets 
+represent a sufficiently complete approximation of the food retail landscape for the 
+purposes of structural comparison. Store presence is treated as binary and exhaustive: a 
+store either exists in the dataset or it does not. 
+ 
+This assumption is knowingly fragile. While multiple data sources were cross-checked, the 
+model does not independently verify store operational status, food quality, affordability, 
+cultural relevance, or temporal stability. Stores may be missing, misclassified, closed, 
+inaccessible, or functionally unusable for reasons not captured in spatial data. 
+ 
+Crucially, this uncertainty is **not corrected for within the scoring framework**. No 
+weighting, penalty, or confidence adjustment is applied to account for incomplete or 
+inaccurate store representation. As a result, geographic density and availability signals 
+should be interpreted as provisional structural indicators rather than confirmed access 
+conditions. 
+ 
+This assumption reflects a broader constraint of food access research: the absence of 
+reliable, continuously updated ground-truth data on food availability. The model treats 
+grocery access as “present and accounted for” only in the narrow sense that locations are 
+mapped, not in the substantive sense that food is accessible, affordable, or usable. 
+ 
+----------------Page (7) Break----------------

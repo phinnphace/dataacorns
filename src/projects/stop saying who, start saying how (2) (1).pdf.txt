@@ -1,0 +1,37 @@
+sept 2025
+ 
+Stop Saying W ho, Start Saying How: A Mechanistic Approach to Public Health Messaging 
+Taryn Selnko¹, Phinn Markson² ¹Mailman School of Public Health, Columbia University, New York, NY, USA 
+²Translational Data Analytics Institute, The Ohio State University, Columbus, OH, USA 
+ 
+The term men who have sex with men (MSM) was adopted in the 1990s to reduce stigma by 
+focusing on behavior over identity in HIV/STI prevention. Yet, its continued use has reinforced 
+identity-based risk profiling, obscuring shared transmission mechanisms and limiting public 
+health impact. Rising gonorrhea rates now span diverse populations — including women, 
+heterosexual men, youth, and racial minorities — yet messaging often remains targeted to 
+MSM, missing opportunities for broad prevention. 
+W e propose a shift to a mechanistic, universal precaution framework that emphasizes 
+condomless penetrative sex as the primary risk factor, regardless of gender or sexual identity. 
+This approach treats risk as a function of behavior, not identity, aligning messaging with actual 
+transmission dynamics. Using gonorrhea as a model pathogen — due to its high incidence, 
+short incubation, and clear route of transmission — we test whether behavior-based messaging 
+increases prevention uptake across all groups. 
+In a cluster quasi-experimental trial across 20 U.S. sexual health clinics (2025–2026), 
+intervention sites will implement mechanistic messaging; control sites will maintain standard, 
+identity-targeted campaigns. The primary outcome is adjusted gonorrhea positivity (cases per 
+test) to account for testing-rate bias. Secondary outcomes include self-reported condom use via 
+validated surveys and perceived stigma. Exploratory analyses will examine trends in antibiotic 
+resistance markers, if available, to rule out treatment failure as a driver of changes. 
+W e will use difference-in-differences analysis with time-series adjustments (e.g., for concurrent 
+public health interventions) to compare pre- and post-intervention changes across arms. 
+Subgroup analyses by gender, sexual orientation, and race/ethnicity will assess equity in impact 
+without presuming risk. 
+Power analysis (G*Power): Assuming a baseline positivity rate of 5%, ICC = 0.02, 50 patients 
+per cluster, and 20 clusters (10 per arm), we achieve 80% power (α = 0.05) to detect a 30% 
+reduction in positivity (to 3.5%) — a meaningful public health effect. 
+If effective, this behavior-centered model could replace identity-based STI messaging with a 
+scalable, stigma-reducing framework. Because transmission depends on acts, not identities, this 
+approach may be adapted across STIs, offering a pathogen-agnostic strategy for equitable, 
+evidence-based public health communication 
+ 
+----------------Page (0) Break----------------

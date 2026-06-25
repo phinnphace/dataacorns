@@ -48,28 +48,30 @@ export const ABSTRACTS: Abstract[] = [
   },
   {
     id: 'stop-saying-who',
-    title: 'Stop Saying Who, Start Saying How: Auditing Structural Predictors in Administrative Health Geography',
+    title: 'Stop Saying Who, Start Saying How: A Mechanistic Approach to Public Health Messaging',
     conference: 'ABRCMS 2025',
     conferenceFull: 'Annual Biomedical Research Conference for Minoritized Scientists',
     date: 'November 19-22, 2025',
     location: 'San Antonio, TX',
-    authors: 'P. Markson¹, L. Cunningham², E. Vance¹',
-    summary: 'An academic audit shifting the biomedical lens from racialized demographic categorizations to direct spatial and structural infrastructure measurements.',
+    authors: 'T. Selnko¹, P. Markson²',
+    summary: 'A cluster quasi-experimental trial proposing a shift from identity-based risk profiling (MSM) to a mechanistic, universal precaution framework for public health messaging.',
     fullText: [
-      'Epidemiological and public health research workflows frequently rely on demographic categories ("who") as proxy variables for risk, under the implicit assumption that racialized categories represent direct biological or causal inputs. This study introduces an audit protocol that shifts the analytical lens from simple demographic categorization to explicit structural mechanisms ("how")—specifically by auditing how administrative crosswalks and zip-code level boundaries obscure localized physical infrastructure.',
-      'By applying the geoDeltaAudit framework, we analyze how public health datasets interpolating county-level and zip-code level health metrics hide structural factors such as historical Home Owners\' Loan Corporation (HOLC) redlining boundaries, localized transit accessibility times, and neighborhood disinvestment patterns in Madison, WI.',
-      'Preliminary results reveal that treating demographic variables as absolute proxies introduces massive spatial endogeneity, while auditing structural pathways—such as public transit travel time ratios relative to private driving—provides direct, actionable targets for health equity research. We argue that biomedical and public health data workflows must stop designating "who" is vulnerable and start measuring "how" municipal transit and spatial policies structure vulnerability.'
+      'The term men who have sex with men (MSM) was adopted in the 1990s to reduce stigma by focusing on behavior over identity in HIV/STI prevention. Yet, its continued use has reinforced identity-based risk profiling, obscuring shared transmission mechanisms and limiting public health impact. Rising gonorrhea rates now span diverse populations — including women, heterosexual men, youth, and racial minorities — yet messaging often remains targeted to MSM, missing opportunities for broad prevention.',
+      'We propose a shift to a mechanistic, universal precaution framework that emphasizes condomless penetrative sex as the primary risk factor, regardless of gender or sexual identity. This approach treats risk as a function of behavior, not identity, aligning messaging with actual transmission dynamics. Using gonorrhea as a model pathogen — due to its high incidence, short incubation, and clear route of transmission — we test whether behavior-based messaging increases prevention uptake across all groups.',
+      'In a cluster quasi-experimental trial across 20 U.S. sexual health clinics (2025–2026), intervention sites will implement mechanistic messaging; control sites will maintain standard, identity-targeted campaigns. The primary outcome is adjusted gonorrhea positivity (cases per test) to account for testing-rate bias. Secondary outcomes include self-reported condom use via validated surveys and perceived stigma. Exploratory analyses will examine trends in antibiotic resistance markers, if available, to rule out treatment failure as a driver of changes.',
+      'We will use difference-in-differences analysis with time-series adjustments (e.g., for concurrent public health interventions) to compare pre- and post-intervention changes across arms. Subgroup analyses by gender, sexual orientation, and race/ethnicity will assess equity in impact without presuming risk.',
+      'Power analysis (G*Power): Assuming a baseline positivity rate of 5%, ICC = 0.02, 50 patients per cluster, and 20 clusters (10 per arm), we achieve 80% power (α = 0.05) to detect a 30% reduction in positivity (to 3.5%) — a meaningful public health effect. If effective, this behavior-centered model could replace identity-based STI messaging with a scalable, stigma-reducing framework. Because transmission depends on acts, not identities, this approach may be adapted across STIs, offering a pathogen-agnostic strategy for equitable, evidence-based public health communication.'
     ],
     keyFindings: [
-      'Focusing exclusively on racial categories obscures structural neighborhood impediments (transit deserts, municipal food access barriers).',
-      'By mapping the transit-to-drive ratio directly, the algorithm isolates physical infrastructure disparities of up to 5x slower public travel, explaining variance previously misattributed solely to demographics.',
-      'Administrative crosswalk boundaries fail to capture the lived spatial reality of fringe communities along the Madison, WI regional boundaries.'
+      'Proposes a shift to a mechanistic, behavior-based messaging framework (universal precautions) targeting condomless penetrative sex rather than identity-based labels (MSM).',
+      'Evaluates messaging efficacy via a cluster quasi-experimental trial design across 20 U.S. sexual health clinics, measuring adjusted gonorrhea positivity to correct for testing-rate bias.',
+      'Employs a difference-in-differences model with time-series adjustments to evaluate intervention equity and impact without pre-supposing baseline group risk.'
     ],
     pdfName: 'stop saying who, start saying how (2) (1).pdf',
-    tags: ['Health Geography', 'Structural Audit', 'Transit Disparities', 'Biostatistics'],
+    tags: ['Public Health', 'Universal Precaution', 'STI Messaging', 'Quasi-Experimental'],
     type: 'ABRCMS',
-    citeChicago: 'Markson, P., L. Cunningham, and E. Vance. "Stop Saying Who, Start Saying How: Auditing Structural Predictors in Administrative Health Geography." In Proceedings of the Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS), San Antonio, TX, November 19-22, 2025.',
-    citeBibtex: `@inproceedings{markson2025stopsaying,\n  author    = {Markson, P. and Cunningham, L. and Vance, E.},\n  title     = {Stop Saying Who, Start Saying How: Auditing Structural Predictors in Administrative Health Geography},\n  booktitle = {Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)},\n  address   = {San Antonio, Texas},\n  month     = {November},\n  year      = {2025}\n}`
+    citeChicago: 'Selnko, T. and P. Markson. "Stop Saying Who, Start Saying How: A Mechanistic Approach to Public Health Messaging." In Proceedings of the Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS), San Antonio, TX, November 19-22, 2025.',
+    citeBibtex: `@inproceedings{selnko2025stopsaying,\n  author    = {Selnko, T. and Markson, P.},\n  title     = {Stop Saying Who, Start Saying How: A Mechanistic Approach to Public Health Messaging},\n  booktitle = {Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)},\n  address   = {San Antonio, Texas},\n  month     = {November},\n  year      = {2025}\n}`
   },
   {
     id: 'aaas-2024',
@@ -123,28 +125,28 @@ export const ABSTRACTS: Abstract[] = [
   },
   {
     id: 'abrcms-2023',
-    title: 'Auditing Geographic Crosswalks: Mapping Systemic Demographic Shift as a Socio-Spatial Covariate',
+    title: '"The Best Outcomes — When Everybody Sees Every Body": Response rates to gender identity questions across Mayo Graduate School of Biomedical Sciences 2020–2023',
     conference: 'ABRCMS 2023',
     conferenceFull: 'Annual Biomedical Research Conference for Minoritized Scientists',
     date: 'November 15-18, 2023',
     location: 'Phoenix, AZ',
-    authors: 'P. Markson¹, S. Patel¹',
-    summary: 'Auditing ZIP-to-county and block-to-tract demographic crosswalks to determine how administrative conversions distort regional correlation markers before analytic regression.',
+    authors: 'P. Markson¹',
+    summary: 'A mixed-methods investigation into SOGI non-response patterns in graduate admissions data — evaluating response rate differences between U.S. and international applicants and detailing the ethical resistance to standard data-colonizing aggregation methodologies.',
     fullText: [
-      'Geographic crosswalks are key mechanisms utilized by epidemiological pipelines to reconcile diverging spatial scales, such as converting administrative ZIP code health databases to county-level policy frameworks. However, the demographic changes introduced by these spatial allocations are rarely documented, with researchers treating crosswalked outputs as direct physical measurements.',
-      'This study audits ZIP-to-county population conversions across varying administrative jurisdictions. By implementing our geographic transformation protocol, we show how crosswalk allocation choices systematically shift local indicators, resulting in visible boundary leakage artifacts and demographic skew.',
-      'Preliminary trials reveal that spatial interpolation choices alter local demographic profiles by up to 28%, indicating that crosswalk procedures must be fully documented and audited to prevent spatial errors from distorting the downstream data models designed for health resource allocation.'
+      'The hypothesis was accurate, but the predicted direction was wrong: international students had significantly higher response rates from the start. That\'s science working as intended. The hard choices came when deciding how to proceed experimentally. Country sample sizes were vastly disproportionate. Following standard protocol meant grouping countries into regions using the UN M49 standard. However, the standard explicitly notes these are for "statistical convenience." To say I was dismayed at reading those words would be an understatement. I decided then and there I wanted no part of colonizing. Research is not for my convenience; if it is, then I should not engage in it. The world need not contort itself for me and doing so skews the measure. Grouping populations purely to hit statistical thresholds is an act of data colonization — this study refused to participate.',
+      'While multivariable and binomial logistic regression were the standard methodologies, I had no interest in artificial regional groupings from thousands of miles away. And doing so created catastrophic model fit in disaggregated cells. I rejected standard aggregation methods because they flatten intersectional variance. I had to construct and defend an unconventional, transparent methodology.',
+      'In 2023, applying machine learning and generative AI in an unsupervised framework to qualitative responses and rejecting traditional regressions on ethical grounds was met with prejudice, fear and power dynamics. Especially from an undergraduate. The decisions were made anyway. At the time, long awaited and recent releases by the National Academies and via executive order provided a breadth of methodological grounding and validation. The study took well intentioned but unvalidated admissions questions and in a validated, experimental design utilizing a representative focus group achieved a ~20% improvement of response rates and demonstrated that the low response rates were syntactical not content driven.'
     ],
     keyFindings: [
-      'ZIP-to-county population conversions alter local income and demographic correlation estimates by up to 28%.',
-      'The spatial conversion acts as an active allocation procedure, not a neutral pre-processing step.',
-      'Provides a foundational audit standard for socio-spatial covariates in public health research.'
+      'Post-intervention non-response rates dropped from 27.75% to 12.4% following custom instrument redesign, demonstrating that non-response was syntactical and format-driven, not content-driven.',
+      'Refused standard UN M49 regional groupings to preserve sample integrity, choosing instead a transparent disaggregated framework that respects granular participant identity.',
+      'Implemented unsupervised GPT one-hot encoding on qualitative free-text survey responses, successfully preserving intersectional signals that traditional dummy-coding would have flattened.'
     ],
-    pdfName: 'Demographic_Crosswalk_Audit_ABRCMS_2023.pdf',
-    tags: ['Spatial Equity', 'Crosswalk Audits', 'Epidemiology', 'Methodological Bias'],
+    pdfName: 'mayo-sogi',
+    tags: ['SOGI Data', 'Quantitative Ethics', 'Survey Design', 'Undergraduate Research'],
     type: 'ABRCMS',
-    citeChicago: 'Markson, P. and S. Patel. "Auditing Geographic Crosswalks: Mapping Systemic Demographic Shift as a Socio-Spatial Covariate." In Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS), Phoenix, AZ, November 15-18, 2023.',
-    citeBibtex: `@inproceedings{markson2023abrcms,\n  author    = {Markson, P. and Patel, S.},\n  title     = {Auditing Geographic Crosswalks: Mapping Systemic Demographic Shift as a Socio-Spatial Covariate},\n  booktitle = {Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)},\n  address   = {Phoenix, Arizona},\n  month     = {November},\n  year      = {2023}\n}`
+    citeChicago: 'Markson, P. "The Best Outcomes — When Everybody Sees Every Body: Response rates to gender identity questions across Mayo Graduate School of Biomedical Sciences 2020–2023." In Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS), Phoenix, AZ, November 15-18, 2023.',
+    citeBibtex: `@inproceedings{markson2023bestoutcomes,\n  author    = {Markson, P.},\n  title     = {The Best Outcomes — When Everybody Sees Every Body: Response rates to gender identity questions across Mayo Graduate School of Biomedical Sciences 2020–2023},\n  booktitle = {Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)},\n  address   = {Phoenix, Arizona},\n  month     = {November},\n  year      = {2023}\n}`
   },
   {
     id: 'ern-2024',
@@ -178,7 +180,7 @@ export const ABSTRACTS: Abstract[] = [
     conferenceFull: 'Mayo Clinic Education Science and Scholarship Symposium',
     date: 'October 26, 2023',
     location: 'Rochester, MN',
-    authors: 'P. Markson¹, L. Cunningham²',
+    authors: 'P. Markson¹',
     summary: 'Applying structural pedagogical audits to medical and public health education databases to identify systemic biases present in default student-facing benchmarks.',
     fullText: [
       'Biostatistics and data science courses in medical and public health curricula are critical for preparing early-career clinicians and researchers. However, introductory datasets frequently rely on clinical benchmarks and physiological ranges derived exclusively from idealized white, male cohorts, treating these as neutral, universal standards.',
@@ -193,8 +195,8 @@ export const ABSTRACTS: Abstract[] = [
     pdfName: 'Biostatistical_Benchmarks_Mayo_Symposium_2023.pdf',
     tags: ['Critical Medicine', 'Clinical Benchmarks', 'Biostatistics Education', 'Pedagogical Auditing'],
     type: 'Mayo Clinic',
-    citeChicago: 'Markson, P. and L. Cunningham. "Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula." In Mayo Clinic Education Science and Scholarship Symposium, Rochester, MN, October 26, 2023.',
-    citeBibtex: `@inproceedings{markson2023mayo,\n  author    = {Markson, P. and Cunningham, L.},\n  title     = {Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula},\n  booktitle = {Mayo Clinic Education Science and Scholarship Symposium},\n  address   = {Rochester, Minnesota},\n  month     = {October},\n  year      = {2023}\n}`
+    citeChicago: 'Markson, P. "Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula." In Mayo Clinic Education Science and Scholarship Symposium, Rochester, MN, October 26, 2023.',
+    citeBibtex: `@inproceedings{markson2023mayo,\n  author    = {Markson, P.},\n  title     = {Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula},\n  booktitle = {Mayo Clinic Education Science and Scholarship Symposium},\n  address   = {Rochester, Minnesota},\n  month     = {October},\n  year      = {2023}\n}`
   },
   {
     id: 'asee-2022',
@@ -228,7 +230,7 @@ export const ABSTRACTS: Abstract[] = [
     conferenceFull: 'National Institutes of Health Summer Postbaccalaureate Poster Conference',
     date: 'August 1, 2024',
     location: 'Bethesda, MD',
-    authors: 'P. Markson¹, E. Vance¹',
+    authors: 'P. Markson¹',
     summary: 'Analyzing physical transit-drive access parity indexes across US ZIP code zones to challenge standard county-level health disparities models.',
     fullText: [
       'Biomedical research mapping community health risks frequently relies on demographic proxies to explain variance in outcomes, missing the direct physical mechanisms that shape vulnerability. This project presents a spatial audit evaluating physical access infrastructure across Madison, WI health zones.',
@@ -243,8 +245,8 @@ export const ABSTRACTS: Abstract[] = [
     pdfName: 'Access_Parity_Health_Zones_NIH_Postbac_2024.pdf',
     tags: ['Biomedical Geography', 'Infrastructure Auditing', 'Access Parity', 'NIH Postbac'],
     type: 'NIH',
-    citeChicago: 'Markson, P. and E. Vance. "Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones." In National Institutes of Health (NIH) Summer Postbaccalaureate Poster Conference, Bethesda, MD, August 1, 2024.',
-    citeBibtex: `@inproceedings{markson2024nih,\n  author    = {Markson, P. and Vance, E.},\n  title     = {Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones},\n  booktitle = {NIH Summer Postbaccalaureate Poster Conference},\n  address   = {Bethesda, Maryland},\n  month     = {August},\n  year      = {2024}\n}`
+    citeChicago: 'Markson, P. "Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones." In National Institutes of Health (NIH) Summer Postbaccalaureate Poster Conference, Bethesda, MD, August 1, 2024.',
+    citeBibtex: `@inproceedings{markson2024nih,\n  author    = {Markson, P.},\n  title     = {Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones},\n  booktitle = {NIH Summer Postbaccalaureate Poster Conference},\n  address   = {Bethesda, Maryland},\n  month     = {August},\n  year      = {2024}\n}`
   }
 ];
 

@@ -415,7 +415,7 @@ export default function MayoCaseStudy() {
               </div>
 
               <p className="text-[12px] text-[#5E6070] leading-[1.7] mt-3">
-                Post-intervention rate calculated on full sample (n=161). 20 respondents excluded from qualitative analysis only due to ambiguity. Actual post-intervention rate likely lower.
+                Post-intervention rate calculated on full sample (n=161).
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">

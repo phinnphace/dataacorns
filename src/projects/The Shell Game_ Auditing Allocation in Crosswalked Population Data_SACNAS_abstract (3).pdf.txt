@@ -1,0 +1,26 @@
+The Shell Game: Auditing Allocation in Crosswalked Population Data 
+Phinn Markson¹ 1 Translational Data Analytics Institute, The Ohio State University, Columbus, OH, USA 
+ 
+Geographic crosswalking, commonplace in population data workflows, is often described as 
+harmonization of datasets across boundary systems. In practice, crosswalks allocate 
+observations between administrative geographies altering the analytic sample while preserving 
+the variable name. This work introduces two R packages designed to quantify perturbation (ΔX) 
+introduced by crosswalk allocation.The first, shellgame,  introduces a conceptual framework and 
+audit protocol for documenting crosswalk assumptions and evaluating how allocation alters the 
+analytic sample. The second, geoDeltaAudit, quantifies perturbation, ΔX(VAR), across allocation 
+steps, making crosswalk-induced sample change measurable. 
+The demonstration workflow defines geographic membership using Census relationship files 
+and allocates ZIP-level observations to counties using the HUD USPS ZIP–County crosswalk 
+(TOT_RATIO). Development testing additionally evaluates an IPUMS NHGIS block-to-tract 
+interpolation crosswalk derived from block-level geographic relationships. Preliminary results 
+demonstrate measurable perturbation introduced solely through allocation choices prior to 
+statistical analysis. These findings indicate that crosswalk transformations should be treated as 
+allocation procedures and support the use of auditing tools to evaluate crosswalk assumptions 
+in population data workflows. 
+Allocated outputs imputed via crosswalks are treated as direct measurements. This is the shell 
+game. The variable remains the same but the underlying sample has changed. Methodological 
+artifacts conflate with observations. This structured uncertainty disproportionately impacts 
+boundary communities, yet remains unquantified in standard workflows. shellgame and 
+geoDeltaAudit make these transformations measurable, enabling analysts to document how 
+crosswalk choices shape results used in funding, resource allocation, and policy implementation 
+----------------Page (0) Break----------------

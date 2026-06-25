@@ -1,0 +1,368 @@
+Table of Contents: 
+I.     Appendix A 
+   Methodological    Deconstruction    
+*The Consultants name has been redacted for privacy and professional courtesy. The focus of this 
+study is not either of us personally, but looks at larger issues that fall on each of us and the world. 
+ 
+II             Appendix B 
+   Table 1: Mean   and  Standar d De viation  of Flor al Featur es  by Species  (Summary    
+Stats     from  initial ED A)  
+○ Table 1: Mean   and  Standar d De viation  of Flor al Featur es  by Species  
+○  Figure 1: Pairwise  scatterplots  
+○ Figure 2
+: 
+Scree  Plot  of Principal  Components
+ 
+○ Table 3: Contingency   Table  of K-Means   Cluster  Assignments   vs. Actual 
+Species       Labels  
+ 
+ 
+ 
+ 
+III         Appendix   C: Consultant   Output  & Diagnostics  (R aw logs  from  script) 
+Logistic  Regression  W arning  Logs  
+Model  training  and  testing  warning  logs   
+ 
+Hyper link s to client  and  consultants  respecti ve rmd  and  pdf/html   outputs,  and  
+pr esentations.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (0) Break----------------
+ 
+Appendix A:  
+Methodological Deconstruction 
+ 
+Analysis Step   Consultant Approach 
+(What Was Done) 
+Why It Was 
+Problematic 
+What Should Be Done 
+Difference Testing  3 Linear Regressions 
+(Sepal Length, Petal 
+Length, Petal W idth)
+ 
+Conflated classification 
+(regression) with 
+inference (ANOVA); 
+omitted the overlapping 
+variable (Sepal W idth); 
+no multiple comparison 
+correction. 
+MANOVA followed by 
+protected ANOVAs & 
+Tukey HSD to identify 
+specific group 
+differences.
+ 
+Dimensionality        Regression on PC1 vs. 
+Species 
+Circular reasoning; tests 
+the summary statistic 
+against the groups used 
+to create it. 
+Use PCA for 
+visualization/EDA only, 
+not inferential testing of 
+known labels. 
+Classification         Multinomial Logistic 
+Regression 
+Ignored "complete 
+separation" warnings; 
+presented a broken 
+model as valid; used a 
+non-random train/test 
+split. 
+Linear Discriminant 
+Analysis (LDA) or 
+Penalized Logistic 
+Regression to handle 
+separation. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (1) Break----------------
+ 
+Appendix   B:  Exploratory  Data  Analysis  
+Table  1: Mean  and Standard  Deviation  of Floral  Features  by  Species  
+ 
+ 
+Species  Sepal 
+Length_
+ 
+Mean
+ 
+Sepal.
+ 
+Length
+_
+ 
+SD
+ 
+Sepal.
+ 
+W idth
+_
+ 
+Mean
+ 
+Sepal.
+ 
+W idth
+_
+ 
+SD
+ 
+Petal.
+ 
+Length
+_
+ 
+Mean
+ 
+Petal.
+ 
+Length
+_
+ 
+SD
+ 
+Petal.
+ 
+W idth
+_
+ 
+Mean
+ 
+          Petal
+ 
+        
+W idth_
+ 
+           SD
+ 
+Setosa       5.01   0.35   3.43   0.38   1.46   0.17   0.25       0.11 
+Versicolor      5.94   0.52   2.77   0.31   4.26   0.47   1.33       0.20 
+Virginica      6.59   0.64   2.97   0.32   5.55   0.55   2.03       0.27 
+ 
+Figure 1: 
+Pairwise scatterplots visually highlighting the relationship between features (Petal length and width and 
+sepal length and width).
+ 
+. 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (2) Break----------------
+ 
+Figure 2. Scree Plot of Principal Components 
+Line plot of eigenvalues showing the variance explained by each component. The elbow after PC2 suggests a 
+two-dimensional solution is appropriate.
+ 
+ 
+ 
+ 
+Table 3: Contingency Table of K-Means Cluster Assignments vs. Actual Species Labels 
+This  table compar  es  the clusters gener ated  by K-means   (k=3)  with  the true  species  labels  in the Iris dataset . Each  cell 
+represents  the count  of observ ations  falling  into the intersection  of a given  cluster  and  species.  Diagonal   dominance   
+suggests  strong  agreement   betw een  unsupervised    clustering  and  gr ound  truth class labels. 
+ 
+ 
+ Table 3: Contingency Table – K-means Clusters vs. Species 
+Labels 
+Setosa        versicolor       virginica 
+0             48             14  
+0              2            36  
+50               0             0 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (3) Break----------------
+ 
+ 
+Appendix C: Consultant   Output  & Diagnostics  
+● 
+Logistic Regression Warning Logs: Raw output generated from the consultant's 
+code demonstrating model non-convergence.  
+# Multinomial  Logistic  Regression  
+ 
+```{r}  
+logistic_model   <-  vglm(  
+  Species  ~ Sepal.Length   + Sepal.W idth + Petal.Length  + Petal.W idth,  
+  family  = multinomial,    
+  data  = iris 
+) 
+Warning  :2 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :13 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :22 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :34 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :39 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :41 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :47 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :50 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :54 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :59 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :63 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :78 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :91 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :96 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+----------------Page (4) Break----------------
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :97 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :some  quantities  such  as z, residuals,  SEs may  be  inaccurate  due to conver gence  at a 
+half-step 
+            predict_class  
+             setosa  versicolor  virginica  
+  setosa          50           0         0 
+  versicolor       0         49          1 
+  virginica        0          1        49  
+ 
+predict_probs  <-  predict(logistic_model,   type  = "response")  
+predict_class  <-  colnames(predict_probs)[apply(predict_probs,      1, which.max)]  
+ 
+table(iris$Species,  predict_class)  
+``` 
+ 
+Model  training  and testing warning  logs   
+# Training and Test Split 
+ 
+```{r}  
+test_index  <-  seq(1,  150,  by  = 3) 
+ 
+train <-  iris[-test_index,  ] 
+test  <-  iris[test_index,  ] 
+ 
+logistic_train  <-  vglm(  
+----------------Page (5) Break----------------
+  Species  ~ Sepal.Length   + Sepal.W idth + Petal.Length  + Petal.W idth,  
+  family  = multinomial,    
+  data  = train 
+) 
+ 
+predict_probs  <-  predict(logistic_train,  newdata  = test, type  = "response")  
+predict_class  <-  colnames(predict_probs)[apply(predict_probs,      1, which.max)]  
+ 
+table(test$Species,  predict_class)  
+ 
+ 
+ 
+ 
+``` 
+ 
+Warning  :1 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :5 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :11 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :18 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :24 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :28 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :33 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :34 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :38 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :40 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :42 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :52 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :61 diagonal  elements  of the working  weights  variable  'wz' have  been  replaced  by  
+1.819e-12  
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+----------------Page (6) Break----------------
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :fitted probabilities  numerically  0 or 1 occurred  
+Warning  :fitted values  close to 0 or 1 
+Warning  :some  quantities  such  as z, residuals,  SEs may  be  inaccurate  due to conver gence  at a 
+half-step 
+            predict_class  
+             setosa  versicolor  virginica  
+  setosa          17           0         0 
+  versicolor       0         17          0 
+  virginica        0          1        15  
+ 
+   
+ 
+ 
+HYPERLINKS to rmd & PDFoutputs 
+ 
+● Consultant’ s full RMD  and PDF  Yaml Output  
+● Clients initial rmd  & supplemental   reanalysis  rmd  
+●  Consultant_RedactedPresentation 
+● Txt of Consultants  silenced  regression  and model  warnings  
+ 
+ 
+----------------Page (7) Break----------------

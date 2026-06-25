@@ -1,20 +1,10 @@
 import fs from 'fs';
+import path from 'path';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const pdf = require('pdf-parse');
+console.log('pdf import is:', typeof pdf, pdf);
 
 async function extract() {
-  const files = [
-    './src/projects/MarksonP_Iris_CaseStudy_Final2025.pdf',
-    './src/projects/Consulting_Final_ProjectRedacted.pdf'
-  ];
-  for (const f of files) {
-    if (fs.existsSync(f)) {
-      const dataBuffer = fs.readFileSync(f);
-      const data = await pdf(dataBuffer);
-      fs.writeFileSync(f + '.txt', data.text);
-      console.log('Extracted', f);
-    }
-  }
 }
 extract();
