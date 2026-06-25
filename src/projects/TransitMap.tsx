@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { MapContainer, TileLayer, GeoJSON, Popup, Marker, useMap } from 'react-leaflet';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import 'leaflet/dist/leaflet.css';
-import { Layers, Map as MapIcon, Info, Filter, AlertTriangle, CheckCircle, Database, ShoppingCart } from 'lucide-react';
+import { Layers, Map as MapIcon, Info, Filter, AlertTriangle, CheckCircle, Database, ShoppingCart, ExternalLink, Github } from 'lucide-react';
 import * as d3Scale from 'd3-scale';
 import * as d3ScaleChromatic from 'd3-scale-chromatic';
 
@@ -253,11 +253,24 @@ const VulnerabilityDashboard: React.FC = () => {
               methodology updates, and future iterations. You can add or edit content here to provide context 
               before users interact with the data dashboard below.
             </p>
-            <p className="mt-4">
-              <a href="https://github.com/phinnphace/MVP-Food-access-county-tree-update_test_1.02" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-medium">
-                View the project repository on GitHub
+            <div className="flex flex-wrap items-center gap-4 mt-6">
+              <a 
+                href="https://tinyurl.com/MappingFood" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-stone-100 hover:bg-stone-800 transition-colors text-xs font-semibold tracking-wider uppercase rounded-md shadow-sm"
+              >
+                Launch R Shiny Dashboard <ExternalLink size={14} />
               </a>
-            </p>
+              <a 
+                href="https://github.com/phinnphace/MVP-Food-access-county-tree-update_test_1.02" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="inline-flex items-center gap-1.5 text-stone-500 hover:text-stone-900 transition-colors text-xs font-medium"
+              >
+                <Github size={14} /> GitHub Repository
+              </a>
+            </div>
             {/* Add more landing page content here as needed */}
           </div>
         </div>
@@ -876,6 +889,19 @@ const VulnerabilityDashboard: React.FC = () => {
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* Footer Area with Github Repo */}
+        <div className="mt-16 pt-8 border-t border-stone-250 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-mono">
+          <span>Mapping Food Vulnerability Project</span>
+          <a 
+            href="https://github.com/phinnphace/MVP-Food-access-county-tree-update_test_1.02" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="flex items-center gap-1.5 text-stone-500 hover:text-stone-900 transition-colors"
+          >
+            <Github size={14} /> GitHub Repository
+          </a>
         </div>
 
       </div> {/* End of App Container padding */}

@@ -73,7 +73,6 @@ const ShellGame: React.FC = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8 text-[10px] font-bold tracking-[0.2em] uppercase text-stone-500">
-            <a href="#abstract" onClick={scrollToSection('abstract')} className="hover:text-stone-900 transition-colors">Abstract</a>
             <a href="#methodology" onClick={scrollToSection('methodology')} className="hover:text-stone-900 transition-colors">Methodology</a>
             <a href="#packages" onClick={scrollToSection('packages')} className="hover:text-stone-900 transition-colors">Packages</a>
             <a href="#impact" onClick={scrollToSection('impact')} className="hover:text-stone-900 transition-colors">Impact</a>
@@ -96,7 +95,6 @@ const ShellGame: React.FC = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="fixed inset-0 z-30 bg-[#F9F8F4] flex flex-col items-center justify-center gap-8 text-xs font-bold tracking-widest uppercase animate-fade-in">
-            <a href="#abstract" onClick={scrollToSection('abstract')} className="hover:text-nobel-gold transition-colors">Abstract</a>
             <a href="#methodology" onClick={scrollToSection('methodology')} className="hover:text-nobel-gold transition-colors">Methodology</a>
             <a href="#packages" onClick={scrollToSection('packages')} className="hover:text-nobel-gold transition-colors">Packages</a>
             <a href="#impact" onClick={scrollToSection('impact')} className="hover:text-nobel-gold transition-colors">Impact</a>
