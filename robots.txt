@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dataacorns.com/sitemap.xml
+
+# Automated discovery by search engines is welcome.
+# Each knowledge product within Data Acorns has its own
+# licensing and attribution requirements.
+# Please respect the license accompanying each artifact.
