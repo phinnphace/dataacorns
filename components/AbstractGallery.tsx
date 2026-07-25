@@ -10,6 +10,7 @@ interface Abstract {
   date: string;
   location: string;
   authors: string;
+  institutions: string;
   summary: string;
   fullText: string[];
   keyFindings: string[];
@@ -24,11 +25,12 @@ export const ABSTRACTS: Abstract[] = [
   {
     id: 'shell-game-sacnas',
     title: 'The Shell Game: Auditing Allocation in Crosswalked Population Data',
-    conference: 'SACNAS 2025',
-    conferenceFull: 'SACNAS National Diversity in STEM (NDiSTEM) Conference',
-    date: 'October 23-25, 2025',
-    location: 'San Juan, Puerto Rico',
-    authors: 'P. Markson¹, J. Rodriguez², S. Patel¹ (*Corresponding Author)',
+    conference: 'SACNAS 2026',
+    conferenceFull: 'Society for the Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS)',
+    date: 'October 29-31, 2026',
+    location: 'Long Beach, California',
+    authors: 'P. Markson¹, K.Rao²',
+    institutions: '¹The Ohio State University, Columbus, OH, USA | ²The Ohio State University, Columbus, OH, USA',
     summary: 'A novel framework and audit protocol for documenting boundary crosswalk assumptions and evaluating how geographic allocation alters the target analytic sample.',
     fullText: [
       'Geographic crosswalking, which is commonplace in population data workflows, is often described as the simple harmonization of datasets across diverging boundary systems. In practice, crosswalks allocate observations between administrative geographies, fundamentally altering the analytical sample while preserving the variable name. This work introduces a standardized audit protocol designed to track and quantify the sample-integrity perturbation (ΔX) introduced by crosswalk-induced transformations.',
@@ -40,11 +42,11 @@ export const ABSTRACTS: Abstract[] = [
       'Measurable perturbation is introduced solely by spatial allocation choices prior to any statistical regression or modeling.',
       'MAUP (Modifiable Areal Unit Problem) errors disproportionately impact boundary-crossing and rural-urban fringe communities.'
     ],
-    pdfName: 'The Shell Game_ Auditing Allocation in Crosswalked Population Data_SACNAS_abstract (3).pdf',
+    pdfName: '',
     tags: ['Crosswalk Audit', 'geoDeltaAudit', 'Population Data', 'Spatial Equity'],
     type: 'SACNAS',
-    citeChicago: 'Markson, P., J. Rodriguez, and S. Patel. "The Shell Game: Auditing Allocation in Crosswalked Population Data." In Proceeding of the SACNAS National Diversity in STEM (NDiSTEM) Conference, San Juan, Puerto Rico, October 23-25, 2025.',
-    citeBibtex: `@inproceedings{markson2025shell,\n  author    = {Markson, P. and Rodriguez, J. and Patel, S.},\n  title     = {The Shell Game: Auditing Allocation in Crosswalked Population Data},\n  booktitle = {SACNAS National Diversity in STEM Conference},\n  address   = {San Juan, Puerto Rico},\n  month     = {October},\n  year      = {2025}\n}`
+    citeChicago: 'Markson, P., Rao, K. "The Shell Game: Auditing Allocation in Crosswalked Population Data." SACNAS Annual National Conference, Long Beach, California October 29-31, 2026.',
+    citeBibtex: `@inproceedings{markson2026shell,\n  author    = {Markson, P. and Rao, K.},\n  title     = {The Shell Game: Auditing Allocation in Crosswalked Population Data},\n  booktitle = {SACNAS National Diversity in STEM Conference},\n  address   = {San Juan, Puerto Rico},\n  month     = {October},\n  year      = {2025}\n}`
   },
   {
     id: 'stop-saying-who',
@@ -54,204 +56,41 @@ export const ABSTRACTS: Abstract[] = [
     date: 'November 19-22, 2025',
     location: 'San Antonio, TX',
     authors: 'T. Selnko¹, P. Markson²',
-    summary: 'A cluster quasi-experimental trial proposing a shift from identity-based risk profiling (MSM) to a mechanistic, universal precaution framework for public health messaging.',
+    institutions: '¹Mailman School of Public Health, Columbia University, New York, NY, USA | ²Translational Data Analytics Institute, The Ohio State University, Columbus, OH, USA',
+    summary: 'A proposed shift from identity-based risk profiling in HIV/STI public health messaging to a behavior-centered, mechanistic framework emphasizing condomless penetrative sex.',
     fullText: [
       'The term men who have sex with men (MSM) was adopted in the 1990s to reduce stigma by focusing on behavior over identity in HIV/STI prevention. Yet, its continued use has reinforced identity-based risk profiling, obscuring shared transmission mechanisms and limiting public health impact. Rising gonorrhea rates now span diverse populations — including women, heterosexual men, youth, and racial minorities — yet messaging often remains targeted to MSM, missing opportunities for broad prevention.',
       'We propose a shift to a mechanistic, universal precaution framework that emphasizes condomless penetrative sex as the primary risk factor, regardless of gender or sexual identity. This approach treats risk as a function of behavior, not identity, aligning messaging with actual transmission dynamics. Using gonorrhea as a model pathogen — due to its high incidence, short incubation, and clear route of transmission — we test whether behavior-based messaging increases prevention uptake across all groups.',
       'In a cluster quasi-experimental trial across 20 U.S. sexual health clinics (2025–2026), intervention sites will implement mechanistic messaging; control sites will maintain standard, identity-targeted campaigns. The primary outcome is adjusted gonorrhea positivity (cases per test) to account for testing-rate bias. Secondary outcomes include self-reported condom use via validated surveys and perceived stigma. Exploratory analyses will examine trends in antibiotic resistance markers, if available, to rule out treatment failure as a driver of changes.',
-      'We will use difference-in-differences analysis with time-series adjustments (e.g., for concurrent public health interventions) to compare pre- and post-intervention changes across arms. Subgroup analyses by gender, sexual orientation, and race/ethnicity will assess equity in impact without presuming risk.',
-      'Power analysis (G*Power): Assuming a baseline positivity rate of 5%, ICC = 0.02, 50 patients per cluster, and 20 clusters (10 per arm), we achieve 80% power (α = 0.05) to detect a 30% reduction in positivity (to 3.5%) — a meaningful public health effect. If effective, this behavior-centered model could replace identity-based STI messaging with a scalable, stigma-reducing framework. Because transmission depends on acts, not identities, this approach may be adapted across STIs, offering a pathogen-agnostic strategy for equitable, evidence-based public health communication.'
+      'We will use difference-in-differences analysis with time-series adjustments (e.g., for concurrent public health interventions) to compare pre- and post-intervention changes across arms. Subgroup analyses by gender, sexual orientation, and race/ethnicity will assess equity in impact without presuming risk. Power analysis (G*Power): Assuming a baseline positivity rate of 5%, ICC = 0.02, 50 patients per cluster, and 20 clusters (10 per arm), we achieve 80% power (α = 0.05) to detect a 30% reduction in positivity (to 3.5%) — a meaningful public health effect. If effective, this behavior-centered model could replace identity-based STI messaging with a scalable, stigma-reducing framework. Because transmission depends on acts, not identities, this approach may be adapted across STIs, offering a pathogen-agnostic strategy for equitable, evidence-based public health communication.'
     ],
     keyFindings: [
-      'Proposes a shift to a mechanistic, behavior-based messaging framework (universal precautions) targeting condomless penetrative sex rather than identity-based labels (MSM).',
-      'Evaluates messaging efficacy via a cluster quasi-experimental trial design across 20 U.S. sexual health clinics, measuring adjusted gonorrhea positivity to correct for testing-rate bias.',
-      'Employs a difference-in-differences model with time-series adjustments to evaluate intervention equity and impact without pre-supposing baseline group risk.'
+      'Shifts public health and STI messaging from demographic/identity categories to direct transmission behaviors (condomless penetrative sex) as the primary risk factor.',
+      'Proposes a cluster quasi-experimental trial across 20 U.S. sexual health clinics comparing behavior-based mechanistic messaging to identity-targeted campaigns.',
+      'Measures adjusted gonorrhea positivity and self-reported condom use to demonstrate that transmission depends on acts, not identities, offering a pathogen-agnostic framework.'
     ],
-    pdfName: 'stop saying who, start saying how (2) (1).pdf',
-    tags: ['Public Health', 'Universal Precaution', 'STI Messaging', 'Quasi-Experimental'],
+    pdfName: '',
+    tags: ['Health Communication', 'Universal Precaution', 'Epidemiology', 'Stigma Reduction'],
     type: 'ABRCMS',
     citeChicago: 'Selnko, T. and P. Markson. "Stop Saying Who, Start Saying How: A Mechanistic Approach to Public Health Messaging." In Proceedings of the Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS), San Antonio, TX, November 19-22, 2025.',
     citeBibtex: `@inproceedings{selnko2025stopsaying,\n  author    = {Selnko, T. and Markson, P.},\n  title     = {Stop Saying Who, Start Saying How: A Mechanistic Approach to Public Health Messaging},\n  booktitle = {Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)},\n  address   = {San Antonio, Texas},\n  month     = {November},\n  year      = {2025}\n}`
-  },
-  {
-    id: 'aaas-2024',
-    title: 'The Pedagogy of Perfect Separation: A Critical Re-Evaluation of the Iris Dataset in Computational Curricula',
-    conference: 'AAAS 2024',
-    conferenceFull: 'American Association for the Advancement of Science Annual Meeting',
-    date: 'February 15-18, 2024',
-    location: 'Denver, CO',
-    authors: 'P. Markson¹, J. Lee² (*Corresponding Author)',
-    summary: 'A pedagogical and methodological audit of the classical Iris dataset, uncovering how introductory classification pipelines systematically erase empirical complexity.',
-    fullText: [
-      'The Iris dataset is ubiquitous in introductory statistics and machine learning, typically presented as a parable of clean categorical separation. However, a closer examination reveals a more complicated truth: while Iris setosa is distinct, Iris versicolor and Iris virginica overlap significantly. This contradiction reveals how statistical pedagogy systematically erases empirical complexity to preserve the myth of clean, objective boundaries.',
-      'This research presents a critical re-analysis comparing two parallel analytical workflows: one following the standard predictive classification path, and another focusing on an exploratory-diagnostic lens that highlights structural overlap. The divergence in these workflows demonstrates how scientific training determines what analysts see and what they discard.',
-      'By tracing the historical and ideological origins of Fisher\'s taxonomic models, we argue that prioritizing predictive separation over structural mixture risks embedding biased assumptions of absolute classification into modern biostatistical and health science education. We outline an auditing framework for introducing ethical taxonomy and investigative statistics back into STEM classrooms.'
-    ],
-    keyFindings: [
-      'Uncovers structural overlap between Versicolor and Virginica that is often erased by standard machine learning examples.',
-      'Highlights the historical dependency on Fisherian metrics and the ideological origins of classification standards.',
-      'Proposes a new pedagogical protocol for critical data science education that incorporates exploratory complexity and reflexive ethics.'
-    ],
-    pdfName: 'Iris_Pedagogy_Classification_AAAS_2024.pdf',
-    tags: ['Critical Pedagogy', 'Iris Dataset', 'Biostatistics', 'STEM Ethics'],
-    type: 'AAAS',
-    citeChicago: 'Markson, P. and J. Lee. "The Pedagogy of Perfect Separation: A Critical Re-Evaluation of the Iris Dataset in Computational Curricula." In American Association for the Advancement of Science (AAAS) Annual Meeting, Denver, CO, February 15-18, 2024.',
-    citeBibtex: `@inproceedings{markson2024aaas,\n  author    = {Markson, P. and Lee, J.},\n  title     = {The Pedagogy of Perfect Separation: A Critical Re-Evaluation of the Iris Dataset in Computational Curricula},\n  booktitle = {American Association for the Advancement of Science (AAAS) Annual Meeting},\n  address   = {Denver, Colorado},\n  month     = {February},\n  year      = {2024}\n}`
-  },
-  {
-    id: 'asbmb-2023',
-    title: 'Interrogating Quantitative Literacy: Integrating Molecular Biology Pedagogy with Computational Audit Workflows',
-    conference: 'ASBMB 2023',
-    conferenceFull: 'American Society for Biochemistry and Molecular Biology Annual Meeting',
-    date: 'March 25-28, 2023',
-    location: 'Seattle, WA',
-    authors: 'P. Markson¹, S. Patel¹, E. Vance²',
-    summary: 'Evaluating computational data literacy inside biochemistry and molecular science, presenting an academic auditing framework for student-led data pipelines.',
-    fullText: [
-      'Modern biochemistry and molecular biology are increasingly computational, requiring students to engage with massive datasets and complex statistical software. However, curricula often treat these quantitative tools as absolute black boxes, emphasizing procedural calculations over diagnostic integrity.',
-      'This paper outlines a model for student-led quantitative audits integrated directly into biochemistry laboratories. Students apply a custom auditing protocol to their own gel chromatography and expression datasets, tracking how common normalization algorithms introduce artifacts or hide structural biological variance.',
-      'By examining student workflows, we demonstrate that active, critical computational auditing significantly improves quantitative literacy, contextual understanding of biological noise, and investigative skepticism toward automated data classification.'
-    ],
-    keyFindings: [
-      'Standard quantitative normalizations in biochemistry laboratories frequently introduce unquantified calculation artifacts.',
-      'Students with audit-enabled training showed a 40% increase in identifying and correcting data-entry and scaling errors.',
-      'Establishes a curriculum template for integrating quantitative reproducibility protocols into undergraduate molecular life science.'
-    ],
-    pdfName: 'Computational_Data_Literacy_Biochem_ASBMB_2023.pdf',
-    tags: ['Quantitative Literacy', 'Biochemistry Pedagogy', 'Molecular Biology'],
-    type: 'ASBMB',
-    citeChicago: 'Markson, P., S. Patel, and E. Vance. "Interrogating Quantitative Literacy: Integrating Molecular Biology Pedagogy with Computational Audit Workflows." In Discover BMB (ASBMB Annual Meeting), Seattle, WA, March 25-28, 2023.',
-    citeBibtex: `@inproceedings{markson2023asbmb,\n  author    = {Markson, P. and Patel, S. and Vance, E.},\n  title     = {Interrogating Quantitative Literacy: Integrating Molecular Biology Pedagogy with Computational Audit Workflows},\n  booktitle = {Discover BMB - Annual Meeting of the American Society for Biochemistry and Molecular Biology},\n  address   = {Seattle, Washington},\n  month     = {March},\n  year      = {2023}\n}`
-  },
-  {
-    id: 'abrcms-2023',
-    title: '"The Best Outcomes — When Everybody Sees Every Body": Response rates to gender identity questions across Mayo Graduate School of Biomedical Sciences 2020–2023',
-    conference: 'ABRCMS 2023',
-    conferenceFull: 'Annual Biomedical Research Conference for Minoritized Scientists',
-    date: 'November 15-18, 2023',
-    location: 'Phoenix, AZ',
-    authors: 'P. Markson¹',
-    summary: 'A mixed-methods investigation into SOGI non-response patterns in graduate admissions data — evaluating response rate differences between U.S. and international applicants and detailing the ethical resistance to standard data-colonizing aggregation methodologies.',
-    fullText: [
-      'The hypothesis was accurate, but the predicted direction was wrong: international students had significantly higher response rates from the start. That\'s science working as intended. The hard choices came when deciding how to proceed experimentally. Country sample sizes were vastly disproportionate. Following standard protocol meant grouping countries into regions using the UN M49 standard. However, the standard explicitly notes these are for "statistical convenience." To say I was dismayed at reading those words would be an understatement. I decided then and there I wanted no part of colonizing. Research is not for my convenience; if it is, then I should not engage in it. The world need not contort itself for me and doing so skews the measure. Grouping populations purely to hit statistical thresholds is an act of data colonization — this study refused to participate.',
-      'While multivariable and binomial logistic regression were the standard methodologies, I had no interest in artificial regional groupings from thousands of miles away. And doing so created catastrophic model fit in disaggregated cells. I rejected standard aggregation methods because they flatten intersectional variance. I had to construct and defend an unconventional, transparent methodology.',
-      'In 2023, applying machine learning and generative AI in an unsupervised framework to qualitative responses and rejecting traditional regressions on ethical grounds was met with prejudice, fear and power dynamics. Especially from an undergraduate. The decisions were made anyway. At the time, long awaited and recent releases by the National Academies and via executive order provided a breadth of methodological grounding and validation. The study took well intentioned but unvalidated admissions questions and in a validated, experimental design utilizing a representative focus group achieved a ~20% improvement of response rates and demonstrated that the low response rates were syntactical not content driven.'
-    ],
-    keyFindings: [
-      'Post-intervention non-response rates dropped from 27.75% to 12.4% following custom instrument redesign, demonstrating that non-response was syntactical and format-driven, not content-driven.',
-      'Refused standard UN M49 regional groupings to preserve sample integrity, choosing instead a transparent disaggregated framework that respects granular participant identity.',
-      'Implemented unsupervised GPT one-hot encoding on qualitative free-text survey responses, successfully preserving intersectional signals that traditional dummy-coding would have flattened.'
-    ],
-    pdfName: 'mayo-sogi',
-    tags: ['SOGI Data', 'Quantitative Ethics', 'Survey Design', 'Undergraduate Research'],
-    type: 'ABRCMS',
-    citeChicago: 'Markson, P. "The Best Outcomes — When Everybody Sees Every Body: Response rates to gender identity questions across Mayo Graduate School of Biomedical Sciences 2020–2023." In Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS), Phoenix, AZ, November 15-18, 2023.',
-    citeBibtex: `@inproceedings{markson2023bestoutcomes,\n  author    = {Markson, P.},\n  title     = {The Best Outcomes — When Everybody Sees Every Body: Response rates to gender identity questions across Mayo Graduate School of Biomedical Sciences 2020–2023},\n  booktitle = {Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)},\n  address   = {Phoenix, Arizona},\n  month     = {November},\n  year      = {2023}\n}`
-  },
-  {
-    id: 'ern-2024',
-    title: 'Quantifying Spatial Perturbation across Changing Administrative Boundaries with geoDeltaAudit',
-    conference: 'ERN 2024',
-    conferenceFull: 'Emerging Researchers National Conference in STEM',
-    date: 'March 14-16, 2024',
-    location: 'Washington, D.C.',
-    authors: 'P. Markson¹',
-    summary: 'An introduction to the R-based geoDeltaAudit implementation, standardizing variance estimation representing spatial allocation choices in STEM research.',
-    fullText: [
-      'Spatial and demographic audits are critical to ensuring that mathematical and public models reflect authentic socio-spatial conditions. This work presents geoDeltaAudit, a native R package designed to quantify demographic and statistic perturbation (ΔX) across consecutive geographic conversion steps.',
-      'Using US Census Bureau relationship and ZIP-county crosswalk files, the research maps how administrative conversions change local population densities. We outline the analytical equations and package functions constructed to track variance across spatial steps.',
-      'Our goal is to make crosswalk-induced sample changes visible and auditable, giving applied STEM researchers access to robust error bounding tools for spatial mapping pipelines.'
-    ],
-    keyFindings: [
-      'Introduces geoDeltaAudit as a formal spatial diagnostic R software package.',
-      'Tracks demographic perturbation (ΔX) and standardizes scale-sensitivity measures.',
-      'Simplifies complex geo-statistical auditing procedures for undergraduate and early-career STEM researchers.'
-    ],
-    pdfName: 'geoDeltaAudit_Spatial_Perturbation_ERN_2024.pdf',
-    tags: ['geoDeltaAudit', 'Spatial Modeling', 'R Software', 'STEM Research'],
-    type: 'ERN',
-    citeChicago: 'Markson, P. "Quantifying Spatial Perturbation across Changing Administrative Boundaries with geoDeltaAudit." In Emerging Researchers National (ERN) Conference in STEM, Washington, D.C., March 14-16, 2024.',
-    citeBibtex: `@inproceedings{markson2024ern,\n  author    = {Markson, P.},\n  title     = {Quantifying Spatial Perturbation across Changing Administrative Boundaries with geoDeltaAudit},\n  booktitle = {Emerging Researchers National (ERN) Conference in STEM},\n  address   = {Washington, D.C.},\n  month     = {March},\n  year      = {2024}\n}`
-  },
-  {
-    id: 'mayo-2023',
-    title: 'Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula',
-    conference: 'Mayo Symposium 2023',
-    conferenceFull: 'Mayo Clinic Education Science and Scholarship Symposium',
-    date: 'October 26, 2023',
-    location: 'Rochester, MN',
-    authors: 'P. Markson¹',
-    summary: 'Applying structural pedagogical audits to medical and public health education databases to identify systemic biases present in default student-facing benchmarks.',
-    fullText: [
-      'Biostatistics and data science courses in medical and public health curricula are critical for preparing early-career clinicians and researchers. However, introductory datasets frequently rely on clinical benchmarks and physiological ranges derived exclusively from idealized white, male cohorts, treating these as neutral, universal standards.',
-      'This project applies a critical pedagogical audit to standard biostatistical curriculum materials. We examine how treating eugenic-era datasets (such as the Iris classification or early clinical tracking files) as benign pedagogical "neutral ground" can inadvertently reinforce typological beliefs about demographic divergence and clinical variations.',
-      'We present a series of alternative curriculum designs and investigative modules that replace uncritical predictive modeling with reflexive, infrastructure-focused auditing, teaching medical students to interrogate how clinical standards are historically constructed.'
-    ],
-    keyFindings: [
-      'Identifies how introductory biostatistical curricula repeatedly rely on clinical baselines derived from non-representative demographic cohorts.',
-      'Proposes pedagogical design models that teach future medical professionals to look beyond demographic proxies and measure direct structural infrastructure.',
-      'Establishes a critical scholarship framework for medical data education.'
-    ],
-    pdfName: 'Biostatistical_Benchmarks_Mayo_Symposium_2023.pdf',
-    tags: ['Critical Medicine', 'Clinical Benchmarks', 'Biostatistics Education', 'Pedagogical Auditing'],
-    type: 'Mayo Clinic',
-    citeChicago: 'Markson, P. "Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula." In Mayo Clinic Education Science and Scholarship Symposium, Rochester, MN, October 26, 2023.',
-    citeBibtex: `@inproceedings{markson2023mayo,\n  author    = {Markson, P.},\n  title     = {Dismantling Biased Biostatistical Benchmarks: Critical Design Protocols in Health Sciences Curricula},\n  booktitle = {Mayo Clinic Education Science and Scholarship Symposium},\n  address   = {Rochester, Minnesota},\n  month     = {October},\n  year      = {2023}\n}`
-  },
-  {
-    id: 'asee-2022',
-    title: 'Fostering Computational Agency: Project-Based Auditing Workflows for Boundary Crosswalks in Engineering Education',
-    conference: 'ASEE 2022',
-    conferenceFull: 'American Society for Engineering Education Annual Conference & Exposition',
-    date: 'June 26-29, 2022',
-    location: 'Minneapolis, MN',
-    authors: 'P. Markson¹',
-    summary: 'A study on teaching spatial computational thinking through real-world geographic relationship files, providing engineering undergraduates with structural audit toolsets.',
-    fullText: [
-      'Undergraduate engineering and spatial analytics programs require dynamic project-based curricula to bridge the gap between abstract programming concepts and real-world infrastructure problems. This paper presents a pedagogical case study evaluating the implementation of spatial auditing workshops within engineering design curricula.',
-      'Undergraduates were tasked with evaluating municipal water supply and transit boundaries using US Census and USPS crosswalk directories. Applying spatial-audit protocols, students documented how geographical boundary harmonization acts as a high-stakes engineering allocation decision.',
-      'Results indicate that shifting from passive programming exercises to active project-based spatial audits significantly increases student ownership, computational self-efficacy, and systems-level critical auditing capacity.'
-    ],
-    keyFindings: [
-      'Shifting to project-based spatial auditing increases engineering student motivation and systems-level understanding.',
-      'Students actively design diagnostic tools for evaluating boundary discrepancies rather than blindly accepting raw dataset crosswalks.',
-      'Provides a complete syllabus model for spatial engineering and computational policy analysis.'
-    ],
-    pdfName: 'Engineering_Spatial_Agency_ASEE_2022.pdf',
-    tags: ['Computational Agency', 'Engineering Education', 'Spatial Analytics', 'Curriculum Design'],
-    type: 'ASEE',
-    citeChicago: 'Markson, P. "Fostering Computational Agency: Project-Based Auditing Workflows for Boundary Crosswalks in Engineering Education." In American Society for Engineering Education (ASEE) Annual Conference & Exposition, Minneapolis, MN, June 26-29, 2022.',
-    citeBibtex: `@inproceedings{markson2022asee,\n  author    = {Markson, P.},\n  title     = {Fostering Computational Agency: Project-Based Auditing Workflows for Boundary Crosswalks in Engineering Education},\n  booktitle = {American Society for Engineering Education (ASEE) Annual Conference \\& Exposition},\n  address   = {Minneapolis, Minnesota},\n  month     = {June},\n  year      = {2022}\n}`
-  },
-  {
-    id: 'nih-2024',
-    title: 'Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones',
-    conference: 'NIH Summer 2024',
-    conferenceFull: 'National Institutes of Health Summer Postbaccalaureate Poster Conference',
-    date: 'August 1, 2024',
-    location: 'Bethesda, MD',
-    authors: 'P. Markson¹',
-    summary: 'Analyzing physical transit-drive access parity indexes across US ZIP code zones to challenge standard county-level health disparities models.',
-    fullText: [
-      'Biomedical research mapping community health risks frequently relies on demographic proxies to explain variance in outcomes, missing the direct physical mechanisms that shape vulnerability. This project presents a spatial audit evaluating physical access infrastructure across Madison, WI health zones.',
-      'Using the TransitAware mapping engine, we calculate the commute-time ratio between public bus transit and private driving for every residential census block. We then audit zip-code and county administrative boundaries to track how spatial aggregation masks pockets of extreme access disparity.',
-      'Our results demonstrate that public access parity is tightly correlated with regional healthcare accessibility scores, providing an active physical infrastructure variable that explains variance previously misattributed solely to demographic classifications.'
-    ],
-    keyFindings: [
-      'Highlights how public accessibility-to-drive ratios act as direct causal markers for healthcare and community access.',
-      'Audits demographic covariates to prove that spatial aggregation hides infrastructure barriers for underserved residential zones.',
-      'Recommends integrating real-time travel-drive parity scores directly into biostatistical health models.'
-    ],
-    pdfName: 'Access_Parity_Health_Zones_NIH_Postbac_2024.pdf',
-    tags: ['Biomedical Geography', 'Infrastructure Auditing', 'Access Parity', 'NIH Postbac'],
-    type: 'NIH',
-    citeChicago: 'Markson, P. "Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones." In National Institutes of Health (NIH) Summer Postbaccalaureate Poster Conference, Bethesda, MD, August 1, 2024.',
-    citeBibtex: `@inproceedings{markson2024nih,\n  author    = {Markson, P.},\n  title     = {Auditing Demographics vs Infrastructure: Spatial Evaluation of Public Transit Travel-Drive Ratios in Health Zones},\n  booktitle = {NIH Summer Postbaccalaureate Poster Conference},\n  address   = {Bethesda, Maryland},\n  month     = {August},\n  year      = {2024}\n}`
   }
 ];
 
 // High-fidelity rendering of the conference thumbnails inside the cards
-const ConferenceThumbnail = ({ type }: { type: string }) => {
+const ConferenceThumbnail = ({ type, id }: { type: string; id?: string }) => {
+  if (id === 'stop-saying-who') {
+    return (
+      <div className="w-full h-32 bg-stone-100 flex items-center justify-center relative border-b border-stone-200 select-none overflow-hidden">
+        <img 
+          src="/abrcms_2025_official.png" 
+          alt="ABRCMS 2025: Stop Saying Who, Start Saying How" 
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+    );
+  }
   if (type === 'ABRCMS') {
     // Exact visual representation of the uploaded ABRCMS file
     return (
@@ -311,8 +150,8 @@ const ConferenceThumbnail = ({ type }: { type: string }) => {
           backgroundSize: '16px 16px' 
         }}></div>
         
-        <div className="flex-grow flex items-center justify-center gap-2 relative z-10 pt-2">
-          <div className="w-12 h-12 rounded-full relative flex items-center justify-center bg-gradient-to-tr from-teal-500 to-amber-500 p-0.5 shadow-lg">
+        <div className="flex-grow flex items-center justify-start gap-2.5 relative z-10 pt-2 px-1">
+          <div className="w-12 h-12 rounded-full relative flex items-center justify-center bg-gradient-to-tr from-teal-500 to-amber-500 p-0.5 shadow-lg flex-shrink-0">
             <div className="w-full h-full bg-stone-950 rounded-full flex items-center justify-center">
               <svg viewBox="0 0 100 100" className="w-8 h-8 text-amber-500">
                 <polygon points="50,15 55,35 75,30 65,45 85,50 65,55 75,70 55,65 50,85 45,65 25,70 35,55 15,50 35,45 25,30 45,35" fill="currentColor" opacity="0.9" />
@@ -322,16 +161,18 @@ const ConferenceThumbnail = ({ type }: { type: string }) => {
             </div>
           </div>
           
-          <div className="flex flex-col text-left font-serif">
-            <span className="font-extrabold tracking-tight text-white text-base leading-none">SACNAS</span>
-            <span className="font-mono text-[8px] tracking-[0.2em] text-teal-400 uppercase font-bold mt-1">NDiSTEM Conference</span>
-            <span className="text-[7.5px] text-stone-400 font-sans tracking-tight mt-0.5">San Juan, PR</span>
+          <div className="flex flex-col text-left font-serif leading-none">
+            <span className="font-extrabold tracking-tight text-white text-[9.5px] leading-tight max-w-[210px]">
+              Society for the Advancement of Chicanos/Hispanics and Native Americans in Science
+            </span>
+            <span className="font-mono text-[6.5px] tracking-[0.05em] text-teal-400 uppercase font-bold mt-1">National Diversity in STEM</span>
+            <span className="text-[7px] text-stone-400 font-sans tracking-tight mt-0.5">Long Beach, CA</span>
           </div>
         </div>
 
-        <div className="flex justify-between items-center text-[7.5px] font-mono text-teal-500 border-t border-stone-800/60 pt-1">
-          <span>SACNAS // NDiSTEM</span>
-          <span>SJ-PR</span>
+        <div className="flex justify-between items-center text-[7px] font-mono text-teal-500 border-t border-stone-800/60 pt-1">
+          <span className="truncate max-w-[70%]">Society for the Advancement of Chicanos/Hispanics and Native Americans in Science</span>
+          <span>ACCEPTED ABSTRACT</span>
         </div>
       </div>
     );
@@ -549,7 +390,14 @@ const AbstractGallery: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [copiedCite, setCopiedCite] = useState<string | null>(null);
 
-  const filters = ['All', 'SACNAS', 'ABRCMS', 'AAAS', 'ASBMB', 'ERN', 'Mayo Clinic', 'ASEE', 'NIH'];
+  const filters = ['All', 'SACNAS', 'ABRCMS'];
+
+  const getFilterLabel = (filter: string) => {
+    if (filter === 'All') return 'Show All';
+    if (filter === 'SACNAS') return 'Society for the Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS)';
+    if (filter === 'ABRCMS') return 'Annual Biomedical Research Conference for Minoritized Scientists (ABRCMS)';
+    return filter;
+  };
 
   const filteredAbstracts = ABSTRACTS.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -586,18 +434,18 @@ const AbstractGallery: React.FC = () => {
         {/* Filter & Search Bar */}
         <div className="max-w-5xl mx-auto mb-10 flex flex-col md:flex-row gap-4 items-center justify-between border-b border-stone-200 pb-6">
           {/* Tabs */}
-          <div className="flex flex-wrap gap-2 text-xs font-mono font-bold tracking-wider uppercase">
+          <div className="flex flex-wrap gap-2 text-[10px] md:text-xs font-mono font-bold tracking-wider uppercase max-w-3xl">
             {filters.map(filter => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 border transition-all ${
+                className={`px-3 py-2 border transition-all text-left md:text-center ${
                   activeFilter === filter
                     ? 'bg-stone-900 border-stone-900 text-white shadow-sm'
                     : 'bg-white border-stone-200 text-stone-600 hover:border-stone-400 hover:text-stone-950'
                 }`}
               >
-                {filter === 'All' ? 'Show All' : filter}
+                {getFilterLabel(filter)}
               </button>
             ))}
           </div>
@@ -627,7 +475,7 @@ const AbstractGallery: React.FC = () => {
                 className="group flex flex-col bg-white border border-stone-200 hover:border-nobel-gold shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer overflow-hidden p-0"
               >
                 {/* Visual Thumbnail */}
-                <ConferenceThumbnail type={item.type} />
+                <ConferenceThumbnail type={item.type} id={item.id} />
 
                 {/* Content */}
                 <div className="p-6 flex-grow flex flex-col justify-between">
@@ -650,7 +498,7 @@ const AbstractGallery: React.FC = () => {
                   <div className="border-t border-stone-100 pt-4 mt-auto flex items-center justify-between font-mono text-[9px] uppercase tracking-wider">
                     <span className="text-stone-400 font-bold">{item.conferenceFull}</span>
                     <span className="flex items-center gap-1 text-stone-900 font-bold group-hover:translate-x-1 transition-transform">
-                      Read Paper <ChevronRight size={10} />
+                      {(item.type === 'SACNAS' || item.type === 'ABRCMS' || !item.pdfName) ? 'Read Abstract' : 'Read Paper'} <ChevronRight size={10} />
                     </span>
                   </div>
                 </div>
@@ -688,7 +536,9 @@ const AbstractGallery: React.FC = () => {
             >
               {/* Close Button Top Panel */}
               <div className="sticky top-0 bg-[#FBFBFA] z-20 px-6 py-4 border-b border-stone-200 flex justify-between items-center bg-opacity-95 backdrop-blur-sm">
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-[0.2em]">Conference Accepted manuscript</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-[0.2em]">
+                  {selectedAbstract.pdfName ? 'Conference Accepted Manuscript' : 'Conference Accepted Abstract'}
+                </span>
                 <button 
                   onClick={() => setSelectedAbstract(null)} 
                   className="p-1 px-3 border border-stone-200 hover:bg-stone-50 text-stone-400 hover:text-stone-950 transition-all font-mono text-[10px] flex items-center gap-1"
@@ -702,7 +552,7 @@ const AbstractGallery: React.FC = () => {
                 
                 {/* Interactive Logo on Detail panel */}
                 <div className="border border-stone-200 rounded overflow-hidden shadow-sm">
-                  <ConferenceThumbnail type={selectedAbstract.type} />
+                  <ConferenceThumbnail type={selectedAbstract.type} id={selectedAbstract.id} />
                 </div>
 
                 {/* Meta details */}
@@ -723,7 +573,7 @@ const AbstractGallery: React.FC = () => {
                   <div className="text-xs font-mono text-stone-500 border-l border-stone-200 pl-4 py-1 leading-normal">
                     <p className="font-bold text-stone-700">Authors:</p>
                     <p>{selectedAbstract.authors}</p>
-                    <p className="text-[9px] font-light mt-1 italic text-stone-400">¹The Ecoverse Group, University of Wisconsin-Madison | ²Department of Biostatistics</p>
+                    <p className="text-[9px] font-light mt-1 italic text-stone-400">{selectedAbstract.institutions}</p>
                   </div>
                 </div>
 
@@ -767,45 +617,33 @@ const AbstractGallery: React.FC = () => {
                 <div className="space-y-4 border-t border-stone-200 pt-8 pb-12">
                   <div className="flex items-center gap-2 mb-4">
                     <FileText size={16} className="text-stone-400" />
-                    <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-stone-700">Accepted PDF & Citations</h3>
+                    <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-stone-700">
+                      {selectedAbstract.pdfName ? 'Accepted PDF & Citations' : 'Academic Citations'}
+                    </h3>
                   </div>
 
                   {/* Actions row */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Download button */}
-                    <a 
-                      href={`/src/projects/${selectedAbstract.pdfName}`}
-                      download={selectedAbstract.pdfName}
-                      className="flex items-center justify-between p-4 bg-stone-900 hover:bg-stone-800 text-white rounded border border-stone-900 transition-colors shadow"
-                    >
-                      <div className="flex items-center gap-3 text-left">
-                        <div className="p-2 bg-stone-800 text-teal-400 rounded">
-                          <Download size={16} />
+                  {selectedAbstract.pdfName && (
+                    <div className="w-full">
+                      {/* Download button */}
+                      <a 
+                        href={`/${selectedAbstract.pdfName}`}
+                        download={selectedAbstract.pdfName}
+                        className="flex items-center justify-between p-4 bg-stone-900 hover:bg-stone-800 text-white rounded border border-stone-900 transition-colors shadow"
+                      >
+                        <div className="flex items-center gap-3 text-left">
+                          <div className="p-2 bg-stone-800 text-teal-400 rounded">
+                            <Download size={16} />
+                          </div>
+                          <div>
+                            <p className="text-[11px] font-mono leading-none text-stone-400">Accepted Manuscript</p>
+                            <p className="text-[10px] font-bold font-sans mt-1 tracking-tight text-white line-clamp-1">{selectedAbstract.pdfName}</p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-[11px] font-mono leading-none text-stone-400">Accepted Manuscript</p>
-                          <p className="text-[10px] font-bold font-sans mt-1 tracking-tight text-white line-clamp-1">{selectedAbstract.pdfName}</p>
-                        </div>
-                      </div>
-                      <ChevronRight size={14} className="text-stone-400" />
-                    </a>
-
-                    {/* Simulation File Details */}
-                    <div className="p-4 bg-[#F2F1EC] rounded border border-stone-200 flex flex-col justify-between">
-                      <div className="flex justify-between items-start">
-                        <div className="flex flex-col">
-                          <span className="text-[9px] font-mono uppercase text-stone-400">Associated Software</span>
-                          <span className="text-xs font-bold font-sans text-stone-800 mt-1">geoDeltaAudit v1.0.4</span>
-                        </div>
-                        <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 px-1.5 py-0.5 rounded text-[8px] font-mono font-bold uppercase">
-                          Compiled
-                        </span>
-                      </div>
-                      <div className="text-[9px] text-stone-400 italic mt-3 font-mono">
-                        Contains the fully audited spatial-drive ratios for Madison WI.
-                      </div>
+                        <ChevronRight size={14} className="text-stone-400" />
+                      </a>
                     </div>
-                  </div>
+                  )}
 
                   {/* Dynamic Academic Citations Box */}
                   <div className="bg-[#FAF9F5] border border-stone-200 p-4 rounded mt-4 space-y-4">
