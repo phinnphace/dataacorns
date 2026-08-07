@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Database, Layout, Sparkles, Map as MapIcon, BookOpen, Gift, Compass, GraduationCap, ClipboardList, Grid } from 'lucide-react';
+import { ChevronDown, Database, Layout, Sparkles, Map as MapIcon, BookOpen, Gift, Compass, GraduationCap, ClipboardList, Grid, Sliders } from 'lucide-react';
 import LandingPage from './components/LandingPage';
 import ShellGame from './src/projects/ShellGame';
 import TransitAware from './src/projects/TransitAware';
@@ -9,6 +9,7 @@ import IrisCaseStudy from './src/projects/IrisCaseStudy';
 import FreeStuff from './src/projects/FreeStuff';
 import AbstractGallery from './components/AbstractGallery';
 import SurveyDesign from './src/projects/SurveyDesign';
+import The8020Project from './src/projects/The8020Project';
 
 // Projects / Ecoverses list
 const PROJECTS = [
@@ -66,6 +67,13 @@ const PROJECTS = [
     name: 'By Design',
     description: 'Open Source Scripts & Tools',
     icon: Gift,
+    status: 'active'
+  },
+  {
+    id: 'the-80-20',
+    name: 'The 80-20 Project',
+    description: 'ML Validation & Observational Constraints',
+    icon: Sliders,
     status: 'active'
   }
 ];
@@ -304,6 +312,18 @@ const App: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <FreeStuff />
+          </motion.div>
+        )}
+
+        {activeProject === 'the-80-20' && (
+          <motion.div
+            key="the-80-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <The8020Project onBack={() => setActiveProject('landing')} />
           </motion.div>
         )}
       </AnimatePresence>

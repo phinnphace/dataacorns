@@ -48,11 +48,11 @@ export const ECOVERSES: Ecoverse[] = [
     icon: Database,
     terrain: 'forest',
     nestingLayers: {
-      outer: 'The Public Surface: An R package suite (geoDeltaAudit & crosswalkAudit) evaluating spatial data stability.',
-      middle: 'Under the Couch Cushions: Spatial allocation choices introduce measurable noise before regression even occurs.',
-      inner: 'The Join: Boundary-crossing and rural-urban fringe communities lose representation when algorithms guess.'
+      outer: 'The Public Surface: An R package suite (shellgame & geoDeltaAudit) auditing data perturbation across administrative transformations.',
+      middle: 'Under the Couch Cushions: Observations shift to proxied allocations.',
+      inner: 'The Join: Allocation decisions determine counts, counts determine samples and samples determine statistics.'
     },
-    tags: ['R Package', 'Spatial Audit', 'MAUP', 'Crosswalks']
+    tags: ['CRAN Package', 'Spatial Audit', 'MAUP', 'Crosswalks']
   },
   {
     id: 'research-hub',
@@ -60,17 +60,17 @@ export const ECOVERSES: Ecoverse[] = [
     gridPos: { x: 30, y: 38 },
     name: 'Research Hub',
     realmName: 'World 2 • Academic Citadel',
-    type: 'Peer-Reviewed Conference Abstracts',
+    type: "Conference Abstracts, Papers, DOIs, Stretch Goal of Open Projects",
     status: 'active',
-    description: 'National conference abstracts accepted at SACNAS (Long Beach) and ABRCMS (Miami) on spatial equity.',
+    description: 'See you in Long Beach!!',
     icon: GraduationCap,
     terrain: 'citadel',
     nestingLayers: {
-      outer: 'The Public Surface: Academic publications and citations presented at national diversity in STEM conferences.',
-      middle: 'Under the Couch Cushions: Translating complex methodological findings into concise, rigorous research posters.',
-      inner: 'The Join: Creating visible pathways for underrepresented communities in data science and spatial statistics.'
+      outer: 'The Public Surface: Writing, conferences, Software',
+      middle: 'Under the Couch Cushions: Not money',
+      inner: 'The Join: We all count, because we all count'
     },
-    tags: ['SACNAS', 'ABRCMS', 'Publications', 'Citations']
+    tags: ['SACNAS', 'ABRCMS', 'ASBMB', 'AAAS', 'ASEE', 'MAYO', 'OASES', 'ERN', 'NIH', 'Publications', 'Citations']
   },
   {
     id: 'survey-design',
@@ -80,13 +80,13 @@ export const ECOVERSES: Ecoverse[] = [
     realmName: 'World 3 • Inclusivity Vault',
     type: 'SOGI Data Collection Framework',
     status: 'active',
-    description: 'Methodological standards for capturing Sexual Orientation and Gender Identity data safely and accurately.',
+    description: 'Methodological project, novel unsupervised one-hot encoding for unstructured textual analysis and data decolonizing and anti racist methodologies.',
     icon: ClipboardList,
     terrain: 'vault',
     nestingLayers: {
-      outer: 'The Public Surface: Best practices for demographic questionnaire engineering and non-binary field design.',
-      middle: 'Under the Couch Cushions: Forced binary choices erase critical populations from health and equity datasets.',
-      inner: 'The Join: Protecting vulnerable respondents while honoring their lived identity in official records.'
+      outer: 'The Public Surface: Full cycle project on SOGI admissions application questionnaire redo.',
+      middle: 'Under the Couch Cushions: Diverged from traditional statistcal methodolgies that are colonizing.',
+      inner: 'The Join: A second look demonstrated that syntactial issues were the prime driver in non-response rates.'
     },
     tags: ['SOGI', 'Survey Method', 'Demographics', 'Inclusivity']
   },
@@ -106,7 +106,7 @@ export const ECOVERSES: Ecoverse[] = [
       middle: 'Under the Couch Cushions: Scheduled timetables rarely match actual arrival reality for night-shift transit riders.',
       inner: 'The Join: Where missing a single bus transfer determines whether someone keeps their job or healthcare.'
     },
-    tags: ['GTFS', 'Transit Mobility', 'Spatial Networks', 'Urban Access']
+    tags: ['GIS', 'Transit Mobility', 'Spatial Networks', 'Urban Access']
   },
   {
     id: 'transit-map',
@@ -120,11 +120,11 @@ export const ECOVERSES: Ecoverse[] = [
     icon: MapIcon,
     terrain: 'atlas',
     nestingLayers: {
-      outer: 'The Public Surface: Isochrone map layers showing 15, 30, and 45-minute transit travel times to fresh produce.',
-      middle: 'Under the Couch Cushions: Distance as the crow flies ignores the 2-hour multi-bus journey for non-car owners.',
-      inner: 'The Join: Food security is a spatial justice issue at the intersection of urban design and public transit.'
+      outer: 'The Public Surface: Manually built map, with novel conceptual framework and scoring methodology to address the insufficient USDA definition of "food desert',
+      middle: 'Under the Couch Cushions: Access is not a binary varible as it is typically reduced to (income and distance to the resource).',
+      inner: 'The Join: Food security transects every variable'
     },
-    tags: ['Food Equity', 'Isochrones', 'GIS', 'Leaflet']
+    tags: ['Food Equity', 'choropleth', 'GIS', 'Leaflet', 'QGIS']
   },
   {
     id: 'iris-case-study',
@@ -134,22 +134,22 @@ export const ECOVERSES: Ecoverse[] = [
     realmName: 'World 6 • Botanical Pedagogy Lab',
     type: 'Classical Multivariate Analysis',
     status: 'active',
-    description: 'Deconstructing Fisher\'s Iris dataset through MANOVA, LDA, and modern pedagogical statistical teaching.',
+    description: 'Deconstructing Fisher\'s Iris dataset orgaqnnically because this is still the unexamined ML status quo sans dialouge on eugenics and statistics.',
     icon: BookOpen,
     terrain: 'lab',
     nestingLayers: {
-      outer: 'The Public Surface: An interactive pedagogical guide through LDA, MANOVA, and principal components.',
-      middle: 'Under the Couch Cushions: Questioning historical textbook assumptions and teaching methods in intro stats.',
-      inner: 'The Join: Learning how to interview the data rather than accepting canned textbook scripts.'
+      outer: 'The Public Surface: An interactive pedagogical guide through how I fell into this with my distance partner',
+      middle: 'Under the Couch Cushions: We both played our STEM lineage roles flawlessly as if they had been written for us...',
+      inner: 'The Join: We do not live in a vacuum. A methodology (tool) created by a group of people determined to create a subhuman group is not and cannot be absent this.'
     },
-    tags: ['MANOVA', 'LDA', 'Pedagogy', 'R Stats']
+    tags: ['EUGENICS', 'SILENCE-WARNINGS', 'Pedagogy', 'R Stats', 'MODEL FIT']
   },
   {
     id: 'free-stuff',
     stageNum: 7,
     gridPos: { x: 38, y: 80 },
     name: 'By Design',
-    realmName: 'World 7 • Craftsman\'s Forge',
+    realmName: 'World 7 • Buildy things\'s Forge',
     type: 'Open Source Tools & Reproducible Research',
     status: 'active',
     description: 'Production-ready R scripts, Canvas LMS monitors, Python utilities, and reproducible research workflows.',
@@ -160,7 +160,25 @@ export const ECOVERSES: Ecoverse[] = [
       middle: 'Under the Couch Cushions: Building tools that solve daily operational friction in academic research.',
       inner: 'The Join: Sharing knowledge freely so others don\'t have to rebuild the wheel from scratch.'
     },
-    tags: ['Open Source', 'R Scripts', 'Canvas LMS', 'Python']
+    tags: ['Open Source', 'CRAN Scripts', 'PyPI', 'Canvas LMS', 'Python']
+  },
+  {
+    id: 'the-80-20',
+    stageNum: 8,
+    gridPos: { x: 50, y: 52 },
+    name: 'The 80-20 Project',
+    realmName: 'World 8 • Draftpersons Validation Atelier',
+    type: 'ML Validation & Confounder Diagnostics',
+    status: 'active',
+    description: 'Exposing confounded measurements through diligent validation',
+    icon: Sliders,
+    terrain: 'forge',
+    nestingLayers: {
+      outer: 'The Public Surface: Standard machine learning confuses benchmarks with findings. and calibration with results,.',
+      middle: 'Under the Couch Cushions: Following a methodologically diligent protocol to identify and remove confounders similiar to an epididemiological SDOH framework, whereby root causes are identified and elimenated where possible',
+      inner: 'The Join: Asking questions regarding what, where, why and how initial and intermediate experimentation interacts with the sample yields rigorous results.'
+    },
+    tags: ['ML Validation', '80/20 Split', 'Linear Probes', 'GAP Collapse', 'Observational Constraints']
   }
 ];
 
@@ -339,7 +357,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
                   {/* Outer Black Border for Connected Stage Road */}
                   <path 
-                    d="M 18,70 L 30,38 L 50,22 L 72,34 L 84,60 L 65,80 L 38,80 Z" 
+                    d="M 18,70 L 30,38 L 50,22 L 72,34 L 84,60 L 65,80 L 38,80 Z M 50,22 L 50,52 L 38,80" 
                     stroke="#1C1917" 
                     strokeWidth="2.4" 
                     strokeLinejoin="round" 
@@ -349,7 +367,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
                   {/* Inner Golden Yellow Dirt Road Track */}
                   <path 
-                    d="M 18,70 L 30,38 L 50,22 L 72,34 L 84,60 L 65,80 L 38,80 Z" 
+                    d="M 18,70 L 30,38 L 50,22 L 72,34 L 84,60 L 65,80 L 38,80 Z M 50,22 L 50,52 L 38,80" 
                     stroke="#FFCC00" 
                     strokeWidth="1.3" 
                     strokeLinejoin="round" 
@@ -359,7 +377,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
                   {/* Inner Dotted Road Centerline */}
                   <path 
-                    d="M 18,70 L 30,38 L 50,22 L 72,34 L 84,60 L 65,80 L 38,80 Z" 
+                    d="M 18,70 L 30,38 L 50,22 L 72,34 L 84,60 L 65,80 L 38,80 Z M 50,22 L 50,52 L 38,80" 
                     stroke="#FFF090" 
                     strokeWidth="0.4" 
                     strokeDasharray="1 1"
@@ -406,7 +424,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                       </div>
 
                       {/* Stage Name Badge */}
-                      <span className={`mt-1.5 px-2 py-0.5 rounded text-[9.5px] font-mono font-bold uppercase tracking-tight shadow-md whitespace-nowrap transition-colors ${
+                      <span className={`mt-1.5 px-2.5 py-0.5 rounded text-[10px] font-sans font-extrabold uppercase tracking-wide shadow-md whitespace-nowrap transition-colors ${
                         isSelected
                           ? 'bg-stone-900 text-[#FFCC00] border border-stone-800'
                           : 'bg-stone-900/90 text-white border border-stone-800 group-hover:border-[#FFCC00]'
