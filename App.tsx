@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Database, Layout, Sparkles, Map as MapIcon, BookOpen, Gift, Compass, GraduationCap, ClipboardList, Grid, Sliders } from 'lucide-react';
 import LandingPage from './components/LandingPage';
@@ -197,15 +197,39 @@ const GlobalNav = ({
 };
 
 const App: React.FC = () => {
-  const [activeProject, setActiveProject] = useState('landing');
+  const [activeProject, setActiveProject] = useState(() =>
+    window.location.hash.startsWith('#/iris') ? 'iris-case-study' : 'landing'
+  );
   const [activeTab, setActiveTab] = useState<'map' | 'philosophy' | 'directory'>('map');
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
+
+  const navigateToProject = (id: string) => {
+    if (id === 'iris-case-study') {
+      window.location.hash = '/iris';
+    } else if (window.location.hash.startsWith('#/iris')) {
+      window.history.pushState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+    setActiveProject(id);
+  };
+
+  useEffect(() => {
+    const syncProjectToHash = () => {
+      if (window.location.hash.startsWith('#/iris')) {
+        setActiveProject('iris-case-study');
+      } else if (!window.location.hash) {
+        setActiveProject('landing');
+      }
+    };
+
+    window.addEventListener('hashchange', syncProjectToHash);
+    return () => window.removeEventListener('hashchange', syncProjectToHash);
+  }, []);
 
   return (
     <div className="relative pt-14 bg-[#FAF8F5] min-h-screen">
       <GlobalNav 
         activeProject={activeProject} 
-        setActiveProject={setActiveProject} 
+        setActiveProject={navigateToProject}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         soundEnabled={soundEnabled}
@@ -222,7 +246,7 @@ const App: React.FC = () => {
             transition={{ duration: 0.3 }}
           >
             <LandingPage 
-              onSelectEcoverse={(id) => setActiveProject(id)} 
+              onSelectEcoverse={navigateToProject}
               activeTab={activeTab}
               setActiveTab={setActiveTab}
               soundEnabled={soundEnabled}
@@ -323,7 +347,7 @@ const App: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <The8020Project onBack={() => setActiveProject('landing')} />
+            <The8020Project onBack={() => navigateToProject('landing')} />
           </motion.div>
         )}
       </AnimatePresence>

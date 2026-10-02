@@ -39,7 +39,18 @@ const GateIcon = ({ className }: { className?: string }) => (
 
 const IrisCaseStudy: React.FC = () => {
   const [activeCard, setActiveCard] = useState<string | null>(null);
-  const [recordOpen, setRecordOpen] = useState(false);
+  const [recordOpen, setRecordOpen] = useState(
+    () => window.location.hash === '#/iris/the-record'
+  );
+
+  useEffect(() => {
+    const syncRecordToHash = () => {
+      setRecordOpen(window.location.hash === '#/iris/the-record');
+    };
+
+    window.addEventListener('hashchange', syncRecordToHash);
+    return () => window.removeEventListener('hashchange', syncRecordToHash);
+  }, []);
 
   useEffect(() => {
     if (activeCard) {
@@ -203,8 +214,18 @@ const IrisCaseStudy: React.FC = () => {
 
   const activeCardData = cards.find(c => c.id === activeCard);
 
+  const openRecord = () => {
+    window.location.hash = '/iris/the-record';
+    setRecordOpen(true);
+  };
+
+  const closeRecord = () => {
+    window.location.hash = '/iris';
+    setRecordOpen(false);
+  };
+
   if (recordOpen) {
-    return <IrisRecordStage onBack={() => setRecordOpen(false)} />;
+    return <IrisRecordStage onBack={closeRecord} />;
   }
 
   return (
@@ -245,7 +266,7 @@ const IrisCaseStudy: React.FC = () => {
               <motion.button
                 type="button"
                 key={card.id}
-                onClick={() => card.id === 'record' ? setRecordOpen(true) : setActiveCard(card.id)}
+                onClick={() => card.id === 'record' ? openRecord() : setActiveCard(card.id)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
