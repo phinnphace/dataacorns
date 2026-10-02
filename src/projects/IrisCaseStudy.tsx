@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BookOpen, AlertCircle, Leaf, Terminal, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import IrisRecordStage from './iris/IrisRecordStage';
 
 import petalLengthBoxplot from './petallength_boxplots.png';
 import sepalWidthBoxplot from './sepalwidth_boxplots.png';
@@ -38,6 +39,7 @@ const GateIcon = ({ className }: { className?: string }) => (
 
 const IrisCaseStudy: React.FC = () => {
   const [activeCard, setActiveCard] = useState<string | null>(null);
+  const [recordOpen, setRecordOpen] = useState(false);
 
   useEffect(() => {
     if (activeCard) {
@@ -187,10 +189,23 @@ const IrisCaseStudy: React.FC = () => {
           </a>
         </div>
       )
+    },
+    {
+      id: 'record',
+      title: 'The Record',
+      icon: BookOpen,
+      color: 'text-[#556b2f]',
+      position: 'bottom-[5%] right-[10%] md:right-[20%]',
+      summary: 'D.1–D.6a, with the data and receipts retained in their original folders.',
+      content: null,
     }
   ];
 
   const activeCardData = cards.find(c => c.id === activeCard);
+
+  if (recordOpen) {
+    return <IrisRecordStage onBack={() => setRecordOpen(false)} />;
+  }
 
   return (
     <div className="min-h-screen bg-[#fdfbf7] relative overflow-hidden selection:bg-[#d4c4a8] selection:text-[#2c241b] flex flex-col">
@@ -227,14 +242,15 @@ const IrisCaseStudy: React.FC = () => {
           {cards.map((card, index) => {
             const Icon = card.icon;
             return (
-              <motion.div 
+              <motion.button
+                type="button"
                 key={card.id}
-                onClick={() => setActiveCard(card.id)}
+                onClick={() => card.id === 'record' ? setRecordOpen(true) : setActiveCard(card.id)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className={`absolute ${card.position} bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-sm shadow-lg border border-[#d4c4a8] max-w-[160px] md:max-w-[200px] cursor-pointer z-20 group`}
+                className={`absolute ${card.position} bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-sm shadow-lg border border-[#d4c4a8] max-w-[160px] md:max-w-[200px] cursor-pointer z-20 group text-left focus:outline-none focus:ring-2 focus:ring-[#6f7f46] focus:ring-offset-2`}
               >
                 <div className="flex items-center gap-2 mb-2 border-b border-[#e5ddcb] pb-2">
                   <Icon className={`w-4 h-4 ${card.color} group-hover:scale-110 transition-transform flex-shrink-0`} />
@@ -248,7 +264,7 @@ const IrisCaseStudy: React.FC = () => {
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#fdfbf7] border border-[#d4c4a8] rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
                   <span className="text-[#8b7355] text-xs">↗</span>
                 </div>
-              </motion.div>
+              </motion.button>
             );
           })}
         </div>

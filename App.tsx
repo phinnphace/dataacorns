@@ -7,7 +7,7 @@ import TransitAware from './src/projects/TransitAware';
 import TransitMap from './src/projects/TransitMap';
 import IrisCaseStudy from './src/projects/IrisCaseStudy';
 import FreeStuff from './src/projects/FreeStuff';
-import AbstractGallery from './components/AbstractGallery';
+import ResearchHub from './components/ResearchHub';
 import SurveyDesign from './src/projects/SurveyDesign';
 import The8020Project from './src/projects/The8020Project';
 
@@ -251,7 +251,7 @@ const App: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <AbstractGallery />
+            <ResearchHub />
           </motion.div>
         )}
 

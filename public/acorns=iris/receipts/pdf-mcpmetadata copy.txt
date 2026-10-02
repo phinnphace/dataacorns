@@ -1,0 +1,9 @@
+(venv) phinnmarkson@Mac-mini portfolio % pip show pdf-mcp
+Name: pdf-mcp
+Version: 3.2.0
+Summary: Gives AI agents agentic RAG over one PDF or a whole folder of them: hybrid semantic + keyword search, selective page reads, tables, images, TOC, OCR, chart data, and CJK/vertical-script support, with SQLite caching.
+Home-page: https://github.com/jztan/pdf-mcp
+Author: 
+Author-email: Kevin Tan <6021013+jztan@users.noreply.github.com>
+License: MIT
+Location: /Users/phinnmarkson/Desktop/portfolio/venv/lib/python3.14/site-packages

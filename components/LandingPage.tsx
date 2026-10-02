@@ -303,11 +303,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   <span className="text-stone-500 hidden sm:inline">|</span>
                   <span className="text-stone-300 text-[11px] hidden sm:inline">WORLD 1</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="flex items-center gap-1 text-emerald-400 font-bold">
-                    <Heart size={12} className="fill-emerald-400" /> 7 LIVE REALMS
-                  </span>
-                </div>
+                <div aria-hidden="true" />
               </div>
 
               {/* Map Background Graphic / Vibrant 8-Bit Canvas Layer */}

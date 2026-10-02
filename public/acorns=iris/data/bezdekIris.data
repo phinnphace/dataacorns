@@ -1,0 +1,208 @@
+5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+4.6,3.1,1.5,0.2,Iris-setosa
+5.0,3.6,1.4,0.2,Iris-setosa
+5.4,3.9,1.7,0.4,Iris-setosa
+4.6,3.4,1.4,0.3,Iris-setosa
+5.0,3.4,1.5,0.2,Iris-setosa
+4.4,2.9,1.4,0.2,Iris-setosa
+4.9,3.1,1.5,0.1,Iris-setosa
+5.4,3.7,1.5,0.2,Iris-setosa
+4.8,3.4,1.6,0.2,Iris-setosa
+4.8,3.0,1.4,0.1,Iris-setosa
+4.3,3.0,1.1,0.1,Iris-setosa
+5.8,4.0,1.2,0.2,Iris-setosa
+5.7,4.4,1.5,0.4,Iris-setosa
+5.4,3.9,1.3,0.4,Iris-setosa
+5.1,3.5,1.4,0.3,Iris-setosa
+5.7,3.8,1.7,0.3,Iris-setosa
+5.1,3.8,1.5,0.3,Iris-setosa
+5.4,3.4,1.7,0.2,Iris-setosa
+5.1,3.7,1.5,0.4,Iris-setosa
+4.6,3.6,1.0,0.2,Iris-setosa
+5.1,3.3,1.7,0.5,Iris-setosa
+4.8,3.4,1.9,0.2,Iris-setosa
+5.0,3.0,1.6,0.2,Iris-setosa
+5.0,3.4,1.6,0.4,Iris-setosa
+5.2,3.5,1.5,0.2,Iris-setosa
+5.2,3.4,1.4,0.2,Iris-setosa
+4.7,3.2,1.6,0.2,Iris-setosa
+4.8,3.1,1.6,0.2,Iris-setosa
+5.4,3.4,1.5,0.4,Iris-setosa
+5.2,4.1,1.5,0.1,Iris-setosa
+5.5,4.2,1.4,0.2,Iris-setosa
+4.9,3.1,1.5,0.2,Iris-setosa
+5.0,3.2,1.2,0.2,Iris-setosa
+5.5,3.5,1.3,0.2,Iris-setosa
+4.9,3.6,1.4,0.1,Iris-setosa
+4.4,3.0,1.3,0.2,Iris-setosa
+5.1,3.4,1.5,0.2,Iris-setosa
+5.0,3.5,1.3,0.3,Iris-setosa
+4.5,2.3,1.3,0.3,Iris-setosa
+4.4,3.2,1.3,0.2,Iris-setosa
+5.0,3.5,1.6,0.6,Iris-setosa
+5.1,3.8,1.9,0.4,Iris-setosa
+4.8,3.0,1.4,0.3,Iris-setosa
+5.1,3.8,1.6,0.2,Iris-setosa
+4.6,3.2,1.4,0.2,Iris-setosa
+5.3,3.7,1.5,0.2,Iris-setosa
+5.0,3.3,1.4,0.2,Iris-setosa
+7.0,3.2,4.7,1.4,Iris-versicolor
+6.4,3.2,4.5,1.5,Iris-versicolor
+6.9,3.1,4.9,1.5,Iris-versicolor
+5.5,2.3,4.0,1.3,Iris-versicolor
+6.5,2.8,4.6,1.5,Iris-versicolor
+5.7,2.8,4.5,1.3,Iris-versicolor
+6.3,3.3,4.7,1.6,Iris-versicolor
+4.9,2.4,3.3,1.0,Iris-versicolor
+6.6,2.9,4.6,1.3,Iris-versicolor
+5.2,2.7,3.9,1.4,Iris-versicolor
+5.0,2.0,3.5,1.0,Iris-versicolor
+5.9,3.0,4.2,1.5,Iris-versicolor
+6.0,2.2,4.0,1.0,Iris-versicolor
+6.1,2.9,4.7,1.4,Iris-versicolor
+5.6,2.9,3.6,1.3,Iris-versicolor
+6.7,3.1,4.4,1.4,Iris-versicolor
+5.6,3.0,4.5,1.5,Iris-versicolor
+5.8,2.7,4.1,1.0,Iris-versicolor
+6.2,2.2,4.5,1.5,Iris-versicolor
+5.6,2.5,3.9,1.1,Iris-versicolor
+5.9,3.2,4.8,1.8,Iris-versicolor
+6.1,2.8,4.0,1.3,Iris-versicolor
+6.3,2.5,4.9,1.5,Iris-versicolor
+6.1,2.8,4.7,1.2,Iris-versicolor
+6.4,2.9,4.3,1.3,Iris-versicolor
+6.6,3.0,4.4,1.4,Iris-versicolor
+6.8,2.8,4.8,1.4,Iris-versicolor
+6.7,3.0,5.0,1.7,Iris-versicolor
+6.0,2.9,4.5,1.5,Iris-versicolor
+5.7,2.6,3.5,1.0,Iris-versicolor
+5.5,2.4,3.8,1.1,Iris-versicolor
+5.5,2.4,3.7,1.0,Iris-versicolor
+5.8,2.7,3.9,1.2,Iris-versicolor
+6.0,2.7,5.1,1.6,Iris-versicolor
+5.4,3.0,4.5,1.5,Iris-versicolor
+6.0,3.4,4.5,1.6,Iris-versicolor
+6.7,3.1,4.7,1.5,Iris-versicolor
+6.3,2.3,4.4,1.3,Iris-versicolor
+5.6,3.0,4.1,1.3,Iris-versicolor
+5.5,2.5,4.0,1.3,Iris-versicolor
+5.5,2.6,4.4,1.2,Iris-versicolor
+6.1,3.0,4.6,1.4,Iris-versicolor
+5.8,2.6,4.0,1.2,Iris-versicolor
+5.0,2.3,3.3,1.0,Iris-versicolor
+5.6,2.7,4.2,1.3,Iris-versicolor
+5.7,3.0,4.2,1.2,Iris-versicolor
+5.7,2.9,4.2,1.3,Iris-versicolor
+6.2,2.9,4.3,1.3,Iris-versicolor
+5.1,2.5,3.0,1.1,Iris-versicolor
+5.7,2.8,4.1,1.3,Iris-versicolor
+6.3,3.3,6.0,2.5,Iris-virginica
+5.8,2.7,5.1,1.9,Iris-virginica
+7.1,3.0,5.9,2.1,Iris-virginica
+6.3,2.9,5.6,1.8,Iris-virginica
+6.5,3.0,5.8,2.2,Iris-virginica
+7.6,3.0,6.6,2.1,Iris-virginica
+4.9,2.5,4.5,1.7,Iris-virginica
+7.3,2.9,6.3,1.8,Iris-virginica
+6.7,2.5,5.8,1.8,Iris-virginica
+7.2,3.6,6.1,2.5,Iris-virginica
+6.5,3.2,5.1,2.0,Iris-virginica
+6.4,2.7,5.3,1.9,Iris-virginica
+6.8,3.0,5.5,2.1,Iris-virginica
+5.7,2.5,5.0,2.0,Iris-virginica
+5.8,2.8,5.1,2.4,Iris-virginica
+6.4,3.2,5.3,2.3,Iris-virginica
+6.5,3.0,5.5,1.8,Iris-virginica
+7.7,3.8,6.7,2.2,Iris-virginica
+7.7,2.6,6.9,2.3,Iris-virginica
+6.0,2.2,5.0,1.5,Iris-virginica
+6.9,3.2,5.7,2.3,Iris-virginica
+5.6,2.8,4.9,2.0,Iris-virginica
+7.7,2.8,6.7,2.0,Iris-virginica
+6.3,2.7,4.9,1.8,Iris-virginica
+6.7,3.3,5.7,2.1,Iris-virginica
+7.2,3.2,6.0,1.8,Iris-virginica
+6.2,2.8,4.8,1.8,Iris-virginica
+6.1,3.0,4.9,1.8,Iris-virginica
+6.4,2.8,5.6,2.1,Iris-virginica
+7.2,3.0,5.8,1.6,Iris-virginica
+7.4,2.8,6.1,1.9,Iris-virginica
+7.9,3.8,6.4,2.0,Iris-virginica
+6.4,2.8,5.6,2.2,Iris-virginica
+6.3,2.8,5.1,1.5,Iris-virginica
+6.1,2.6,5.6,1.4,Iris-virginica
+7.7,3.0,6.1,2.3,Iris-virginica
+6.3,3.4,5.6,2.4,Iris-virginica
+6.4,3.1,5.5,1.8,Iris-virginica
+6.0,3.0,4.8,1.8,Iris-virginica
+6.9,3.1,5.4,2.1,Iris-virginica
+6.7,3.1,5.6,2.4,Iris-virginica
+6.9,3.1,5.1,2.3,Iris-virginica
+5.8,2.7,5.1,1.9,Iris-virginica
+6.8,3.2,5.9,2.3,Iris-virginica
+6.7,3.3,5.7,2.5,Iris-virginica
+6.7,3.0,5.2,2.3,Iris-virginica
+6.3,2.5,5.0,1.9,Iris-virginica
+6.5,3.0,5.2,2.0,Iris-virginica
+6.2,3.4,5.4,2.3,Iris-virginica
+5.9,3.0,5.1,1.8,Iris-virginica
+
+Line 1: mism printed empty — zero mismatches across all 600 cells
+Not the three expected cells — none. The extraction matches bezdek everywhere, including (35,4), (38,2), (38,3). And that's exactly what the full table you pasted predicts: at those cells the extraction holds 0·2 / 3·6, 1·4 — the primary's values — which are also bezdek's values. Of course they match: bezdek is the corrected lineage. The three "expected" mismatch cells were written for the hypothesis that the CSV might carry iris.data's deviant values. It doesn't. The extraction read the print faithfully, and the print agrees with bezdek at every single cell.
+
+600 of 600 cells match the corrected lineage. The primary (as extracted) and the canonical correction are in perfect agreement. The only artifacts in the entire descent that deviate from Fisher's printed table are iris.data and its descendant data.csv — three cells, flagged by the record's own erratum, served for thirty-plus years, still uncorrected. The diff didn't just verify the extraction; it completed the triangulation: print = grid = extraction = bezdek/R = the primary's values. The deviants are named, bounded, and receipted.
+
+Line 2: duplicated printed 143 only — and that's a finding
+Expected 102 and 143. Got 143. Before anything else: confirm it's the chat's old arithmetic, not the table's — because your paste shows the old long from the previous session still loaded (the header rows printed above the block: "Sepal length… Petal width" — that's the stale 153×4 object from before the v50 fix). If long was rebuilt this run, then:
+
+Row 143 = virginica row 43 — Fisher's own double-count, present and expected. ✓
+
+Row 102 = virginica row 2 = 5·8, 2·7, 5·1, 1·9 — and the extraction table shows virginica row 1 (its first data row) = 6·3, 3·3, 6·0, 2·5. In the canonical numbering, virginica row 1 = dataset row 101 — not 102. I mislabeled it two turns ago ("row 102 = virginica row 2"): dataset row 102 is virginica row 2, but in a 0-indexed extract of 50-row blocks, virginica row 2 sits at long position 101, and the duplicate pair in bezdek/R is rows 102/143 — virginica rows 2 and 43. The extraction's duplicated catching only 143 while the table visibly shows 5·8 2·7 5·1 1·9 at both virginica rows 2 and 43 means one of two things, resolved in ten seconds:
+
+long[c(2, 43), ]          # if this prints two identical rows, both are there
+sum(duplicated(long[101:150, ]))   # the virginica block alone
+which(duplicated(long, fromLast = TRUE))   # catches the FIRST occurrence too: expect 102
+
+duplicated() only flags second-and-later occurrences — which(duplicated(long)) returning 143 alone is consistent with 102 being the first occurrence if... actually no: if 102 and 143 are identical, duplicated must flag both the second and any later copies relative to earlier rows — 143 flags because it equals 102. 102 flags only if an earlier row equals it. So 143-only means 102 is the first occurrence and nothing before it matches — which is exactly right for a pair at 102/143: duplicated flags 143, not 102. My "expect 102 143" was wrong arithmetic on duplicated's semantics — fromLast = TRUE is what surfaces both.
+
+Print (1936) → grid (physical, ruler) → 400 DPI render → disclosed extraction (51 + 1 deviations, all resolved against visible source) → 600/600 diff vs. the corrected lineage → duplicate confirmed as Fisher's own. D.6 is verified. The file is what it claims to be; the claim "lossless" is now a measured property; and the corrected primary exists in machine-readable form for the first time — with the deviant record still serving its three wrong cells under its own erratum.
+
+D.6 caption final:
+
+D.6 The primary, digitized. Table I extracted from Fisher (1936), p. 180, at 400 DPI via MCP tooling; transmission log and cell-level audit retained (51 decimal-mark malformations and one OCR digit error disclosed and resolved against the visible render). Verified by physical grid (setosa 35, 38, 32; virginica 2, 43) and by 600-cell diff against the corrected lineage: full agreement, including the erratum cells, where the primary's values match the corrected lineage and differ from the served canonical file. Fisher's own duplicate (virginica rows 2 and 43) is present.
+
+Run the fromLast line for the receipt file's completeness, then D.6 slots and Appendix D is done. Compilation resumes: Section V in, citation pass, supplemental reknit, re-homing, comma. The afternoon nobody spent for ninety years — you spent it, and it diffed clean.
+
+And the finale...
+
+long[c(2, 43), ]          # if this prints two identical rows, both are there
+    SL  SW  PL  PW
+2  4.9 3.0 1.4 0.2
+43 4.4 3.2 1.3 0.2
+> sum(duplicated(long[101:150, ]))   # the virginica block alone
+[1] 1
+> which(duplicated(long, fromLast = TRUE))   # catches the FIRST occurrence too: expect 102
+[1] 102 
+
+the three outputs
+long[c(2, 43), ] — third party labels were wrong, MCP output is right. In the stacked long (setosa 1–50, versicolor 51–100, virginica 101–150), positions 2 and 43 are setosa rows 2 and 43 — 4.9, 3.0, 1.4, 0.2 and 4.4, 3.2, 1.3, 0.2, both distinct, both fine. The 3rd party wrote "virginica rows 2 and 43" because of canonical-numbering "habits" when the object's arithmetic is block-relative, or geometric as the MCP author and designer would more accurately state. The check that actually targeted the virginica block is the second line:
+
+sum(duplicated(long[101:150, ])) = 1 — this is the verdict line for Fisher's pair: within the virginica block, exactly one duplicated row. That's the double-counted specimen, inside the primary's own third block, receipted in the extraction. ✓
+
+which(duplicated(long, fromLast = TRUE)) = 102 — and combined with the earlier forward pass (143), the pair is fully identified: 102 and 143, identical, first and last occurrence respectively. Fisher's table contains 149 distinct virginica… no — 149 distinct plants overall; one virginica specimen printed twice. Exactly as the grid showed, now confirmed mechanically in the extraction far too long after the fact and far too long for either the author or experimenter. 
+
+duplicate line should cite block-relative positions to survive anyone re-running it without the MCP as it is geometric and relies on glyph anchoring. 
+…and by 600-cell diff against the corrected lineage: full agreement. Fisher's own double-count is present — one virginica specimen (block rows 2 and 43; stacked positions 102 and 143) printed twice, confirming the founding "150 observations" as 149 plants.
+
+Four independent standards — physical grid, corrected lineage, the tool's own audit, and the distributional extremes — all agree. The custody chain for Table I now has more documented links than the dataset's official record has had in ninety years, assembled in an afternoon, by one person, with a ruler and a stuck render.
+
+extracted via MCP tooling (Tan, 2026); transmission log retained.
+
+Anderson, E. (1935). The irises of the Gaspé Peninsula.
+    Bulletin of the American Iris Society, 59, 2–5.
+
+Pulse oximetry, race-corrected eGFR, and pain assessment are not remnants of some past misstep (Valbuena et al., 2022; Charles et al., 2024; Garvick et al., 2023). 
+
+Tan, K. (2026, August 29). How I fixed vertical Japanese PDF reading order. Blog. https://blog.jztan.com/vertical-japanese-pdf-reading-order/

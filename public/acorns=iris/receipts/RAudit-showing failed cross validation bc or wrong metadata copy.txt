@@ -1,0 +1,38 @@
+> t <- read.csv("fisher1936_table1.csv")
+> dim(t)                          # expect: 150 rows, 4 cols (+ maybe a species col)
+[1] 51 12
+> t[c(10, 35, 38), ]              # setosa cells
+   Iris.setosa Iris.setosa.1 Iris.setosa.2 Iris.setosa.3 Iris.versicolor Iris.versicolor.1
+10         4·4           2·9           1·4           0·2             6·6               2·9
+35         5·5           4·2           1·4           0·2             6·0               2·7
+38         5·5           3·5           1·3           0·2             6·7               3·1
+   Iris.versicolor.2 Iris.versicolor.3 Iris.virginica Iris.virginica.1 Iris.virginica.2
+10               4·6               1·3            6·7              2·5              5·8
+35               5·1               1·6            6·3              2·8              5·1
+38               4·7               1·5            6·3              3·4              5·6
+   Iris.virginica.3
+10              1·8
+35              1·5
+38              2·4
+> t[c(101, 142), ]                # virginica 2 & 43, 0-indexed → rows 102/143 in dataset numbering
+     Iris.setosa Iris.setosa.1 Iris.setosa.2 Iris.setosa.3 Iris.versicolor Iris.versicolor.1
+NA          <NA>          <NA>          <NA>          <NA>            <NA>              <NA>
+NA.1        <NA>          <NA>          <NA>          <NA>            <NA>              <NA>
+     Iris.versicolor.2 Iris.versicolor.3 Iris.virginica Iris.virginica.1 Iris.virginica.2
+NA                <NA>              <NA>           <NA>             <NA>             <NA>
+NA.1              <NA>              <NA>           <NA>             <NA>             <NA>
+     Iris.virginica.3
+NA               <NA>
+NA.1             <NA>
+> which(duplicated(t[ , 1:4]))    # expect: 102, 143 — the duplicate must be IN the CSV
+integer(0)
+> sum(t[35, ] != c(4.9, 3.1, 1.5, 0.2), na.rm = TRUE)   # expect 0
+[1] 12
+> sum(t[38, ] != c(4.9, 3.6, 1.4, 0.1), na.rm = TRUE)   # expect 0
+[1] 12
+
+
+
+ 51 × 12. The extraction worked, buy my audit code assumed it imported the long table (150 × 4); but what I extracted is the printed layout — 51 rows × 12 columns: Fisher's original three-species panel, each species a 4-column block, 50 rows plus header. 
+
+Row 10 of I. setosa in the CSV reads 4·4, 2·9, 1·4, 0·2 — which is dataset row 10 exactly. The cells are right; the shape is wide. Nothing is dropped. My audit "failed" because the commands called the wrong geometry — t[35,] on a 51-row file is not I. setosa row 35, and the interpuncts mean every numeric comparison returns TRUE (12 of 12 columns "differ" because "4·9" ≠ 4.9 as a string).

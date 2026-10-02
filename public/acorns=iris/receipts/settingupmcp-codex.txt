@@ -1,0 +1,23 @@
+Last login: Mon Sep 14 07:06:28 on ttys002
+You have new mail.
+which pdf-mcp%                                                                  phinnmarkson@Mac-mini ~ % which pdf-mcp
+pdf-mcp not found
+phinnmarkson@Mac-mini ~ % codex mcp remove pdf-mcp
+codex mcp add pdf-mcp -- /Users/phinnmarkson/Desktop/portfolio/venv/bin/pdf-mcp
+Removed global MCP server 'pdf-mcp'.
+Added global MCP server 'pdf-mcp'.
+phinnmarkson@Mac-mini ~ % codex mcp get pdf-mcp
+pdf-mcp
+  enabled: true
+  transport: stdio
+  command: /Users/phinnmarkson/Desktop/portfolio/venv/bin/pdf-mcp
+  args: -
+  cwd: -
+  env: -
+  remove: codex mcp remove pdf-mcp
+phinnmarkson@Mac-mini ~ % xattr -dr com.apple.quarantine "/Phinally/Downloads" 
+xattr: No such file: /Phinally/Downloads
+phinnmarkson@Mac-mini ~ % xattr -dr com.apple.quarantine "/Phinally/Downloads/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS.pdfr" 
+xattr: No such file: /Phinally/Downloads/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS.pdfr
+phinnmarkson@Mac-mini ~ % xattr -dr com.apple.quarantine "/Volumes/Phinally/Downloads/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS.pdf"
+phinnmarkson@Mac-mini ~ % 

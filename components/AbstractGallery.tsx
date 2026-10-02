@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Calendar, MapPin, Download, BookOpen, X, FileText, ArrowRight, Award, Compass, Sparkles, ChevronRight, Share2, Copy, Check } from 'lucide-react';
 
-interface Abstract {
+export interface Abstract {
   id: string;
   title: string;
   conference: string;
