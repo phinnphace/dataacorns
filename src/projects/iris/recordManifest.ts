@@ -32,7 +32,7 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.1 The manufactured triplet, and what deduplication deletes.docx',
     preview:
       'The canonical file\'s two transcription errors (rows 35, 38; see D.2) collapse distinct setosa specimens onto row 10, manufacturing a triplet of identical rows.',
-    size: '3.3 MB',
+    size: '140.9 KB',
   },
   {
     id: 'd2',
@@ -40,7 +40,7 @@ export const recordDocuments: RecordDocument[] = [
     title: 'The mirrors disagree (full values)',
     fileName: 'D.2 The mirrors disagree (full values).docx',
     preview: 'The duplicate is IN the primary.',
-    size: '3.7 MB',
+    size: '13.2 KB',
   },
   {
     id: 'd3',
@@ -49,7 +49,7 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx',
     preview:
       'Excerpts reproduced verbatim from the repository\'s legacy documentation file (retrieved September 13, 2026).',
-    size: '10.5 KB',
+    size: '9.3 KB',
   },
   {
     id: 'd4',
