@@ -32,7 +32,7 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.1 The manufactured triplet, and what deduplication deletes.docx',
     preview:
       'The canonical file\'s two transcription errors (rows 35, 38; see D.2) collapse distinct setosa specimens onto row 10, manufacturing a triplet of identical rows.',
-    size: '140.9 KB',
+    size: '140.6 KB',
   },
   {
     id: 'd2',
