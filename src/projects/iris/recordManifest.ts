@@ -28,11 +28,11 @@ export const recordDocuments: RecordDocument[] = [
   {
     id: 'd1',
     label: 'D.1',
-    title: 'The legacy record, verbatim',
-    fileName: 'D.1 The legacy record, verbatim (iris.names, served unchanged since 1989).docx',
+    title: 'The manufactured triplet, and what deduplication deletes',
+    fileName: 'D.1 The manufactured triplet, and what deduplication deletes.docx',
     preview:
-      'Excerpts reproduced verbatim from the repository\'s legacy documentation file (retrieved September 13, 2026).',
-    size: '10.5 KB',
+      'The canonical file\'s two transcription errors (rows 35, 38; see D.2) collapse distinct setosa specimens onto row 10, manufacturing a triplet of identical rows.',
+    size: '3.3 MB',
   },
   {
     id: 'd2',
@@ -45,11 +45,11 @@ export const recordDocuments: RecordDocument[] = [
   {
     id: 'd3',
     label: 'D.3',
-    title: 'The manufactured triplet, and what deduplication deletes',
-    fileName: 'D.3 The manufactured triplet, and what deduplication deletes.docx',
+    title: 'The legacy record, verbatim',
+    fileName: 'D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx',
     preview:
-      'The canonical file\'s two transcription errors (rows 35, 38; see D.2) collapse distinct setosa specimens onto row 10, manufacturing a triplet of identical rows.',
-    size: '3.3 MB',
+      'Excerpts reproduced verbatim from the repository\'s legacy documentation file (retrieved September 13, 2026).',
+    size: '10.5 KB',
   },
   {
     id: 'd4',
