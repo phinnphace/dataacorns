@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   ArrowLeft,
+  ArrowUpRight,
   Download,
   File,
   FileCode2,
@@ -9,12 +10,18 @@ import {
   FileText,
   Folder,
   MoreHorizontal,
+  Undo2,
 } from 'lucide-react';
 import { artifactUrl, type ArtifactFile, type ArtifactFolder } from './recordManifest';
+import { folderFileId } from './useIrisStudySession';
 
 type ArtifactFolderViewProps = {
   folder: ArtifactFolder;
   onBack: () => void;
+  checkedOutFileIds: string[];
+  pinnedFileIds?: string[];
+  onPullOut: (file: ArtifactFile) => void;
+  onReturn: (file: ArtifactFile) => void;
 };
 
 const iconForFile = (file: ArtifactFile) => {
@@ -35,7 +42,14 @@ const iconForFile = (file: ArtifactFile) => {
   }
 };
 
-const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({ folder, onBack }) => (
+const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({
+  folder,
+  onBack,
+  checkedOutFileIds,
+  pinnedFileIds = [],
+  onPullOut,
+  onReturn,
+}) => (
   <div className="min-h-screen bg-[#d8d8d8] px-3 py-5 font-sans text-[#202020] sm:px-6 sm:py-9">
     <div className="mx-auto max-w-5xl overflow-hidden rounded-lg border border-[#a9a9a9] bg-[#f7f7f7] shadow-xl">
       <div className="flex items-center justify-between border-b border-[#b9b9b9] bg-[#e9e9e9] px-3 py-2">
@@ -49,7 +63,7 @@ const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({ folder, onBack 
             type="button"
             onClick={onBack}
             className="rounded border border-[#bcbcbc] bg-[#f7f7f7] p-1.5 text-[#555] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#5577aa]"
-            aria-label="Back to The Record"
+            aria-label="Back to the study session"
           >
             <ArrowLeft className="h-4 w-4" />
           </button>
@@ -63,20 +77,24 @@ const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({ folder, onBack 
         <MoreHorizontal className="h-5 w-5 text-[#777]" aria-hidden="true" />
       </div>
 
-      <div className="grid grid-cols-[minmax(0,1fr)_90px_44px] border-b border-[#c8c8c8] bg-[#efefef] px-4 py-2 text-[11px] font-semibold uppercase tracking-wide text-[#6b6b6b] sm:grid-cols-[minmax(0,1fr)_120px_80px]">
+      <div className="grid grid-cols-[minmax(0,1fr)_72px_84px_40px] border-b border-[#c8c8c8] bg-[#efefef] px-4 py-2 text-[11px] font-semibold uppercase tracking-wide text-[#6b6b6b] sm:grid-cols-[minmax(0,1fr)_110px_120px_64px]">
         <span>Name</span>
         <span>Size</span>
+        <span>Study desk</span>
         <span className="sr-only sm:not-sr-only">Get</span>
       </div>
 
       <ul className="divide-y divide-[#dddddd]">
         {folder.files.map((file) => {
           const sourceUrl = artifactUrl(`${folder.id}/${file.fileName}`);
+          const fileId = folderFileId(folder.id, file.fileName);
+          const isPinned = pinnedFileIds.includes(fileId);
+          const isOnDesk = isPinned || checkedOutFileIds.includes(fileId);
 
           return (
             <li
               key={file.fileName}
-              className="grid grid-cols-[minmax(0,1fr)_90px_44px] items-center px-4 py-3 text-sm hover:bg-[#e8f1fb] sm:grid-cols-[minmax(0,1fr)_120px_80px]"
+              className="grid grid-cols-[minmax(0,1fr)_72px_84px_40px] items-center px-4 py-3 text-sm hover:bg-[#e8f1fb] sm:grid-cols-[minmax(0,1fr)_110px_120px_64px]"
             >
               <a
                 href={sourceUrl}
@@ -90,6 +108,21 @@ const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({ folder, onBack 
                 </span>
               </a>
               <span className="text-xs text-[#707070]">{file.size}</span>
+              {isPinned ? (
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wide text-[#556b2f]">
+                  Exhibit
+                </span>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => (isOnDesk ? onReturn(file) : onPullOut(file))}
+                  className="inline-flex items-center gap-1.5 justify-self-start rounded border border-[#bcbcbc] bg-[#f7f7f7] px-2 py-1.5 text-[11px] font-semibold text-[#555] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#5577aa]"
+                  aria-label={isOnDesk ? `Return ${file.fileName} to ${folder.name}` : `Put ${file.fileName} on the study desk`}
+                >
+                  {isOnDesk ? <Undo2 className="h-3.5 w-3.5" /> : <ArrowUpRight className="h-3.5 w-3.5" />}
+                  <span className="hidden sm:inline">{isOnDesk ? 'Return' : 'Pull out'}</span>
+                </button>
+              )}
               <a
                 href={sourceUrl}
                 download={file.fileName}
@@ -103,8 +136,15 @@ const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({ folder, onBack 
         })}
       </ul>
 
-      <div className="border-t border-[#c8c8c8] bg-[#efefef] px-4 py-2 text-xs text-[#666]">
-        {folder.files.length} items
+      <div className="flex items-center justify-between border-t border-[#c8c8c8] bg-[#efefef] px-4 py-2 text-xs text-[#666]">
+        <span>{folder.files.length} items</span>
+        <span>
+          {folder.files.filter((file) => {
+            const id = folderFileId(folder.id, file.fileName);
+            return checkedOutFileIds.includes(id) || pinnedFileIds.includes(id);
+          }).length}{' '}
+          on the study desk
+        </span>
       </div>
     </div>
   </div>

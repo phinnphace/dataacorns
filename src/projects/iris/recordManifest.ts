@@ -2,7 +2,6 @@ export const ARTIFACT_ROOT = '/acorns=iris';
 
 export type RecordDocument = {
   id: string;
-  label: string;
   title: string;
   fileName: string;
   preview: string;
@@ -26,8 +25,7 @@ export const artifactUrl = (relativePath: string) =>
 
 export const recordDocuments: RecordDocument[] = [
   {
-    id: 'd1',
-    label: 'D.1',
+    id: 'manufactured-triplet',
     title: 'The manufactured triplet, and what deduplication deletes',
     fileName: 'D.1 The manufactured triplet, and what deduplication deletes.docx',
     preview:
@@ -35,16 +33,14 @@ export const recordDocuments: RecordDocument[] = [
     size: '140.6 KB',
   },
   {
-    id: 'd2',
-    label: 'D.2',
+    id: 'mirrors-disagree',
     title: 'The mirrors disagree (full values)',
     fileName: 'D.2 The mirrors disagree (full values).docx',
     preview: 'The duplicate is IN the primary.',
     size: '13.2 KB',
   },
   {
-    id: 'd3',
-    label: 'D.3',
+    id: 'legacy-record',
     title: 'The legacy record, verbatim',
     fileName: 'D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx',
     preview:
@@ -52,8 +48,7 @@ export const recordDocuments: RecordDocument[] = [
     size: '9.3 KB',
   },
   {
-    id: 'd4',
-    label: 'D.4',
+    id: 'layer-by-layer-audit',
     title: 'Layer-by-layer audit',
     fileName: 'D4 layer by layer.docx',
     preview:
@@ -61,8 +56,7 @@ export const recordDocuments: RecordDocument[] = [
     size: '3.2 MB',
   },
   {
-    id: 'd5',
-    label: 'D.5',
+    id: 'intervention',
     title: 'The intervention',
     fileName: 'D.5 The intervention.docx',
     preview:
@@ -70,8 +64,7 @@ export const recordDocuments: RecordDocument[] = [
     size: '404.5 KB',
   },
   {
-    id: 'd6',
-    label: 'D.6',
+    id: 'pdf-mcp',
     title: 'pdf-mcp',
     fileName: 'D.6 pdf-mcp.docx',
     preview:
@@ -79,8 +72,7 @@ export const recordDocuments: RecordDocument[] = [
     size: '3.9 MB',
   },
   {
-    id: 'd6a',
-    label: 'D.6a',
+    id: 'shape-prior',
     title: 'The shape prior — the canonical geometry fails the primary',
     fileName: 'D.6a The shape prior — the canonical geometry fails the primary.docx',
     preview:

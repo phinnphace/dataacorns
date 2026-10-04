@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
   ArrowLeft,
-  ChevronLeft,
-  ChevronRight,
   Download,
   ExternalLink,
   FileText,
@@ -27,9 +25,6 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
   const styleRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const sourceUrl = artifactUrl(document.fileName);
-  const documentIndex = documents.findIndex((item) => item.id === document.id);
-  const previousDocument = documentIndex > 0 ? documents[documentIndex - 1] : null;
-  const nextDocument = documentIndex < documents.length - 1 ? documents[documentIndex + 1] : null;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -127,11 +122,11 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
                 className="flex flex-shrink-0 items-center gap-2 rounded-sm border border-[#cfc2aa] bg-white px-3 py-2 font-mono text-xs font-bold uppercase tracking-wide text-[#5c4e3c] transition-colors hover:bg-[#f2ede3] focus:outline-none focus:ring-2 focus:ring-[#6f7f46]"
               >
                 <ArrowLeft className="h-4 w-4" />
-                The Record
+                Study session
               </button>
               <div className="min-w-0">
                 <div className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-[#7b6b55]">
-                  {document.label} · Original DOCX
+                  Original DOCX
                 </div>
                 <h1 className="truncate font-serif text-lg font-semibold text-[#1a1510] sm:text-xl">
                   {document.title}
@@ -161,16 +156,6 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
           </div>
 
           <div className="mt-3 flex items-center gap-2 border-t border-[#ddd1bb] pt-3">
-            <button
-              type="button"
-              onClick={() => previousDocument && onSelectDocument(previousDocument)}
-              disabled={!previousDocument}
-              className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#cfc2aa] bg-white text-[#5c4e3c] transition-colors hover:bg-[#f2ede3] focus:outline-none focus:ring-2 focus:ring-[#6f7f46] disabled:cursor-not-allowed disabled:opacity-35"
-              aria-label={previousDocument ? `Previous exhibit: ${previousDocument.label}` : 'No previous exhibit'}
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-
             <div
               role="radiogroup"
               aria-label="Document exhibits"
@@ -185,7 +170,7 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
                     type="button"
                     role="radio"
                     aria-checked={isActive}
-                    aria-label={`${item.label}: ${item.title}`}
+                    aria-label={item.title}
                     onClick={() => onSelectDocument(item)}
                     className={`inline-flex flex-shrink-0 items-center gap-2 rounded-full border px-3 py-1.5 font-mono text-[11px] font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-[#6f7f46] ${
                       isActive
@@ -199,21 +184,11 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
                         isActive ? 'border-white bg-white' : 'border-[#8d7c63] bg-transparent'
                       }`}
                     />
-                    {item.label}
+                    {item.title}
                   </button>
                 );
               })}
             </div>
-
-            <button
-              type="button"
-              onClick={() => nextDocument && onSelectDocument(nextDocument)}
-              disabled={!nextDocument}
-              className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#cfc2aa] bg-white text-[#5c4e3c] transition-colors hover:bg-[#f2ede3] focus:outline-none focus:ring-2 focus:ring-[#6f7f46] disabled:cursor-not-allowed disabled:opacity-35"
-              aria-label={nextDocument ? `Next exhibit: ${nextDocument.label}` : 'No next exhibit'}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
           </div>
         </div>
       </div>
