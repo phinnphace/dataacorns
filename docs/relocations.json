@@ -1,0 +1,472 @@
+[
+  {
+    "from": "Contextual_Training_Effects_on_Visual_Feature_Learning (2).pdf",
+    "to": "public/papers/Contextual_Training_Effects_on_Visual_Feature_Learning (2).pdf",
+    "sha256": "29506b540b6ff3e66c5aaf26b8414b04baa5e84400593c0e8a2fcfacbe2c70e6"
+  },
+  {
+    "from": "App.tsx",
+    "to": "src/app/App.tsx",
+    "sha256": "689a55eb07f05c9627adb0c1cc47163a4a8cb7341578e841ca25230884019c47"
+  },
+  {
+    "from": "index.tsx",
+    "to": "src/main.tsx",
+    "sha256": "bbbc967342f087cb9d33e38c5a633c28c5ebaae841bed2097bb33a75fcb4ee7b"
+  },
+  {
+    "from": "index.css",
+    "to": "src/app/index.css",
+    "sha256": "08a31276a055a572996ee47d8291f7d794010407fcba4bae18877fb071acd777"
+  },
+  {
+    "from": "vite-env.d.ts",
+    "to": "src/vite-env.d.ts",
+    "sha256": "83adccd144b16d0bb228bc2cba526c0bbf4632d856bc3b0b1f140730f99fcdf6"
+  },
+  {
+    "from": "components/LandingPage.tsx",
+    "to": "src/ecoverses/overworld/LandingPage.tsx",
+    "sha256": "9791b3b4423eb448ed3d2f95b3e99e5af467e619f5283b996d954973eea39bed"
+  },
+  {
+    "from": "components/ResearchHub.tsx",
+    "to": "src/ecoverses/research-hub/ResearchHub.tsx",
+    "sha256": "28a290b8802f8fa19b3a13d4622599c32aecc5f985016bc574c0c27dab4dfa84"
+  },
+  {
+    "from": "components/AuditIntro.tsx",
+    "to": "src/ecoverses/shell-game/AuditIntro.tsx",
+    "sha256": "f3a97e065e74181d05d03bb8f9574c97b10efe5105c1d4241f132ed5d6d6e292"
+  },
+  {
+    "from": "components/MethodologyBreakdown.tsx",
+    "to": "src/ecoverses/shell-game/MethodologyBreakdown.tsx",
+    "sha256": "e6687131879eeb6afde226d07f15bdc75bfeac022ebfa852ea667e7d35b6d30c"
+  },
+  {
+    "from": "src/projects/ShellGame.tsx",
+    "to": "src/ecoverses/shell-game/ShellGame.tsx",
+    "sha256": "cbc64db60614560c114abe704289cc9a17929f9756120d0ab9b3531b75a3bc0d"
+  },
+  {
+    "from": "src/projects/TransitAware.tsx",
+    "to": "src/ecoverses/transit-aware/TransitAware.tsx",
+    "sha256": "0b3b59327ba449f1a1636abd65fd68fb180272950c6cf8762f69123c40adc56a"
+  },
+  {
+    "from": "src/projects/TransitMap.tsx",
+    "to": "src/ecoverses/food-vulnerability/TransitMap.tsx",
+    "sha256": "2bb1c5880021b82a7063db625ff5372b0b1f712923dddf904d901ab703e20c34"
+  },
+  {
+    "from": "src/projects/IrisCaseStudy.tsx",
+    "to": "src/ecoverses/iris/IrisCaseStudy.tsx",
+    "sha256": "1c7415ea6b64f540c016203d1bf39c6ca10250fcc36296e5cb5ae2d2a413014d"
+  },
+  {
+    "from": "src/projects/FreeStuff.tsx",
+    "to": "src/ecoverses/by-design/FreeStuff.tsx",
+    "sha256": "eaac439205498b6a5e36b5d235281b908536126f579b615fdb2cb2ea28a85e9a"
+  },
+  {
+    "from": "src/projects/SurveyDesign.tsx",
+    "to": "src/ecoverses/survey-design/SurveyDesign.tsx",
+    "sha256": "4b2cc308be55742b27180c6c7e7cfd1ecca0719c1e754ec17362c2e4eb9cb03c"
+  },
+  {
+    "from": "src/projects/The8020Project.tsx",
+    "to": "src/ecoverses/eighty-twenty/The8020Project.tsx",
+    "sha256": "0e7e9551a8dd142af101fcfbfb13d6008f435e078f03070ea9f331bc0ac0791a"
+  },
+  {
+    "from": "src/projects/iris/ArtifactFolderView.tsx",
+    "to": "src/ecoverses/iris/record/ArtifactFolderView.tsx",
+    "sha256": "30428030704b93e29526f6297e97feab08518a925268e6a7a8544bf914bfa7f0"
+  },
+  {
+    "from": "src/projects/iris/DocxArtifactReader.tsx",
+    "to": "src/ecoverses/iris/record/DocxArtifactReader.tsx",
+    "sha256": "abeae23b645e3c2ccef5ffecade56f123a89410b92a443700d04b67c463402fa"
+  },
+  {
+    "from": "src/projects/iris/IrisRecordStage.tsx",
+    "to": "src/ecoverses/iris/record/IrisRecordStage.tsx",
+    "sha256": "2c7ff4cf3666f602699d9e6463363eff4df977ae8d48667a6279f0d5887d0924"
+  },
+  {
+    "from": "src/projects/iris/StudyWorkspace.tsx",
+    "to": "src/ecoverses/iris/record/StudyWorkspace.tsx",
+    "sha256": "f92e889bcd7d3b6e0baeb28c44af1ac43f7f81e7b2ea0eff68e6baf556cfa1d9"
+  },
+  {
+    "from": "src/projects/iris/recordManifest.ts",
+    "to": "src/ecoverses/iris/record/recordManifest.ts",
+    "sha256": "d76e2270e99249b516abbd2131df0a0880f6593ef2a6fba9e075b37fac284052"
+  },
+  {
+    "from": "src/projects/iris/useIrisStudySession.ts",
+    "to": "src/ecoverses/iris/record/useIrisStudySession.ts",
+    "sha256": "193159dbfca9d3325a9ac52e911c779d2770523f9870086fa0979df2b9780ebe"
+  },
+  {
+    "from": "src/projects/final_app_data.json",
+    "to": "src/ecoverses/food-vulnerability/data/final_app_data.json",
+    "sha256": "afcf91c3319dd58e450f46ea5bfb0d5c3e30dc71c1a624c10e3ff3a8c77efeda"
+  },
+  {
+    "from": "src/projects/groceries.json",
+    "to": "src/ecoverses/food-vulnerability/data/groceries.json",
+    "sha256": "08a764bf5ad2f6ceb1d3991afce126e42531c33eafc7aa2e1896da358705394f"
+  },
+  {
+    "from": "transitaware/mappinginequality.json",
+    "to": "src/ecoverses/transit-aware/data/mappinginequality.json",
+    "sha256": "7091320f1b511d28f68cf590772ef40d1aa3840162541bd3336e585425cf1ca2"
+  },
+  {
+    "from": "transitaware/restaurants.json",
+    "to": "src/ecoverses/transit-aware/data/restaurants.json",
+    "sha256": "c272bdaafde8fafeffc4a25005e774e6bfce7dfd994339bee1f641008b3fc46d"
+  },
+  {
+    "from": "src/projects/ComputeRouteMatrix.py",
+    "to": "research/transit-aware/ComputeRouteMatrix.py",
+    "sha256": "b41bc716e7f161d7555d2af2a8d007b41ddf82cf1ec6a7be435460bc85f55b45"
+  },
+  {
+    "from": "transitaware/Homeicordinates.py",
+    "to": "research/transit-aware/Homeicordinates.py",
+    "sha256": "3b396daaebb7a0a90f61876958ae38a25da944f3d6dc7c4df58e146009a59f27"
+  },
+  {
+    "from": "transitaware/madison-transit_drive-audit-ratio - transit_matrix_results.csv",
+    "to": "research/transit-aware/madison-transit_drive-audit-ratio - transit_matrix_results.csv",
+    "sha256": "c862116ee308856b03c1b62602e6ed6dcea507957987a6337699a6f4bfc4ee66"
+  },
+  {
+    "from": "transitaware/route_polylines.json",
+    "to": "research/transit-aware/route_polylines.json",
+    "sha256": "f4600f774192ba67c001b2c78630e145b9aee2147748ab0eebab2fcc2c1e4364"
+  },
+  {
+    "from": "transitaware/transit_matrix_results.csv",
+    "to": "research/transit-aware/transit_matrix_results.csv",
+    "sha256": "1217c1319dcad31fd7ec0bf9dfbeef54e13320865b1073fdc546ad102cf638c3"
+  },
+  {
+    "from": "transitaware/transit_time_map-1.html",
+    "to": "research/transit-aware/transit_time_map-1.html",
+    "sha256": "a7126776645083b4949c7eced03177d166fbb736142cc84461f88f4fcf34a488"
+  },
+  {
+    "from": "src/projects/Scoring methodology.pdf",
+    "to": "public/food-vulnerability/Scoring methodology.pdf",
+    "sha256": "4d86afb255ff2e6a083811381f04ca495f51761aa6cf4138b0a67c4c3df71be8"
+  },
+  {
+    "from": "minding the gap-where youcan findme.docx",
+    "to": "content/sources/minding the gap-where youcan findme.docx",
+    "sha256": "6a854779534d5a53e6c6956dc301897abffdf0431e1fca3be6587afc617e4d90"
+  },
+  {
+    "from": "introduction.Rmd.txt",
+    "to": "research/shell-game/introduction.Rmd.txt",
+    "sha256": "3d3c256480bb89ae097db404f5adddd5a5eea9e9f78d721f6c9e45795852150e"
+  },
+  {
+    "from": "ARCHITECTURE.md",
+    "to": "research/site-history/ARCHITECTURE.md",
+    "sha256": "7e48784c65d7fed2b2ecd47e15cdd4010733d1c3217ec27a4ccdd3763fb15b89"
+  },
+  {
+    "from": "public/README.md",
+    "to": "research/site-history/public-upload-instructions.md",
+    "sha256": "71ecbb95c3e7566c34b4d7d99cbeb2fa969222e0de8c9bc08bc8a1e591eed213"
+  },
+  {
+    "from": "components/Methodology.tsx",
+    "to": "research/shell-game/presentation-history/Methodology.tsx",
+    "sha256": "13ebc03b477fe5c3f23349b0b0b21fbfb240e5bdc1d07f10146a241c90243ef5"
+  },
+  {
+    "from": "src/projects/ PetalWidthcall.rmd",
+    "to": "research/iris/ PetalWidthcall.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "src/projects/-1.gitignore (1)",
+    "to": "research/tools/site-history/-1.gitignore (1)",
+    "sha256": "6be3ad42b656b960f5c484a4af15f4458eff6caaa7655a77f4d711c719e69422"
+  },
+  {
+    "from": "src/projects/ANOVA.png",
+    "to": "research/iris/ANOVA.png",
+    "sha256": "9d580cb334c4f3d22b9cbe1e8e63dd8e9c9b9864b877e92fb06e09a68a322186"
+  },
+  {
+    "from": "src/projects/ANOVAcall.rmd",
+    "to": "research/iris/ANOVAcall.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "src/projects/ANOVAtable.rmd",
+    "to": "research/iris/ANOVAtable.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "src/projects/Confusionmatrix.rmd",
+    "to": "research/iris/Confusionmatrix.rmd",
+    "sha256": "caf1d3beede2b2589e86513d17dc124d11cd6b4e5c4e7d58f81e241b5ff2b933"
+  },
+  {
+    "from": "src/projects/Constltuantgressionwarnings.txt",
+    "to": "research/iris/Constltuantgressionwarnings.txt",
+    "sha256": "fceda704c7096db19fa9b217b4f230df4ba4b7a0b963f676cf591365711bb20d"
+  },
+  {
+    "from": "src/projects/ConsultingFinalProjectResults.rmd",
+    "to": "research/iris/ConsultingFinalProjectResults.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "src/projects/ConsultingFinalProject_F.pdf",
+    "to": "research/iris/ConsultingFinalProject_F.pdf",
+    "sha256": "d7a150e148de1c80ca675e533a1939743b77ea3ce312e7ee876bba7e5abfd8f9"
+  },
+  {
+    "from": "src/projects/Consulting_Final_ProjectRedacted.pdf",
+    "to": "research/iris/Consulting_Final_ProjectRedacted.pdf",
+    "sha256": "4bb6e76b7ef1dc35a79dca69fe5d5ae39c593e18fb9fb4682d9fb3a1552b1d40"
+  },
+  {
+    "from": "src/projects/Iris_EDA.Rmd",
+    "to": "research/iris/Iris_EDA.Rmd",
+    "sha256": "e977aa8b9c49cf20d4afe3ddaa38b6a4050b05dd8bf60c93897ee96e3e088bee"
+  },
+  {
+    "from": "src/projects/LDAMANOVA.png",
+    "to": "research/iris/LDAMANOVA.png",
+    "sha256": "f2f221719f5ccba6b3323f8b7b01909cb6758c932318dc348dca4ea40c88da7d"
+  },
+  {
+    "from": "src/projects/LDAtable.rmd",
+    "to": "research/iris/LDAtable.rmd",
+    "sha256": "caf1d3beede2b2589e86513d17dc124d11cd6b4e5c4e7d58f81e241b5ff2b933"
+  },
+  {
+    "from": "src/projects/MANOVA.png",
+    "to": "research/iris/MANOVA.png",
+    "sha256": "1f5b89fcba3293f6178f9090f3d30eda89baa96cde2da463e839e6ea913e403a"
+  },
+  {
+    "from": "src/projects/MANOVAtable.rmd",
+    "to": "research/iris/MANOVAtable.rmd",
+    "sha256": "caf1d3beede2b2589e86513d17dc124d11cd6b4e5c4e7d58f81e241b5ff2b933"
+  },
+  {
+    "from": "src/projects/MANVOArenalysis.rmd",
+    "to": "research/iris/MANVOArenalysis.rmd",
+    "sha256": "caf1d3beede2b2589e86513d17dc124d11cd6b4e5c4e7d58f81e241b5ff2b933"
+  },
+  {
+    "from": "src/projects/MarksonP_Iris_CaseStudy_Final2025.pdf",
+    "to": "research/iris/MarksonP_Iris_CaseStudy_Final2025.pdf",
+    "sha256": "b4af4b95a9d49694b8d51cdd31d80bedb7d1be2d6a24d90d1d64512edab3d71e"
+  },
+  {
+    "from": "src/projects/MarksonP_Iris_CaseStudy_Final2025.txt",
+    "to": "research/iris/MarksonP_Iris_CaseStudy_Final2025.txt",
+    "sha256": "a8300e68e1d0b5bcdf86c6df0160dd664c69ee73625e3c1a2224bef0aaee4659"
+  },
+  {
+    "from": "src/projects/PCAkMeans.png",
+    "to": "research/iris/PCAkMeans.png",
+    "sha256": "9eee1f657fc6d49c7e9acefbc534891e77efebb3efa7fe4b9e6b21ec241b4bbf"
+  },
+  {
+    "from": "src/projects/PCAsummary.png",
+    "to": "research/iris/PCAsummary.png",
+    "sha256": "6f9e38458e9596e42f0ffca69992a4412be4edf53efa383556d7db9819514105"
+  },
+  {
+    "from": "src/projects/Petallengthcall.rmd",
+    "to": "research/iris/Petallengthcall.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "src/projects/README.canvas.md",
+    "to": "research/tools/site-history/README.canvas.md",
+    "sha256": "a54d332b6df63772afc4b37ee46d35e09920b99d8d67272df2219ee95b7e950a"
+  },
+  {
+    "from": "src/projects/README.schoolclosure.md",
+    "to": "research/tools/site-history/README.schoolclosure.md",
+    "sha256": "ea33e4f9dee742a66d4b8863d5516587111cafd7017952979c39e3f221fc4966"
+  },
+  {
+    "from": "src/projects/Supplemental.docx (1).pdf",
+    "to": "research/iris/Supplemental.docx (1).pdf",
+    "sha256": "f9c4f07688bed781ee62b3b237283b7807b30e81de438dec65a21fd782ef5482"
+  },
+  {
+    "from": "src/projects/The Shell Game_ Auditing Allocation in Crosswalked Population Data_SACNAS_abstract (3).pdf",
+    "to": "research/conferences/The Shell Game_ Auditing Allocation in Crosswalked Population Data_SACNAS_abstract (3).pdf",
+    "sha256": "e261931fd12007ef95800359e9ee6aa65d4d47700742bf8515b9c75f4cf168e0"
+  },
+  {
+    "from": "src/projects/TukeyHSD.rmd",
+    "to": "research/iris/TukeyHSD.rmd",
+    "sha256": "caf1d3beede2b2589e86513d17dc124d11cd6b4e5c4e7d58f81e241b5ff2b933"
+  },
+  {
+    "from": "src/projects/canvas_dashboard.py",
+    "to": "research/tools/site-history/canvas_dashboard.py",
+    "sha256": "964f209f0e76073a9d4edd677b7eb3960cc0e833e7ec30647a3505a0a683bb52"
+  },
+  {
+    "from": "src/projects/canvas_env.example",
+    "to": "research/tools/site-history/canvas_env.example",
+    "sha256": "fba4a456c0d2e58595a5a8c284ffadb1e7fe805b89842f8ce63bf3769639b21e"
+  },
+  {
+    "from": "src/projects/canvas_gitignore",
+    "to": "research/tools/site-history/canvas_gitignore",
+    "sha256": "18c7fd2d61aec65d741e9dba85787f40bfc653229ce6ceb64fc502fd84b8a2bf"
+  },
+  {
+    "from": "src/projects/canvas_readme.md",
+    "to": "research/tools/site-history/canvas_readme.md",
+    "sha256": "5c4a506aebdf43c0c684572f7114ec897665108daef06425eedfa626d056be06"
+  },
+  {
+    "from": "src/projects/canvas_requirements.txt",
+    "to": "research/tools/site-history/canvas_requirements.txt",
+    "sha256": "6a58af1377e006046f47bfcfead07b28400d5285d79d106b86e6e4b8ea33b9f8"
+  },
+  {
+    "from": "src/projects/canvassetup.png",
+    "to": "research/tools/site-history/canvassetup.png",
+    "sha256": "8de1c5324993f308f2f0ba1249a73204faee4bd4b0c1ed8b97957eb141bf99ea"
+  },
+  {
+    "from": "src/projects/canvassummary.png",
+    "to": "research/tools/site-history/canvassummary.png",
+    "sha256": "bd7735ea9b9076d64ce18ff5480c1609255d13bcdad4df9a041c61f0e7e2cf72"
+  },
+  {
+    "from": "src/projects/env (1)-1.example",
+    "to": "research/tools/site-history/env (1)-1.example",
+    "sha256": "6685169de2c2c6288fc73eae9439d47a96bcf3a1218ab42d521648491eba5040"
+  },
+  {
+    "from": "src/projects/gitignore (1)",
+    "to": "research/tools/site-history/gitignore (1)",
+    "sha256": "6be3ad42b656b960f5c484a4af15f4458eff6caaa7655a77f4d711c719e69422"
+  },
+  {
+    "from": "src/projects/kmeanscontingencytable.rmd",
+    "to": "research/iris/kmeanscontingencytable.rmd",
+    "sha256": "e977aa8b9c49cf20d4afe3ddaa38b6a4050b05dd8bf60c93897ee96e3e088bee"
+  },
+  {
+    "from": "src/projects/meandSDEDA.rmd",
+    "to": "research/iris/meandSDEDA.rmd",
+    "sha256": "e977aa8b9c49cf20d4afe3ddaa38b6a4050b05dd8bf60c93897ee96e3e088bee"
+  },
+  {
+    "from": "src/projects/mmsd_env.example",
+    "to": "research/tools/site-history/mmsd_env.example",
+    "sha256": "6685169de2c2c6288fc73eae9439d47a96bcf3a1218ab42d521648491eba5040"
+  },
+  {
+    "from": "src/projects/mmsd_readme.md",
+    "to": "research/tools/site-history/mmsd_readme.md",
+    "sha256": "b540a7d129c58c6e0161038cc9530da2e5af06bfaaf60cf9aa4ff3da3916b4a9"
+  },
+  {
+    "from": "src/projects/mmsd_requirements.txt",
+    "to": "research/tools/site-history/mmsd_requirements.txt",
+    "sha256": "6a58af1377e006046f47bfcfead07b28400d5285d79d106b86e6e4b8ea33b9f8"
+  },
+  {
+    "from": "src/projects/pairwise.png",
+    "to": "research/iris/pairwise.png",
+    "sha256": "4a5ffea6db5c4887a8f3d1402ce5c6042001bc37235f1db8a05ebc61fe3b9414"
+  },
+  {
+    "from": "src/projects/pcaasummary.rmd",
+    "to": "research/iris/pcaasummary.rmd",
+    "sha256": "e977aa8b9c49cf20d4afe3ddaa38b6a4050b05dd8bf60c93897ee96e3e088bee"
+  },
+  {
+    "from": "src/projects/petallength.png",
+    "to": "research/iris/petallength.png",
+    "sha256": "bc9b6401882a7935fbcf63b98e56828bb242f068aa4a869ce5e841585ffd037d"
+  },
+  {
+    "from": "src/projects/petallength_boxplots.png",
+    "to": "research/iris/petallength_boxplots.png",
+    "sha256": "4b328d16f66ac5073790ae8741f06b445973ae38a0b084d65eb919ca61a02a62"
+  },
+  {
+    "from": "src/projects/petalwidth.png",
+    "to": "research/iris/petalwidth.png",
+    "sha256": "98590a55ef01d4268c41577ad9a97885ca6bc8faf8689991794ffeef9cba2d3a"
+  },
+  {
+    "from": "src/projects/predictclasstable.rmd",
+    "to": "research/iris/predictclasstable.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "src/projects/school_closure_monitor.py",
+    "to": "research/tools/site-history/school_closure_monitor.py",
+    "sha256": "c3e2360223afd12dbd036f66bc4dc81bde5c6ae59582a866a25945fed1b7003b"
+  },
+  {
+    "from": "src/projects/screeplot.png",
+    "to": "research/iris/screeplot.png",
+    "sha256": "19ba4b369c5998db2bfff60ae485305df9f20d02c6ab622bfa10084604c7e8d7"
+  },
+  {
+    "from": "src/projects/sepallength.png",
+    "to": "research/iris/sepallength.png",
+    "sha256": "e91f149555ed796217107cec31448e032f22596b98e9b8c240a0a44dfc46b044"
+  },
+  {
+    "from": "src/projects/sepalwidth.png",
+    "to": "research/iris/sepalwidth.png",
+    "sha256": "cc820de668aa4c7c04f5c6e58b764ee68d44420d8c76caeadbc72c492879eb6f"
+  },
+  {
+    "from": "src/projects/sepalwidth_boxplots.png",
+    "to": "research/iris/sepalwidth_boxplots.png",
+    "sha256": "062766df5198aa9987b9a0454e8fbb6e10e814b0e9b56591b367c699011f5221"
+  },
+  {
+    "from": "src/projects/stop saying who, start saying how (2) (1).pdf",
+    "to": "research/conferences/stop saying who, start saying how (2) (1).pdf",
+    "sha256": "b7cd1649c72742352aab5044983025875cd9e21273efcc0b4aba4f05a3b05302"
+  },
+  {
+    "from": "src/projects/summarystatsEDA1.rmd",
+    "to": "research/iris/summarystatsEDA1.rmd",
+    "sha256": "e977aa8b9c49cf20d4afe3ddaa38b6a4050b05dd8bf60c93897ee96e3e088bee"
+  },
+  {
+    "from": "src/projects/supplemental_reanalysis.Rmd",
+    "to": "research/iris/supplemental_reanalysis.Rmd",
+    "sha256": "4f8ce9de3bde13725b78064b810649cc43c5fa93a68bf349029ea7937f721d87"
+  },
+  {
+    "from": "src/projects/supplemental_reanalysis.html",
+    "to": "research/iris/supplemental_reanalysis.html",
+    "sha256": "6d3176bdcb95e0335e79d1f336e652c73e203f30f8e4d144a843324d486a40b9"
+  },
+  {
+    "from": "src/projects/train_test_split.rmd",
+    "to": "research/iris/train_test_split.rmd",
+    "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  }
+]

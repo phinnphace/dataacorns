@@ -1,0 +1,27 @@
+# ============================================================
+# Canvas Dashboard – Environment Variables
+# ============================================================
+# 1. Copy this file:   cp .env.example .env
+# 2. Fill in your values below
+# 3. NEVER commit .env to version control
+# ============================================================
+
+# Your Canvas API token
+# Get one: Canvas → Account (top-left) → Settings → + New Access Token
+CANVAS_TOKEN=your_canvas_token_here
+
+# Your school's Canvas URL (no trailing slash)
+# Examples:
+#   https://canvas.instructure.com       (generic)
+#   https://osu.instructure.com          (Ohio State)
+#   https://canvas.wisc.edu              (UW–Madison)
+CANVAS_BASE_URL=https://canvas.instructure.com
+
+# (Optional) Comma-separated course IDs to track.
+# Leave blank to track ALL active courses.
+# Find a course ID in the URL when you open it: /courses/XXXXXX
+KEEP_COURSE_IDS=
+
+# (Optional) Directory where canvas_summary.md and canvas_data.db will be saved.
+# Defaults to the folder where canvas_dashboard.py lives.
+OUTPUT_DIR=

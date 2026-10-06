@@ -34,6 +34,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Check types and original artifact integrity
+        run: npm run lint && npm run check:artifacts
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

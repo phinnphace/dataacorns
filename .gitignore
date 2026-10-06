@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Credentials and generated research/tool output (not source exhibits)
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+kaggle.json
+auth.json
+.kaggle/
+research/model-schmodel/results/
+research/model-schmodel/PILOT_RESULTS.md

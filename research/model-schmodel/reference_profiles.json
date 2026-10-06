@@ -1,0 +1,89 @@
+{
+  "indexing": "One-based data-row positions, excluding any header.",
+  "deduplication_semantics": "Exact equality over four measurements plus species; keep the first occurrence unless a run explicitly reports another rule.",
+  "profiles": {
+    "fisher_table_i": {
+      "duplicate_groups": [
+        {
+          "rows": [102, 143],
+          "values": [5.8, 2.7, 5.1, 1.9, "Iris-virginica"]
+        }
+      ],
+      "rows_dropped_keep_first": [143],
+      "post_dedup_row_count": 149,
+      "post_dedup_class_counts": {
+        "Iris-setosa": 50,
+        "Iris-versicolor": 50,
+        "Iris-virginica": 49
+      },
+      "provenance": "Appendix D extraction and receipts for Fisher (1936), Table I."
+    },
+    "uci_iris_data": {
+      "sha256": "6f608b71a7317216319b4d27b4d9bc84e6abd734eda7872b71a458569e2656c0",
+      "duplicate_groups": [
+        {
+          "rows": [10, 35, 38],
+          "values": [4.9, 3.1, 1.5, 0.1, "Iris-setosa"]
+        },
+        {
+          "rows": [102, 143],
+          "values": [5.8, 2.7, 5.1, 1.9, "Iris-virginica"]
+        }
+      ],
+      "rows_dropped_keep_first": [35, 38, 143],
+      "post_dedup_row_count": 147,
+      "post_dedup_class_counts": {
+        "Iris-setosa": 48,
+        "Iris-versicolor": 50,
+        "Iris-virginica": 49
+      },
+      "provenance": "Appendix D canonical UCI iris.data receipt."
+    },
+    "bezdek_iris_data": {
+      "duplicate_groups": [
+        {
+          "rows": [102, 143],
+          "values": [5.8, 2.7, 5.1, 1.9, "Iris-virginica"]
+        }
+      ],
+      "rows_dropped_keep_first": [143],
+      "post_dedup_row_count": 149,
+      "post_dedup_class_counts": {
+        "Iris-setosa": 50,
+        "Iris-versicolor": 50,
+        "Iris-virginica": 49
+      },
+      "provenance": "Appendix D corrected-lineage bezdekIris.data receipt."
+    },
+    "kaggle_uciml_iris_version_2": {
+      "dataset": "uciml/iris",
+      "file": "Iris.csv",
+      "sha256": "600ac44f23c2e6e0ae37daac8ceb2baba4df963efa580eb31b3b576b28e34c55",
+      "all_columns_including_id": {
+        "duplicate_groups": [],
+        "rows_dropped_keep_first": [],
+        "post_dedup_row_count": 150
+      },
+      "measurements_plus_species_excluding_id": {
+        "duplicate_groups": [
+          {
+            "rows": [10, 35, 38],
+            "values": [4.9, 3.1, 1.5, 0.1, "Iris-setosa"]
+          },
+          {
+            "rows": [102, 143],
+            "values": [5.8, 2.7, 5.1, 1.9, "Iris-virginica"]
+          }
+        ],
+        "rows_dropped_keep_first": [35, 38, 143],
+        "post_dedup_row_count": 147,
+        "post_dedup_class_counts": {
+          "Iris-setosa": 48,
+          "Iris-versicolor": 50,
+          "Iris-virginica": 49
+        }
+      },
+      "provenance": "Public Kaggle dataset artifact downloaded from the Kaggle API before benchmark publication."
+    }
+  }
+}

@@ -25,3 +25,18 @@ A second-iteration dashboard assessing tract-level food access vulnerability. Th
 ---
 *Visit the live portfolio at [dataacorns.com](https://dataacorns.com)*
 
+## Website maintenance
+
+The application is organized under `src/ecoverses/`, with shared navigation and the Ecoverse registry in `src/app/`. Research sources are kept separately under `research/`; downloadable tools are in `tools/`. A Git project does not automatically get an Ecoverse.
+
+See [the application map](docs/architecture.md) for the maintained layout, protected evidence paths, and note-publishing instructions.
+
+```sh
+npm ci
+npm run dev
+npm run lint
+npm run check:artifacts
+npm run build
+```
+
+The artifact check protects the original source files, including every Iris exhibit, receipt, and dataset. GitHub Pages runs the build, type check, and artifact check before deployment.
