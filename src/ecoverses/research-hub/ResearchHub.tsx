@@ -24,6 +24,7 @@ import { PAPERS, paperUrl } from '../../content/papers';
 const FILTERS = ['All', 'SACNAS', 'ABRCMS', 'Papers'];
 const GITHUB_NOTES_URL = 'https://github.com/phinnphace/dataacorns/tree/main/content/notes';
 const GITHUB_NEW_NOTE_URL = 'https://github.com/phinnphace/dataacorns/new/main/content/notes';
+const opensPapersShelf = () => window.location.hash.slice(2).split('/')[1] === 'papers';
 
 type HubSection = 'all' | 'notes' | 'abstracts';
 
@@ -262,8 +263,8 @@ const ResearchHub: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<Abstract | null>(null);
   const [selectedNote, setSelectedNote] = useState<ResearchNote | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [activeSection, setActiveSection] = useState<HubSection>('all');
+  const [activeFilter, setActiveFilter] = useState(opensPapersShelf() ? 'Papers' : 'All');
+  const [activeSection, setActiveSection] = useState<HubSection>(opensPapersShelf() ? 'abstracts' : 'all');
 
   const abstractPosts = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();

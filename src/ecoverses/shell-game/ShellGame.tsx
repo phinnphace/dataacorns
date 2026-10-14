@@ -551,7 +551,7 @@ const ShellGame: React.FC = () => {
                 <ul className="space-y-3 text-sm font-medium">
                   <li><a href="https://github.com/phinnphace/geoDeltaAudit#readme" className="hover:text-nobel-gold transition-colors">Documentation</a></li>
                   <li><a href="/Vignette_steps%20copy.Rmd.txt" className="hover:text-nobel-gold transition-colors">Vignettes</a></li>
-                  <li><a href="/The%20Shell%20Game_%20Auditing%20Allocation%20in%20Crosswalked%20Population%20Data.pdf" className="hover:text-nobel-gold transition-colors">Research Paper</a></li>
+                  <li><a href="#/research-hub/papers" className="hover:text-nobel-gold transition-colors">Research Paper</a></li>
                 </ul>
               </div>
             </div>
