@@ -6,6 +6,7 @@ export type RecordDocument = {
   fileName: string;
   preview: string;
   size: string;
+  revision?: string;
 };
 
 export type ArtifactFile = {
@@ -31,6 +32,7 @@ export const recordDocuments: RecordDocument[] = [
     preview:
       'The canonical file\'s two transcription errors (rows 35, 38; see D.2) collapse distinct setosa specimens onto row 10, manufacturing a triplet of identical rows.',
     size: '3.3 MB',
+    revision: '2d94ad01dc78ca96',
   },
   {
     id: 'mirrors-disagree',

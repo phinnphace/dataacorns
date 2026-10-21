@@ -24,7 +24,7 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
   const documentRef = useRef<HTMLDivElement>(null);
   const styleRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
-  const sourceUrl = artifactUrl(document.fileName);
+  const sourceUrl = `${artifactUrl(document.fileName)}${document.revision ? `?v=${document.revision}` : ''}`;
 
   useEffect(() => {
     const controller = new AbortController();
