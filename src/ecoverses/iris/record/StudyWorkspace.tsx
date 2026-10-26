@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import MontagePlayer from './MontagePlayer';
 import {
   ArrowDown,
   ArrowUp,
@@ -22,6 +23,7 @@ import {
 } from './recordManifest';
 import {
   FLOWCHART_ID,
+  MONTAGE_ID,
   folderFileId,
   type StudyView,
   type WorkspacePosition,
@@ -417,6 +419,17 @@ const StudyWorkspace: React.FC<StudyWorkspaceProps> = ({
                   </div>
                 </MovableItem>
               ))}
+
+              <MovableItem
+                id={MONTAGE_ID}
+                label="exhibit montage"
+                position={state.positions[MONTAGE_ID] ?? { x: 772, y: 639 }}
+                width={250}
+                height={285}
+                onMove={setPosition}
+              >
+                <MontagePlayer />
+              </MovableItem>
 
               {checkedOutFiles.map(({ id, folder, file }) => (
                 <MovableItem

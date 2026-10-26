@@ -17,6 +17,7 @@ Each Ecoverse has a hash URL (`#/shellgame`, `#/research-hub`, etc.). Iris retai
 ## Evidence and sources
 
 - `public/acorns=iris/` is protected: the DOCX exhibits, data, and receipts stay byte-identical at their established filenames and URLs. The reader renders the original documents; it must not summarize or reconstruct them. Visitor study-session arrangements are presentation state only.
+- `public/media/iris_montage_page.mp4` is the unchanged exhibit montage, presented as a movable player card in The Record with native controls and a pop-out window. Its checksum is tracked with the source artifacts.
 - The older primary Iris paper, analyses, and plots are archived in `research/iris/`. The parent page is not being rewritten while the revised paper is in progress.
 - `content/sources/` retains the landing-page intro essay source. Its displayed essay remains in the Overworld component.
 - The original Contextual Training paper is housed under `public/papers/` and linked by title in Research Hub, with no blurb or separate Ecoverse. Its project GUI and wider artifact organization remain on hold. A repository project does not automatically get an Ecoverse.

@@ -24,6 +24,7 @@ const DEVICE_KEY = 'iris-study-layout-v1';
 const REMEMBER_KEY = 'iris-study-remember-v1';
 
 export const FLOWCHART_ID = 'fisher-flowchart';
+export const MONTAGE_ID = 'exhibit-montage';
 
 export const folderFileId = (folderId: ArtifactFolder['id'], fileName: string) =>
   `folder:${folderId}:${fileName}`;
@@ -39,6 +40,7 @@ const createDefaultState = (documents: RecordDocument[]): StudySessionState => (
   exhibitOrder: documents.map((document) => document.id),
   positions: {
     [FLOWCHART_ID]: { x: 24, y: 24 },
+    [MONTAGE_ID]: { x: 772, y: 639 },
     ...Object.fromEntries(
       documents.map((document, index) => [document.id, defaultPositionForDocument(index)]),
     ),
@@ -96,7 +98,10 @@ const normalizeState = (
   const positions = { ...defaults.positions };
   if (stored.positions && typeof stored.positions === 'object') {
     for (const [id, position] of Object.entries(stored.positions)) {
-      if ((documentIds.has(id) || id === FLOWCHART_ID || validFileIds.has(id)) && isPosition(position)) {
+      if (
+        (documentIds.has(id) || id === FLOWCHART_ID || id === MONTAGE_ID || validFileIds.has(id)) &&
+        isPosition(position)
+      ) {
         positions[id] = position;
       }
     }

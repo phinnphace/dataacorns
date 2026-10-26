@@ -578,5 +578,10 @@
     "originalPath": "transitaware/transit_time_map-1.html",
     "path": "research/transit-aware/transit_time_map-1.html",
     "sha256": "a7126776645083b4949c7eced03177d166fbb736142cc84461f88f4fcf34a488"
+  },
+  {
+    "originalPath": "iris_montage_page.mp4",
+    "path": "public/media/iris_montage_page.mp4",
+    "sha256": "66d81f05e0a40c5ac55d711193d6870c387228593bca751ad95a700ca871d674"
   }
 ]
