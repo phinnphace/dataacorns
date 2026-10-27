@@ -150,10 +150,10 @@ const IrisCaseStudy: React.FC = () => {
           <p>
             This project is both a technical analysis and a critique of how we inherit tools without interrogating their origins. Statistical methods don't exist in a vacuum — they are shaped by the people who created them, and by the social, political, and scientific paradigms of their time. If we are serious about equity in data science, we must be equally serious about the roots of the tools we use.
           </p>
-          <a href="https://rpubs.com/marksonp/Iris_reanalysis" target="_blank" rel="noopener noreferrer" className="block bg-[#fdfbf7] border border-[#e5ddcb] p-5 rounded-sm hover:shadow-md transition-all group">
+          <a href="https://rpubs.com/marksonp/the-record" target="_blank" rel="noopener noreferrer" className="block bg-[#fdfbf7] border border-[#e5ddcb] p-5 rounded-sm hover:shadow-md transition-all group">
             <div className="flex items-center gap-4 text-[#556b2f] group-hover:text-[#3e4f22]">
               <span className="text-2xl">💡</span>
-              <span className="font-mono text-sm underline underline-offset-4 break-all">https://rpubs.com/marksonp/Iris_reanalysis</span>
+              <span className="font-mono text-sm underline underline-offset-4 break-all">https://rpubs.com/marksonp/the-record</span>
             </div>
           </a>
         </div>
@@ -180,10 +180,10 @@ const IrisCaseStudy: React.FC = () => {
           <p>
             We train ourselves — and our tools — on the <em>presumption</em> of normality, often ignoring how that presumption is constructed. The <em>Iris</em> dataset is a paradigmatic example of this: widely viewed as neutral, when in fact it reflects a highly curated ideal rooted in typological thinking.
           </p>
-          <a href="https://tinyurl.com/IrisConsulting" target="_blank" rel="noopener noreferrer" className="block bg-[#fdfbf7] border border-[#e5ddcb] p-5 rounded-sm hover:shadow-md transition-all group">
+          <a href="https://dataacorns.com/papers/The%20Iris%20Dataset-%20An%20Accidental%20Case%20Study%20in%20Pedagogy%2C%20Methodology%20and%20Real-World%20Implications.pdf" target="_blank" rel="noopener noreferrer" className="block bg-[#fdfbf7] border border-[#e5ddcb] p-5 rounded-sm hover:shadow-md transition-all group">
             <div className="flex items-center gap-4 text-[#556b2f] group-hover:text-[#3e4f22]">
               <span className="text-2xl">💡</span>
-              <span className="font-mono text-sm underline underline-offset-4 break-all">https://tinyurl.com/IrisConsulting</span>
+              <span className="font-mono text-sm underline underline-offset-4 break-all">https://dataacorns.com/papers/The%20Iris%20Dataset-%20An%20Accidental%20Case%20Study%20in%20Pedagogy%2C%20Methodology%20and%20Real-World%20Implications.pdf</span>
             </div>
           </a>
         </div>
