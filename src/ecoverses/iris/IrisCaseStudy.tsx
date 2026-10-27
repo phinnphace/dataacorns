@@ -230,6 +230,12 @@ const IrisCaseStudy: React.FC = () => {
           <h2 className="text-lg md:text-xl italic text-[#5c4e3c] font-light max-w-2xl mx-auto leading-relaxed">
             An accidental case study in pedagogy, methodology, and real-world implications.
           </h2>
+          <a
+            href="#/research-hub/papers"
+            className="mt-4 inline-block text-sm text-[#556b2f] underline underline-offset-4 hover:text-[#3e4f22] focus:outline-none focus:ring-2 focus:ring-[#6f7f46] focus:ring-offset-2"
+          >
+            Research Paper
+          </a>
           <div className="mt-4 text-xs tracking-widest uppercase text-[#8b7355]">
             Tap the anatomical cards to explore the analysis
           </div>

@@ -1,6 +1,11 @@
 // Housing for original papers, independent of the Ecoverse registry.
 export const PAPERS = [
   {
+    id: 'iris-accidental-case-study',
+    title: 'The Iris Dataset: An Accidental Case Study in Pedagogy, Methodology and Real-World Implications',
+    fileName: 'The Iris Dataset- An Accidental Case Study in Pedagogy, Methodology and Real-World Implications.pdf',
+  },
+  {
     id: 'shell-game-case-study',
     title: 'The Shell Game: A Case Study Introducing a Reproducible Framework for Auditing Data Transformations Across Administrative Boundaries',
     fileName: 'The_Shell_Game_Case_Study.pdf',

@@ -583,5 +583,10 @@
     "originalPath": "iris_montage_page.mp4",
     "path": "public/media/iris_montage_page.mp4",
     "sha256": "66d81f05e0a40c5ac55d711193d6870c387228593bca751ad95a700ca871d674"
+  },
+  {
+    "originalPath": "The Iris Dataset- An Accidental Case Study in Pedagogy, Methodology and Real-World Implications.pdf",
+    "path": "public/papers/The Iris Dataset- An Accidental Case Study in Pedagogy, Methodology and Real-World Implications.pdf",
+    "sha256": "354c29fa065d067149c705b9ccee1b88eaf89fd469da59b9bbe7992920a323b4"
   }
 ]
