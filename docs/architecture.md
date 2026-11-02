@@ -16,8 +16,8 @@ Each Ecoverse has a hash URL (`#/shellgame`, `#/research-hub`, etc.). Iris retai
 
 ## Evidence and sources
 
-- `public/acorns=iris/` is protected: the DOCX exhibits, data, and receipts stay byte-identical at their established filenames and URLs. The reader renders the original documents; it must not summarize or reconstruct them. Visitor study-session arrangements are presentation state only.
-- `public/media/iris_montage_page.mp4` is the unchanged exhibit montage, presented as a movable player card in The Record with native controls and a pop-out window. Its checksum is tracked with the source artifacts.
+- `public/acorns=iris/` is protected: the Appendix D exhibits, supplementary data, and supporting documentation stay byte-identical at their established filenames and URLs. The reader renders the original documents; it must not summarize or reconstruct them. Visitor study-session arrangements are presentation state only.
+- `public/media/iris_montage_page.mp4` is the exhibit montage, presented as a movable player card in The Record with native controls and a pop-out window. Its checksum is tracked with the source artifacts.
 - The older primary Iris paper, analyses, and plots are archived in `research/iris/`. The parent page is not being rewritten while the revised paper is in progress.
 - `content/sources/` retains the landing-page intro essay source. Its displayed essay remains in the Overworld component.
 - The original Contextual Training paper is housed under `public/papers/` and linked by title in Research Hub, with no blurb or separate Ecoverse. Its project GUI and wider artifact organization remain on hold. A repository project does not automatically get an Ecoverse.
@@ -27,7 +27,7 @@ Each Ecoverse has a hash URL (`#/shellgame`, `#/research-hub`, etc.). Iris retai
 - `research/conferences/` retains conference-source copies. Official conference imagery remains in `public/`. SACNAS is 2026; the ABRCMS entry is 2025. Archived filenames are historical records, not current display metadata.
 - `tools/canvas-api/` and `tools/school-closure/` contain independently maintained Python sources and READMEs. The website displays those READMEs and offers source downloads. Canvas also links to PyPI (`canvastogo`). The historical MMSD configuration remains in the School Closure source; the public tool name is School Closure.
 - `research/tools/site-history/` preserves the previous tool material. It is not the current download source.
-- `research/model-schmodel/` contains work-in-progress field-collection source. No new public Ecoverse or model run is introduced by this cleanup. Private pilot notes, receipts, and environments remain local and ignored.
+- `research/model-schmodel/` contains work-in-progress field-collection source. No new public Ecoverse or model run is introduced by this cleanup. Private pilot notes, execution records, and environments remain local and ignored.
 - `research/site-history/` retains the previous conceptual architecture and upload instructions.
 
 The NHGIS download links to the exact file in `phinnphace/shellgame`, pinned to commit `d5efa3fe0ea635aa80e60518d6dca9eb32f82332`. It is not a substituted dataset or a second 17 MB copy.
@@ -44,4 +44,8 @@ npm run build
 
 `docs/relocations.json` records moved paths. `docs/source-artifacts.json` records the baseline hashes of existing source artifacts, with their new locations where applicable. `npm run check:artifacts` checks those bytes and the full Iris evidence file list. Updating an artifact requires the owner's explicit approval; an intentional new version should be accompanied by an intentional manifest update, not silently accepted.
 
-GitHub Pages builds `dist/` through `.github/workflows/deploy.yml`. Preserve `public/CNAME`, robots/sitemap files, and social-share metadata. Do not commit `.env`, tokens, virtual environments, generated databases, downloaded model receipts, or `dist/`.
+GitHub Pages builds `dist/` through `.github/workflows/deploy.yml`. Preserve `public/CNAME`, robots/sitemap files, and social-share metadata. Do not commit `.env`, tokens, virtual environments, generated databases, downloaded model execution records, or `dist/`.
+
+## Supporting-documentation paths
+
+The active Iris supporting files are under `public/acorns=iris/supporting-documentation/`. The source manifest and relocation log record their current locations and original paths. The build copies these verified files to the established download URLs for compatibility. Saved study-session file identifiers are migrated on load.

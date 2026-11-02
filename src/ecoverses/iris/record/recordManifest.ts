@@ -7,6 +7,7 @@ export type RecordDocument = {
   preview: string;
   size: string;
   revision?: string;
+  sourceUrl?: string;
 };
 
 export type ArtifactFile = {
@@ -17,7 +18,7 @@ export type ArtifactFile = {
 };
 
 export type ArtifactFolder = {
-  id: 'data' | 'receipts';
+  id: 'data' | 'supporting-documentation';
   name: string;
   files: ArtifactFile[];
 };
@@ -80,7 +81,7 @@ export const recordDocuments: RecordDocument[] = [
     preview:
       'The iris dataset, tabel 1was extracted from Fisher (1936), p. 180 (PDF page 3) using the MCP-based PDF tool developed by Kevin Tan (Tan, 2025).',
     size: '3.8 MB',
-    revision: '34bc9d6d43574841',
+    revision: 'eaf17ca79f3cbace',
   },
   {
     id: 'shape-prior',
@@ -99,7 +100,7 @@ export const artifactFolders: ArtifactFolder[] = [
     name: 'data',
     files: [
       { fileName: 'Index', size: '105 bytes', kind: 'data' },
-      { fileName: 'bezdekIris.data', size: '11.7 KB', kind: 'data' },
+      { fileName: 'bezdekIris.data', size: '11.7 KB', kind: 'data', revision: '090c1bda81056edf' },
       { fileName: 'citation_metadata_human_readable.txt', size: '159 bytes', kind: 'text' },
       { fileName: 'citation_metadata_machine_readable.bib', size: '891 bytes', kind: 'text' },
       { fileName: 'iris.data', size: '4.4 KB', kind: 'data' },
@@ -107,11 +108,11 @@ export const artifactFolders: ArtifactFolder[] = [
     ],
   },
   {
-    id: 'receipts',
+    id: 'supporting-documentation',
     name: 'Supporting documentation',
     files: [
       { fileName: '20260929_135504.jpg', size: '3.6 MB', kind: 'image' },
-      { fileName: '600cellauditdiff.r', size: '283 bytes', kind: 'code' },
+      { fileName: '600cellauditdiff.r', size: '293 bytes', kind: 'code', revision: '51ff5548db74613f' },
       {
         fileName:
           'Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS copy.pdf',

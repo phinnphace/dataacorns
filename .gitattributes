@@ -1,0 +1,2 @@
+# Preserve source-artifact bytes, including original line endings.
+/public/acorns=iris/** -text

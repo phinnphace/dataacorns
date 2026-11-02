@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { ExternalLink } from 'lucide-react';
 
-const MONTAGE_URL = '/media/iris_montage_page.mp4?v=66d81f05e0a40c5a';
+const MONTAGE_URL = '/media/iris_montage_page.mp4?v=43f0571759529247';
 
 const MontagePlayer: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);

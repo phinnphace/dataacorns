@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Database, Layout, Sparkles, Map as MapIcon, BookOpen, Gift, Compass, GraduationCap, ClipboardList, Grid, Sliders } from 'lucide-react';
 import LandingPage from '../ecoverses/overworld/LandingPage';
@@ -10,13 +10,16 @@ const FreeStuff = lazy(() => import('../ecoverses/by-design/FreeStuff'));
 const ResearchHub = lazy(() => import('../ecoverses/research-hub/ResearchHub'));
 const SurveyDesign = lazy(() => import('../ecoverses/survey-design/SurveyDesign'));
 const The8020Project = lazy(() => import('../ecoverses/eighty-twenty/The8020Project'));
+const AuthorNotePage = lazy(() => import('../components/AuthorNotePage'));
 
 import { ECOVERSES } from './ecoverses';
+import { AUTHOR_NOTE_ROUTE } from '../content/authorNote';
 
 const PROJECTS = [{ id: 'landing', name: 'Overworld Portal' }, ...ECOVERSES];
 
 const projectFromHash = () => {
   const route = window.location.hash.slice(2).split('/')[0];
+  if (route === 'authors-note') return 'authors-note';
   if (route === 'iris') return 'iris-case-study';
   return ECOVERSES.some(project => project.id === route) ? route : 'landing';
 };
@@ -143,6 +146,8 @@ const App: React.FC = () => {
   const [activeProject, setActiveProject] = useState(projectFromHash);
   const [activeTab, setActiveTab] = useState<'map' | 'philosophy' | 'directory'>('map');
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
+  const [noteReturnHash, setNoteReturnHash] = useState('');
+  const previousHash = useRef(window.location.hash);
 
   const navigateToProject = (id: string) => {
     window.location.hash = id === 'landing' ? '' : `/${id === 'iris-case-study' ? 'iris' : id}`;
@@ -151,6 +156,10 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const syncProjectToHash = () => {
+      if (window.location.hash === AUTHOR_NOTE_ROUTE && previousHash.current !== AUTHOR_NOTE_ROUTE) {
+        setNoteReturnHash(previousHash.current);
+      }
+      previousHash.current = window.location.hash;
       setActiveProject(projectFromHash());
     };
 
@@ -171,6 +180,17 @@ const App: React.FC = () => {
       
       <Suspense fallback={<div role="status" className="px-6 py-24 text-center font-mono text-stone-600">Opening Ecoverse…</div>}>
       <AnimatePresence mode="wait">
+        {activeProject === 'authors-note' && (
+          <motion.div
+            key="authors-note"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <AuthorNotePage onBack={() => { window.location.hash = noteReturnHash; }} />
+          </motion.div>
+        )}
         {activeProject === 'landing' && (
           <motion.div
             key="landing"
@@ -286,6 +306,11 @@ const App: React.FC = () => {
         )}
       </AnimatePresence>
       </Suspense>
+      <footer className="border-t border-stone-300 bg-[#faf8f5] px-6 py-5 text-center text-sm text-stone-700">
+        <a href={AUTHOR_NOTE_ROUTE} className="underline underline-offset-4 hover:text-stone-950 focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2">
+          Author’s epistemic note
+        </a>
+      </footer>
     </div>
   );
 };

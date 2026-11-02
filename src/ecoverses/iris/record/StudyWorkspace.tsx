@@ -244,10 +244,10 @@ const StudyWorkspace: React.FC<StudyWorkspaceProps> = ({
     reset,
   } = session;
 
-  const chartUrl = `${artifactUrl('receipts/fisher.flowchart.png')}?v=5cace691d928172b`;
+  const chartUrl = `${artifactUrl('supporting-documentation/fisher.flowchart.png')}?v=5cace691d928172b`;
   const chartWidth = state.flowchartSize === 'wide' ? 560 : 440;
   const chartHeight = state.flowchartSize === 'wide' ? 650 : 590;
-  const deskFileIds = [folderFileId('receipts', 'fisher.flowchart.png'), ...state.checkedOutFileIds];
+  const deskFileIds = [folderFileId('supporting-documentation', 'fisher.flowchart.png'), ...state.checkedOutFileIds];
 
   return (
     <section aria-labelledby="study-session-heading">

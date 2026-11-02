@@ -13,6 +13,7 @@ type DocxArtifactReaderProps = {
   documents: RecordDocument[];
   onBack: () => void;
   onSelectDocument: (document: RecordDocument) => void;
+  backLabel?: string;
 };
 
 const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
@@ -20,11 +21,12 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
   documents,
   onBack,
   onSelectDocument,
+  backLabel = 'Study session',
 }) => {
   const documentRef = useRef<HTMLDivElement>(null);
   const styleRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
-  const sourceUrl = `${artifactUrl(document.fileName)}${document.revision ? `?v=${document.revision}` : ''}`;
+  const sourceUrl = `${document.sourceUrl ?? artifactUrl(document.fileName)}${document.revision ? `?v=${document.revision}` : ''}`;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -122,7 +124,7 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
                 className="flex flex-shrink-0 items-center gap-2 rounded-sm border border-[#cfc2aa] bg-white px-3 py-2 font-mono text-xs font-bold uppercase tracking-wide text-[#5c4e3c] transition-colors hover:bg-[#f2ede3] focus:outline-none focus:ring-2 focus:ring-[#6f7f46]"
               >
                 <ArrowLeft className="h-4 w-4" />
-                Study session
+                {backLabel}
               </button>
               <div className="min-w-0">
                 <div className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-[#7b6b55]">
@@ -155,7 +157,7 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
             </div>
           </div>
 
-          <div className="mt-3 flex items-center gap-2 border-t border-[#ddd1bb] pt-3">
+          {documents.length > 1 && <div className="mt-3 flex items-center gap-2 border-t border-[#ddd1bb] pt-3">
             <div
               role="radiogroup"
               aria-label="Document exhibits"
@@ -189,7 +191,7 @@ const DocxArtifactReader: React.FC<DocxArtifactReaderProps> = ({
                 );
               })}
             </div>
-          </div>
+          </div>}
         </div>
       </div>
 

@@ -92,7 +92,7 @@
   {
     "originalPath": "public/acorns=iris/D.6 pdf-mcp.docx",
     "path": "public/acorns=iris/D.6 pdf-mcp.docx",
-    "sha256": "34bc9d6d435748416fca15bd4b29e9cacb5222a2a1cfa99a7818cf6fe1d34bda"
+    "sha256": "eaf17ca79f3cbace1173e19404a4ce592bc3fb0590990583fe2c8b8ce46c4558"
   },
   {
     "originalPath": "public/acorns=iris/D.6a The shape prior — the canonical geometry fails the primary.docx",
@@ -136,62 +136,62 @@
   },
   {
     "originalPath": "public/acorns=iris/receipts/20260929_135504.jpg",
-    "path": "public/acorns=iris/receipts/20260929_135504.jpg",
+    "path": "public/acorns=iris/supporting-documentation/20260929_135504.jpg",
     "sha256": "dd986ac41df7539fbcbf6aefbac53216553f9af8083c7cc4f2611d8334f5a307"
   },
   {
     "originalPath": "public/acorns=iris/receipts/600cellauditdiff.r",
-    "path": "public/acorns=iris/receipts/600cellauditdiff.r",
-    "sha256": "35a77e00576a530ef27f11513a842650434430b471d97b15ff583daec9050668"
+    "path": "public/acorns=iris/supporting-documentation/600cellauditdiff.r",
+    "sha256": "51ff5548db74613ffd419439cbc5f7fa094f5e33eb18027dd80c26e2ba945464"
   },
   {
     "originalPath": "public/acorns=iris/receipts/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS copy.pdf",
-    "path": "public/acorns=iris/receipts/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS copy.pdf",
+    "path": "public/acorns=iris/supporting-documentation/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS copy.pdf",
     "sha256": "e0cd1b773a00028f636a8f47d6dc33f0b56b787466c4237f0d1f4721f94730f5"
   },
   {
     "originalPath": "public/acorns=iris/receipts/Insearchofvirginica copy.pdf",
-    "path": "public/acorns=iris/receipts/Insearchofvirginica copy.pdf",
+    "path": "public/acorns=iris/supporting-documentation/Insearchofvirginica copy.pdf",
     "sha256": "cb03e7cbbf55cc82b615f4ba8f94330bf13612c3553a75db8d881f63112c1e2c"
   },
   {
     "originalPath": "public/acorns=iris/receipts/RAudit-showing failed cross validation bc or wrong metadata copy.txt",
-    "path": "public/acorns=iris/receipts/RAudit-showing failed cross validation bc or wrong metadata copy.txt",
+    "path": "public/acorns=iris/supporting-documentation/RAudit-showing failed cross validation bc or wrong metadata copy.txt",
     "sha256": "8a1a4888202e5101270e9505b2541c70a8ee47f4bb444fd7039999013ba1d947"
   },
   {
     "originalPath": "public/acorns=iris/receipts/codex-transcript.txt",
-    "path": "public/acorns=iris/receipts/codex-transcript.txt",
+    "path": "public/acorns=iris/supporting-documentation/codex-transcript.txt",
     "sha256": "a5195c40754ef3dece67ab2d6eff7862e9765556483ec68dead85f0f7ecf8523"
   },
   {
     "originalPath": "public/acorns=iris/receipts/fisher.flowchart.png",
-    "path": "public/acorns=iris/receipts/fisher.flowchart.png",
+    "path": "public/acorns=iris/supporting-documentation/fisher.flowchart.png",
     "sha256": "5cace691d928172bdcc7b4c18aba2d5d67aa1b149dec98dc88a680ad228c03ea"
   },
   {
     "originalPath": "public/acorns=iris/receipts/fisher1936_table1 copy.csv",
-    "path": "public/acorns=iris/receipts/fisher1936_table1 copy.csv",
+    "path": "public/acorns=iris/supporting-documentation/fisher1936_table1 copy.csv",
     "sha256": "e1c23eadce48cf40a00aa87a5ed7d3d5a0b67e285af9dbcae067e447a575fcf9"
   },
   {
     "originalPath": "public/acorns=iris/receipts/fisher1936_table1.numbers",
-    "path": "public/acorns=iris/receipts/fisher1936_table1.numbers",
+    "path": "public/acorns=iris/supporting-documentation/fisher1936_table1.numbers",
     "sha256": "db30b625a3272c244e5acab5cc05792a45381a06f5e03074578e37b5d52c232c"
   },
   {
     "originalPath": "public/acorns=iris/receipts/pdf-mcp-run copy.txt",
-    "path": "public/acorns=iris/receipts/pdf-mcp-run copy.txt",
+    "path": "public/acorns=iris/supporting-documentation/pdf-mcp-run copy.txt",
     "sha256": "487d7384d473b21817f6d17ccf8f84d21bff53747b918c3ececabf74fcda1b11"
   },
   {
     "originalPath": "public/acorns=iris/receipts/pdf-mcpmetadata copy.txt",
-    "path": "public/acorns=iris/receipts/pdf-mcpmetadata copy.txt",
+    "path": "public/acorns=iris/supporting-documentation/pdf-mcpmetadata copy.txt",
     "sha256": "af8a80e9fbe0b0c82633488f5edb10c191676bd83e3b2432e3888eacaed3fe18"
   },
   {
     "originalPath": "public/acorns=iris/receipts/settingupmcp-codex.txt",
-    "path": "public/acorns=iris/receipts/settingupmcp-codex.txt",
+    "path": "public/acorns=iris/supporting-documentation/settingupmcp-codex.txt",
     "sha256": "d78a0e848c0f4e967df2ae3add021876436b4c0c9b89de596df45ec8211c7ae0"
   },
   {
@@ -582,11 +582,16 @@
   {
     "originalPath": "iris_montage_page.mp4",
     "path": "public/media/iris_montage_page.mp4",
-    "sha256": "66d81f05e0a40c5ac55d711193d6870c387228593bca751ad95a700ca871d674"
+    "sha256": "43f057175952924788c3fcb32d34fe7b9a125b651b2fe946a70c31f3e6c21861"
   },
   {
     "originalPath": "The Iris Dataset- An Accidental Case Study in Pedagogy, Methodology and Real-World Implications.pdf",
     "path": "public/papers/The Iris Dataset- An Accidental Case Study in Pedagogy, Methodology and Real-World Implications.pdf",
     "sha256": "354c29fa065d067149c705b9ccee1b88eaf89fd469da59b9bbe7992920a323b4"
+  },
+  {
+    "originalPath": "Authors Epistemic Note Regarding Language Inconsistencies.docx",
+    "path": "public/notes/Authors Epistemic Note Regarding Language Inconsistencies.docx",
+    "sha256": "5ffc4ad14ffdc4ae0458203eb0cba865d9bc80136a86461b01d0e459a8737b6c"
   }
 ]

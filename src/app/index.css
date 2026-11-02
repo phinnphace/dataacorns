@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 639px) {
+  .author-note-reader .docx-reader-document {
+    min-width: 0;
+  }
+
+  .author-note-reader .docx-wrapper {
+    padding: 12px;
+  }
+
+  .author-note-reader .docx-wrapper > section.docx {
+    box-sizing: border-box;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 24px !important;
+  }
+
+  .author-note-reader .docx-wrapper > section.docx > article {
+    overflow-wrap: anywhere;
+  }
+}
+
 /* Fix for Leaflet tiles breaking with Tailwind CSS */
 .leaflet-container img {
   max-width: none !important;

@@ -195,7 +195,7 @@ const IrisCaseStudy: React.FC = () => {
       icon: BookOpen,
       color: 'text-[#556b2f]',
       position: 'bottom-[5%] right-[10%] md:right-[20%]',
-      summary: 'D.1–D.6a, with the data and supporting documentation retained in their original folders.',
+      summary: 'D.1–D.6a, with primary-source papers, supplementary data, and supporting documentation.',
       content: null,
     }
   ];

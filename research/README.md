@@ -6,4 +6,4 @@ Project boundaries matter: `iris/`, `shell-game/`, `transit-aware/`, and `model-
 
 The old primary Iris work is archived while its revision is in progress. Keep its original filenames and content. Do not infer scientific inaccuracies, substitute datasets, or turn source tables into new representations as part of maintenance.
 
-Model schmodel is an emerging thread across the research, not a published new stage. Its source uses Kaggle's API vocabulary where required, but this site does not organize it as a separate "benchmarks" project. The original local run receipts have not been moved, deleted, or published.
+Model schmodel is an emerging thread across the research, not a published new stage. Its source uses Kaggle's API vocabulary where required, but this site does not organize it as a separate "benchmarks" project. The original local execution records have not been moved, deleted, or published.

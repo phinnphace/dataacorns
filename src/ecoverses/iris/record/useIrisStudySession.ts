@@ -29,6 +29,10 @@ export const MONTAGE_ID = 'exhibit-montage';
 export const folderFileId = (folderId: ArtifactFolder['id'], fileName: string) =>
   `folder:${folderId}:${fileName}`;
 
+// Migrate saved file selections from the former folder identifier.
+const normalizeFileId = (id: string) =>
+  id.replace(/^folder:receipts:/, 'folder:supporting-documentation:');
+
 const defaultPositionForDocument = (index: number): WorkspacePosition => ({
   x: index % 2 === 0 ? 500 : 772,
   y: 24 + Math.floor(index / 2) * 205,
@@ -90,14 +94,16 @@ const normalizeState = (
     folders.flatMap((folder) => folder.files.map((file) => folderFileId(folder.id, file.fileName))),
   );
   const checkedOutFileIds = Array.isArray(stored.checkedOutFileIds)
-    ? stored.checkedOutFileIds.filter(
-        (id): id is string => typeof id === 'string' && validFileIds.has(id),
-      )
+    ? stored.checkedOutFileIds
+        .filter((id): id is string => typeof id === 'string')
+        .map(normalizeFileId)
+        .filter((id) => validFileIds.has(id))
     : [];
 
   const positions = { ...defaults.positions };
   if (stored.positions && typeof stored.positions === 'object') {
-    for (const [id, position] of Object.entries(stored.positions)) {
+    for (const [storedId, position] of Object.entries(stored.positions)) {
+      const id = normalizeFileId(storedId);
       if (
         (documentIds.has(id) || id === FLOWCHART_ID || id === MONTAGE_ID || validFileIds.has(id)) &&
         isPosition(position)

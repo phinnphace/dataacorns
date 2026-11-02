@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node tools/copy-artifact-aliases.cjs",
     "preview": "vite preview",
     "lint": "tsc --noEmit",
     "check:artifacts": "node tools/check-artifacts.cjs"

@@ -11,6 +11,7 @@ import {
   type RecordDocument,
 } from './recordManifest';
 import { folderFileId, useIrisStudySession } from './useIrisStudySession';
+import { AUTHOR_NOTE_ROUTE } from '../../../content/authorNote';
 
 type IrisRecordStageProps = {
   onBack: () => void;
@@ -49,7 +50,7 @@ const IrisRecordStage: React.FC<IrisRecordStageProps> = ({ onBack }) => {
         folder={activeFolder}
         onBack={() => setActiveFolder(null)}
         checkedOutFileIds={session.state.checkedOutFileIds}
-        pinnedFileIds={[folderFileId('receipts', 'fisher.flowchart.png')]}
+        pinnedFileIds={[folderFileId('supporting-documentation', 'fisher.flowchart.png')]}
         onPullOut={(file) => session.checkOutFile(activeFolder, file)}
         onReturn={(file) => session.returnFile(activeFolder, file)}
       />
@@ -83,7 +84,7 @@ const IrisRecordStage: React.FC<IrisRecordStageProps> = ({ onBack }) => {
         <header className="mb-8 border-b-2 border-double border-[#d4c4a8] pb-8">
           <div className="mb-4 flex items-center gap-3 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[#7a694f]">
             <FileText className="h-4 w-4 text-[#556b2f]" />
-            Evidence workspace
+            Appendix D
           </div>
           <h1 className="mb-4 font-serif text-4xl font-normal text-[#1a1510] sm:text-5xl">The Record</h1>
           <p className="max-w-3xl font-serif text-lg leading-relaxed text-[#5c4e3c] sm:text-xl">
@@ -91,8 +92,14 @@ const IrisRecordStage: React.FC<IrisRecordStageProps> = ({ onBack }) => {
             make sense of them now.
           </p>
           <p className="mt-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#556b2f]">
-            Exhibits and supporting documentation.
+            Appendix D exhibits and supporting documentation.
           </p>
+          <a
+            href={AUTHOR_NOTE_ROUTE}
+            className="mt-4 inline-block text-sm text-[#556b2f] underline underline-offset-4 hover:text-[#3e4f22] focus:outline-none focus:ring-2 focus:ring-[#6f7f46] focus:ring-offset-2"
+          >
+            Author’s epistemic note
+          </a>
         </header>
 
         <details className="group mb-8 border border-[#c9b95f] bg-[#fff1a8] text-[#332d20] shadow-[4px_6px_14px_rgba(75,58,22,0.16)]">

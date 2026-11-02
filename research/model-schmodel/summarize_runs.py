@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-RECEIPT_PATTERN = re.compile(r"MODEL_SHMODEL_RECEIPT=(\{[^\r\n]*\})")
+RUN_RECORD_PATTERN = re.compile(r"MODEL_SHMODEL_(?:RUN_RECORD|RECEIPT)=(\{[^\r\n]*\})")
 
 
 def iter_files(paths: Iterable[Path]) -> Iterable[Path]:
@@ -22,13 +22,13 @@ def iter_files(paths: Iterable[Path]) -> Iterable[Path]:
             yield from (candidate for candidate in path.rglob("*") if candidate.is_file())
 
 
-def extract_receipts(path: Path) -> list[dict[str, Any]]:
+def extract_run_records(path: Path) -> list[dict[str, Any]]:
     try:
         text = path.read_text(encoding="utf-8", errors="replace")
     except OSError:
         return []
 
-    receipts: list[dict[str, Any]] = []
+    run_records: list[dict[str, Any]] = []
 
     if path.name.endswith(".run.json"):
         try:
@@ -38,9 +38,11 @@ def extract_receipts(path: Path) -> list[dict[str, Any]]:
         model = (run.get("modelVersion") or {}).get("slug", "")
         for result in run.get("results", []):
             payload = result.get("dictResult") or {}
-            receipt = payload.get("receipt")
-            if isinstance(receipt, dict):
-                extracted = dict(receipt)
+            run_record = payload.get("run_record")
+            if run_record is None:
+                run_record = payload.get("receipt")  # Legacy downloaded-run field.
+            if isinstance(run_record, dict):
+                extracted = dict(run_record)
                 if "removed_row_positions_one_based" not in extracted:
                     extracted["removed_row_positions_one_based"] = extracted.get(
                         "rows_dropped_one_based", []
@@ -51,10 +53,10 @@ def extract_receipts(path: Path) -> list[dict[str, Any]]:
                 )
                 extracted["dataset_sha256"] = payload.get("dataset_sha256", "")
                 extracted["protocol_sha256"] = payload.get("protocol_sha256", "")
-                extracted["receipt_file"] = str(path)
-                receipts.append(extracted)
+                extracted["source_file"] = str(path)
+                run_records.append(extracted)
             elif payload.get("observer_extraction_status"):
-                receipts.append(
+                run_records.append(
                     {
                         "model": model,
                         "task_version": (run.get("taskVersion") or {}).get(
@@ -74,30 +76,30 @@ def extract_receipts(path: Path) -> list[dict[str, Any]]:
                         "observer_extraction_status": payload.get(
                             "observer_extraction_status", ""
                         ),
-                        "receipt_file": str(path),
+                        "source_file": str(path),
                     }
                 )
 
-    if receipts:
-        return receipts
+    if run_records:
+        return run_records
 
-    for match in RECEIPT_PATTERN.finditer(text):
+    for match in RUN_RECORD_PATTERN.finditer(text):
         try:
-            receipt = json.loads(match.group(1))
+            run_record = json.loads(match.group(1))
         except json.JSONDecodeError:
             continue
-        if "removed_row_positions_one_based" not in receipt:
-            receipt["removed_row_positions_one_based"] = receipt.get(
+        if "removed_row_positions_one_based" not in run_record:
+            run_record["removed_row_positions_one_based"] = run_record.get(
                 "rows_dropped_one_based", []
             )
-        receipt["receipt_file"] = str(path)
-        receipts.append(receipt)
-    return receipts
+        run_record["source_file"] = str(path)
+        run_records.append(run_record)
+    return run_records
 
 
-def flatten(receipt: dict[str, Any]) -> dict[str, Any]:
+def flatten(run_record: dict[str, Any]) -> dict[str, Any]:
     flattened: dict[str, Any] = {}
-    for key, value in receipt.items():
+    for key, value in run_record.items():
         if isinstance(value, (dict, list)):
             flattened[key] = json.dumps(value, ensure_ascii=False, sort_keys=True)
         else:
@@ -111,21 +113,21 @@ def main() -> int:
     parser.add_argument("--csv", dest="csv_path", type=Path, help="Optional summary CSV output")
     args = parser.parse_args()
 
-    receipts: list[dict[str, Any]] = []
+    run_records: list[dict[str, Any]] = []
     for path in iter_files(args.paths):
-        receipts.extend(extract_receipts(path))
+        run_records.extend(extract_run_records(path))
 
-    print(json.dumps(receipts, indent=2, ensure_ascii=False, sort_keys=True))
+    print(json.dumps(run_records, indent=2, ensure_ascii=False, sort_keys=True))
 
-    if args.csv_path and receipts:
-        rows = [flatten(receipt) for receipt in receipts]
+    if args.csv_path and run_records:
+        rows = [flatten(run_record) for run_record in run_records]
         fieldnames = sorted({key for row in rows for key in row})
         with args.csv_path.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
 
-    return 0 if receipts else 1
+    return 0 if run_records else 1
 
 
 if __name__ == "__main__":

@@ -39,4 +39,4 @@ npm run check:artifacts
 npm run build
 ```
 
-The artifact check protects the original source files, including every Iris exhibit, receipt, and dataset. GitHub Pages runs the build, type check, and artifact check before deployment.
+The artifact check protects the original source files, including every Appendix D exhibit, supporting artifact, and dataset. GitHub Pages runs the build, type check, and artifact check before deployment.

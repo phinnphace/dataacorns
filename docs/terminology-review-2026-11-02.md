@@ -2,75 +2,67 @@
 
 Date: November 2, 2026
 
-## Website wording updated
+## Terminology by research function
 
-| Location | Previous wording | Replacement |
+| Material | Term used | Reason |
 | --- | --- | --- |
-| Iris The Record card | data and receipts | data and supporting documentation |
-| The Record caption | Receipts hold. Exhibits show. | Exhibits and supporting documentation. |
-| Folder label | receipts | Supporting documentation |
-| Study session note | exhibits, links, receipts, and folder contents | exhibits, links, supporting documentation, and folder contents |
+| The Record as a whole | Appendix D | It is the paper’s single numbered appendix. |
+| D.1 through D.6a | Appendix D exhibits | These are sections within that appendix, rather than seven independent appendices. |
+| Fisher (1936) PDF | Primary-source documentation | This is the original published paper. |
+| Unwin and Kleinman (2021) PDF | Primary research article | This is an original research article used as a source for the historical analysis. |
+| Extracted Table I CSV and spreadsheet | Supplementary data | These are structured extractions derived from the printed table. |
+| R comparison script | Supplementary analysis code | It supports the comparison of extracted values and repository files. |
+| Validation logs, transcripts and physical-grid photograph | Supporting documentation | These document the extraction and verification process. |
+| Extraction-tool metadata | Software provenance documentation | This identifies the tool and version used. |
+| Fisher flowchart | Supplementary figure | This presents the relationships and comparison results visually. |
+| Publisher-exported BibTeX and plain-text citation metadata | Citation metadata in the data folder | The metadata files are actually stored there; D6 now points to that folder accurately. |
+| Model-run JSON, generated code, stdout and stderr | Execution records | These record what ran and what it produced. |
 
-## Word exhibits updated with owner authorization
+## Completed wording changes
 
-Seventeen terminology replacements across all seven downloadable DOCX exhibits. Existing text-run formatting, tables, images, links and package members are preserved. Only word/document.xml changes inside each DOCX. Reader revision queries and the source-artifact hashes are updated intentionally. Original and revised renders have identical page counts (2, 1, 1, 1, 6, 2, 1).
+- Updated the Iris card, Appendix D heading, study-session note, and displayed supporting-documentation folder label.
+- Updated the seven Word exhibits and flowchart caption in the first pass.
+- Preserved the annotated source-data file and its archived model transcript byte-for-byte. Historical terminology in that primary record is documented rather than rewritten.
+- Updated the R-script comment to refer to supplementary data.
+- Updated repository maintenance documentation and model reference-profile descriptions.
+- Renamed the model-run indexing function and variables; current exports use source_file and the new run-record naming.
+- Corrected D6’s description of the comparison inputs and the actual location of citation metadata. Its six-page rendering is preserved.
+- Relocated the 12 supporting files to the supporting-documentation directory and updated active links, file identifiers, revision queries, and the source manifest.
+- Added build-time copies at the established URLs so previously shared links keep returning the current file bytes.
+- Added saved-session identifier migration so selected files, positions and study view persist through the folder change.
 
-| Exhibit | Replacements | Previous SHA-256 prefix | Revised SHA-256 prefix |
-| --- | ---: | --- | --- |
-| D.1 The manufactured triplet, and what deduplication deletes.docx | 2 | `2d94ad01dc78ca96` | `82a3c08b51c48293` |
-| D.2 The mirrors disagree (full values).docx | 2 | `43cfb138ce34e190` | `5d5ca9c9b50497ee` |
-| D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx | 2 | `3ea554e3b9be5d96` | `f2cb113b6b90331d` |
-| D.5 The intervention.docx | 2 | `a946b1977872029c` | `38d076a9fda20848` |
-| D.6 pdf-mcp.docx | 5 | `f1e616acc5be80b9` | `34bc9d6d43574841` |
-| D.6a The shape prior — the canonical geometry fails the primary.docx | 2 | `c003cac672322725` | `f35f2f1136edc339` |
-| D4 layer by layer.docx | 2 | `734df8f173a6e053` | `251fd09cb3949b1b` |
+## Current source versions
 
-Replacements:
-
-- Receipts dated → Supporting documentation dated
-- receipt file → supporting documentation file
-- receipt folder / receipts folder → supporting documentation folder
-- receipts already verified → source documentation already verified
-
-## Source data and code flagged for separate review
-
-### public/acorns=iris/data/bezdekIris.data
-
-- nt = grid = extraction = bezdek/R = the primary's values. The deviants are named, bounded, and receipted. Line 2: duplicated printed 143 only — and that's a finding Expected 102 and 143. Got 143. Before anything else: confirm it's the cha
-- e. Fisher's own duplicate (virginica rows 2 and 43) is present. Run the fromLast line for the receipt file's completeness, then D.6 slots and Appendix D is done. Compilation resumes: Section V in, citation pass, supplemental reknit, re-
-- one duplicated row. That's the double-counted specimen, inside the primary's own third block, receipted in the extraction. ✓ which(duplicated(long, fromLast = TRUE)) = 102 — and combined with the earlier forward pass (143), the pair is f
-
-### public/acorns=iris/receipts/600cellauditdiff.r
-
-- # MCP-extracted table vs. the receipts already verified # spot cells: setosa 35 = 4.9, 3.1, 1.5, 0.2 · setosa 38 = 4.9, 3.6, 1.4, 0.1 # virginica 2 & 43 = 5.8, 2.7, 5.1, 1.9
-
-## Figure caption updated with owner authorization
-
-`public/acorns=iris/receipts/fisher.flowchart.png`: bottom caption reads "All values receipted (2026-09-13 / 09-29); mirrors differ from primary in exactly the erratum’s 3 cells — see D.2". Proposed terminology-only change: "All values documented". Caption-only change completed. Pixel comparison confirms every pixel outside the caption rectangle is identical to the original. The scientific diagram and numbers are unchanged.
-
-## Existing technical references
-
-The established /acorns=iris/receipts/ asset URLs and folder identifiers remain compatible with existing links and saved study sessions. The displayed folder label is Supporting documentation. No file renames or structural changes are included.
-
-The source-artifact manifest retains historical originalPath strings. Repository maintenance prose and unpublished model-schmodel code also contain the old term; the helper uses receipt keys and MODEL_SHMODEL_RECEIPT as existing input/output contracts. These are flagged rather than refactored as part of the portfolio wording pass.
-
-No text matches were found in the public PDF manuscripts by text extraction. The standalone flowchart and photograph were visually inspected. The montage video and text embedded inside other source-document screenshots are not comprehensively transcribed by this text scan.
-
-## Remaining repository text references
-
-This index records every remaining text-match line after the approved website and Word changes. The source data and code examples above retain their original wording; other entries are established asset paths, input schemas, historical manifest fields, or maintenance prose.
-
-| File | Lines |
+| File | SHA-256 prefix |
 | --- | --- |
-| `README.md` | 42 |
-| `docs/architecture.md` | 19, 30, 47 |
-| `docs/source-artifacts.json` | 138, 139, 143, 144, 148, 149, 153, 154, 158, 159, 163, 164, 168, 169, 173, 174, 178, 179, 183, 184, 188, 189, 193, 194 |
-| `public/acorns=iris/data/bezdekIris.data` | 155, 176, 192 |
-| `public/acorns=iris/receipts/600cellauditdiff.r` | 1 |
-| `research/README.md` | 9 |
-| `research/model-schmodel/README.md` | 15, 24, 50, 58, 65, 72 |
-| `research/model-schmodel/reference_profiles.json` | 19, 40, 56 |
-| `research/model-schmodel/summarize_runs.py` | 14, 25, 31, 41, 42, 43, 54, 55, 57, 77, 81, 82, 84, 86, 89, 90, 93, 94, 95, 98, 100, 114, 116, 118, 120, 121, 128 |
-| `src/ecoverses/iris/record/IrisRecordStage.tsx` | 52 |
-| `src/ecoverses/iris/record/StudyWorkspace.tsx` | 247, 250 |
-| `src/ecoverses/iris/record/recordManifest.ts` | 20, 110 |
+| `public/acorns=iris/D.1 The manufactured triplet, and what deduplication deletes.docx` | `82a3c08b51c48293` |
+| `public/acorns=iris/D.2 The mirrors disagree (full values).docx` | `5d5ca9c9b50497ee` |
+| `public/acorns=iris/D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx` | `f2cb113b6b90331d` |
+| `public/acorns=iris/D.5 The intervention.docx` | `38d076a9fda20848` |
+| `public/acorns=iris/D.6 pdf-mcp.docx` | `eaf17ca79f3cbace` |
+| `public/acorns=iris/D.6a The shape prior — the canonical geometry fails the primary.docx` | `f35f2f1136edc339` |
+| `public/acorns=iris/D4 layer by layer.docx` | `251fd09cb3949b1b` |
+| `public/acorns=iris/data/bezdekIris.data` | `090c1bda81056edf` |
+| `public/acorns=iris/supporting-documentation/600cellauditdiff.r` | `51ff5548db74613f` |
+| `public/acorns=iris/supporting-documentation/fisher.flowchart.png` | `5cace691d928172b` |
+
+## Historical compatibility references
+
+The former folder identifier and URLs are retained only as input migration rules and build-time download aliases. Historical originalPath fields and relocation records retain actual former paths, rather than rewriting their provenance. The execution-record parser accepts the former JSON field and printed marker when reading already-downloaded runs. Current labels, active paths, documentation and newly indexed outputs use the revised terminology.
+
+## Montage and screenshot review
+
+The montage was scanned at one-second intervals: 421 frames decoded successfully, with no decoding failures. Four matching stretches were found: 00:30–00:42 and 02:41–02:52 (authored console labels), 06:09–06:18 (the historical GitHub screenshot), and 06:52–07:00 (authored credit text). The authored console labels and credits are revised. The historical GitHub screenshot remains verbatim in both D5 and the montage, as explicitly directed by the owner. The original comment and screenshot were never cropped or rewritten.
+
+## Validation
+
+- Type checking and production build pass. The author note’s rendered text is checked against the supplied DOCX, and its downloaded bytes match the attachment.
+- All 119 source artifacts and the exact 25-file Iris source-material inventory pass the artifact checks.
+- The 12 legacy download aliases are built from the same verified bytes as their current destinations.
+- The seven document readers render the revised text and use revision queries.
+- Existing saved study-session selections, file positions and view migrate correctly.
+- Current and older execution-record JSON and text formats, plus raw generated-output indexing, pass compatibility checks.
+
+## Verbatim author note
+
+The owner supplied `Authors Epistemic Note Regarding Language Inconsistencies.docx` for verbatim publication. Its source SHA-256 is `5ffc4ad14ffdc4ae0458203eb0cba865d9bc80136a86461b01d0e459a8737b6c`. It is available from the top of The Record and a site-wide footer link. Both open the same unchanged DOCX in the existing reader. Its deliberate discussion of the former term remains verbatim.

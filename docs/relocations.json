@@ -468,5 +468,65 @@
     "from": "src/projects/train_test_split.rmd",
     "to": "research/iris/train_test_split.rmd",
     "sha256": "3c4ed57efc72ba5440bc266fd50e08ca712f38e58e227176cdf489fe14b22bed"
+  },
+  {
+    "from": "public/acorns=iris/receipts/20260929_135504.jpg",
+    "to": "public/acorns=iris/supporting-documentation/20260929_135504.jpg",
+    "sha256": "dd986ac41df7539fbcbf6aefbac53216553f9af8083c7cc4f2611d8334f5a307"
+  },
+  {
+    "from": "public/acorns=iris/receipts/600cellauditdiff.r",
+    "to": "public/acorns=iris/supporting-documentation/600cellauditdiff.r",
+    "sha256": "51ff5548db74613ffd419439cbc5f7fa094f5e33eb18027dd80c26e2ba945464"
+  },
+  {
+    "from": "public/acorns=iris/receipts/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS copy.pdf",
+    "to": "public/acorns=iris/supporting-documentation/Annals of Eugenics - September 1936 - FISHER - THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS copy.pdf",
+    "sha256": "e0cd1b773a00028f636a8f47d6dc33f0b56b787466c4237f0d1f4721f94730f5"
+  },
+  {
+    "from": "public/acorns=iris/receipts/Insearchofvirginica copy.pdf",
+    "to": "public/acorns=iris/supporting-documentation/Insearchofvirginica copy.pdf",
+    "sha256": "cb03e7cbbf55cc82b615f4ba8f94330bf13612c3553a75db8d881f63112c1e2c"
+  },
+  {
+    "from": "public/acorns=iris/receipts/RAudit-showing failed cross validation bc or wrong metadata copy.txt",
+    "to": "public/acorns=iris/supporting-documentation/RAudit-showing failed cross validation bc or wrong metadata copy.txt",
+    "sha256": "8a1a4888202e5101270e9505b2541c70a8ee47f4bb444fd7039999013ba1d947"
+  },
+  {
+    "from": "public/acorns=iris/receipts/codex-transcript.txt",
+    "to": "public/acorns=iris/supporting-documentation/codex-transcript.txt",
+    "sha256": "a5195c40754ef3dece67ab2d6eff7862e9765556483ec68dead85f0f7ecf8523"
+  },
+  {
+    "from": "public/acorns=iris/receipts/fisher.flowchart.png",
+    "to": "public/acorns=iris/supporting-documentation/fisher.flowchart.png",
+    "sha256": "5cace691d928172bdcc7b4c18aba2d5d67aa1b149dec98dc88a680ad228c03ea"
+  },
+  {
+    "from": "public/acorns=iris/receipts/fisher1936_table1 copy.csv",
+    "to": "public/acorns=iris/supporting-documentation/fisher1936_table1 copy.csv",
+    "sha256": "e1c23eadce48cf40a00aa87a5ed7d3d5a0b67e285af9dbcae067e447a575fcf9"
+  },
+  {
+    "from": "public/acorns=iris/receipts/fisher1936_table1.numbers",
+    "to": "public/acorns=iris/supporting-documentation/fisher1936_table1.numbers",
+    "sha256": "db30b625a3272c244e5acab5cc05792a45381a06f5e03074578e37b5d52c232c"
+  },
+  {
+    "from": "public/acorns=iris/receipts/pdf-mcp-run copy.txt",
+    "to": "public/acorns=iris/supporting-documentation/pdf-mcp-run copy.txt",
+    "sha256": "487d7384d473b21817f6d17ccf8f84d21bff53747b918c3ececabf74fcda1b11"
+  },
+  {
+    "from": "public/acorns=iris/receipts/pdf-mcpmetadata copy.txt",
+    "to": "public/acorns=iris/supporting-documentation/pdf-mcpmetadata copy.txt",
+    "sha256": "af8a80e9fbe0b0c82633488f5edb10c191676bd83e3b2432e3888eacaed3fe18"
+  },
+  {
+    "from": "public/acorns=iris/receipts/settingupmcp-codex.txt",
+    "to": "public/acorns=iris/supporting-documentation/settingupmcp-codex.txt",
+    "sha256": "d78a0e848c0f4e967df2ae3add021876436b4c0c9b89de596df45ec8211c7ae0"
   }
 ]
