@@ -12,7 +12,7 @@ import {
   MoreHorizontal,
   Undo2,
 } from 'lucide-react';
-import { artifactUrl, type ArtifactFile, type ArtifactFolder } from './recordManifest';
+import { artifactFileUrl, type ArtifactFile, type ArtifactFolder } from './recordManifest';
 import { folderFileId } from './useIrisStudySession';
 
 type ArtifactFolderViewProps = {
@@ -86,7 +86,7 @@ const ArtifactFolderView: React.FC<ArtifactFolderViewProps> = ({
 
       <ul className="divide-y divide-[#dddddd]">
         {folder.files.map((file) => {
-          const sourceUrl = artifactUrl(`${folder.id}/${file.fileName}`);
+          const sourceUrl = artifactFileUrl(folder.id, file);
           const fileId = folderFileId(folder.id, file.fileName);
           const isPinned = pinnedFileIds.includes(fileId);
           const isOnDesk = isPinned || checkedOutFileIds.includes(fileId);

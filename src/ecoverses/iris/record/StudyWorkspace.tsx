@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import {
   artifactUrl,
+  artifactFileUrl,
   type ArtifactFolder,
   type RecordDocument,
 } from './recordManifest';
@@ -243,7 +244,7 @@ const StudyWorkspace: React.FC<StudyWorkspaceProps> = ({
     reset,
   } = session;
 
-  const chartUrl = artifactUrl('receipts/fisher.flowchart.png');
+  const chartUrl = `${artifactUrl('receipts/fisher.flowchart.png')}?v=5cace691d928172b`;
   const chartWidth = state.flowchartSize === 'wide' ? 560 : 440;
   const chartHeight = state.flowchartSize === 'wide' ? 650 : 590;
   const deskFileIds = [folderFileId('receipts', 'fisher.flowchart.png'), ...state.checkedOutFileIds];
@@ -304,7 +305,7 @@ const StudyWorkspace: React.FC<StudyWorkspaceProps> = ({
 
         <div className="mt-4 flex flex-col gap-3 border-t border-[#ddd1bb] pt-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-2xl text-sm leading-relaxed text-[#665947]">
-            These controls change only your view. The exhibits, links, receipts, and folder contents remain untouched.
+            These controls change only your view. The exhibits, links, supporting documentation, and folder contents remain untouched.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <label className="inline-flex cursor-pointer items-center gap-2 font-mono text-[11px] font-bold text-[#5c4e3c]">
@@ -454,7 +455,7 @@ const StudyWorkspace: React.FC<StudyWorkspaceProps> = ({
                     </div>
                     <div className="mt-4 flex items-center justify-between gap-3">
                       <a
-                        href={artifactUrl(`${folder.id}/${file.fileName}`)}
+                        href={artifactFileUrl(folder.id, file)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#315f8c] focus:outline-none focus:ring-2 focus:ring-[#5577aa]"

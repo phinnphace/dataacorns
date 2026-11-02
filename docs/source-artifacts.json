@@ -72,37 +72,37 @@
   {
     "originalPath": "public/acorns=iris/D.1 The manufactured triplet, and what deduplication deletes.docx",
     "path": "public/acorns=iris/D.1 The manufactured triplet, and what deduplication deletes.docx",
-    "sha256": "2d94ad01dc78ca96c68d690584f815dcc287438dcec111d59408e2880d38a730"
+    "sha256": "82a3c08b51c48293d8d9e540cee07afd2ed4094e4c6b3cf8f63896113aa78321"
   },
   {
     "originalPath": "public/acorns=iris/D.2 The mirrors disagree (full values).docx",
     "path": "public/acorns=iris/D.2 The mirrors disagree (full values).docx",
-    "sha256": "43cfb138ce34e1908f8c6c80aa794f4da062454479f22e229ed0984bf8b5a61e"
+    "sha256": "5d5ca9c9b50497ee46b546cfbce02ba78cd6fafbed3491b9702f53e25c3a52c7"
   },
   {
     "originalPath": "public/acorns=iris/D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx",
     "path": "public/acorns=iris/D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx",
-    "sha256": "3ea554e3b9be5d96e8b34f169368d33e12624457d1123e3e8dab2510460ee652"
+    "sha256": "f2cb113b6b90331dfbf8b53e10f140a454ddb552283542a25d1b82b79db148eb"
   },
   {
     "originalPath": "public/acorns=iris/D.5 The intervention.docx",
     "path": "public/acorns=iris/D.5 The intervention.docx",
-    "sha256": "a946b1977872029cede637c09e800d5736f90a22d0cf77f48bcdd57dba933112"
+    "sha256": "38d076a9fda208480b3f44b369b14d9576cf41498a3d0b78ecca0f07eb822256"
   },
   {
     "originalPath": "public/acorns=iris/D.6 pdf-mcp.docx",
     "path": "public/acorns=iris/D.6 pdf-mcp.docx",
-    "sha256": "f1e616acc5be80b9a5aba91d016a23c7611e98e47756cd385c6df1181815faf3"
+    "sha256": "34bc9d6d435748416fca15bd4b29e9cacb5222a2a1cfa99a7818cf6fe1d34bda"
   },
   {
     "originalPath": "public/acorns=iris/D.6a The shape prior — the canonical geometry fails the primary.docx",
     "path": "public/acorns=iris/D.6a The shape prior — the canonical geometry fails the primary.docx",
-    "sha256": "c003cac672322725e79d25229e4d71a167239237d10e1ed3941fa988a6c15916"
+    "sha256": "f35f2f1136edc339286377e98f072f1863fcc94163b123c1004713d994faa1cc"
   },
   {
     "originalPath": "public/acorns=iris/D4 layer by layer.docx",
     "path": "public/acorns=iris/D4 layer by layer.docx",
-    "sha256": "734df8f173a6e053285092a59958bdc2f3934f4084edfecbb4b3a667fe047ed1"
+    "sha256": "251fd09cb3949b1b1286d9cfb1c8263916497ce7c2e1adcb3249f121aef45e72"
   },
   {
     "originalPath": "public/acorns=iris/data/Index",
@@ -167,7 +167,7 @@
   {
     "originalPath": "public/acorns=iris/receipts/fisher.flowchart.png",
     "path": "public/acorns=iris/receipts/fisher.flowchart.png",
-    "sha256": "9c1d62883ed8f79fc8065b0638db1389d381a5f7fb55e2b5cfdeb6e6e322ca04"
+    "sha256": "5cace691d928172bdcc7b4c18aba2d5d67aa1b149dec98dc88a680ad228c03ea"
   },
   {
     "originalPath": "public/acorns=iris/receipts/fisher1936_table1 copy.csv",

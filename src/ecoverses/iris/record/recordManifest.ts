@@ -13,6 +13,7 @@ export type ArtifactFile = {
   fileName: string;
   size: string;
   kind: 'text' | 'data' | 'image' | 'pdf' | 'numbers' | 'code';
+  revision?: string;
 };
 
 export type ArtifactFolder = {
@@ -24,6 +25,9 @@ export type ArtifactFolder = {
 export const artifactUrl = (relativePath: string) =>
   `${ARTIFACT_ROOT}/${encodeURI(relativePath)}`;
 
+export const artifactFileUrl = (folderId: ArtifactFolder['id'], file: ArtifactFile) =>
+  `${artifactUrl(`${folderId}/${file.fileName}`)}${file.revision ? `?v=${file.revision}` : ''}`;
+
 export const recordDocuments: RecordDocument[] = [
   {
     id: 'manufactured-triplet',
@@ -32,14 +36,15 @@ export const recordDocuments: RecordDocument[] = [
     preview:
       'The canonical file\'s two transcription errors (rows 35, 38; see D.2) collapse distinct setosa specimens onto row 10, manufacturing a triplet of identical rows.',
     size: '3.3 MB',
-    revision: '2d94ad01dc78ca96',
+    revision: '82a3c08b51c48293',
   },
   {
     id: 'mirrors-disagree',
     title: 'The mirrors disagree (full values)',
     fileName: 'D.2 The mirrors disagree (full values).docx',
     preview: 'The duplicate is IN the primary.',
-    size: '13.2 KB',
+    size: '12.9 KB',
+    revision: '5d5ca9c9b50497ee',
   },
   {
     id: 'legacy-record',
@@ -47,7 +52,8 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.3 The legacy record, verbatim (iris.names, served unchanged since 1989).docx',
     preview:
       'Excerpts reproduced verbatim from the repository\'s legacy documentation file (retrieved September 13, 2026).',
-    size: '9.3 KB',
+    size: '9.1 KB',
+    revision: 'f2cb113b6b90331d',
   },
   {
     id: 'layer-by-layer-audit',
@@ -55,7 +61,8 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D4 layer by layer.docx',
     preview:
       'Attribution: The primary is explicit about both provenance and credit: the I. setosa and I. versicolor plants were “found growing together in the same colony and measured by Dr E. Anderson, to whom I am indebted for the use of the data.”',
-    size: '3.2 MB',
+    size: '3.1 MB',
+    revision: '251fd09cb3949b1b',
   },
   {
     id: 'intervention',
@@ -63,7 +70,8 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.5 The intervention.docx',
     preview:
       'Findings were reported to repository maintainers on September 09, 2026; issue #32 is still open as of this draft, September 22, 2026.',
-    size: '404.5 KB',
+    size: '404.2 KB',
+    revision: '38d076a9fda20848',
   },
   {
     id: 'pdf-mcp',
@@ -71,7 +79,8 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.6 pdf-mcp.docx',
     preview:
       'The iris dataset, tabel 1was extracted from Fisher (1936), p. 180 (PDF page 3) using the MCP-based PDF tool developed by Kevin Tan (Tan, 2025).',
-    size: '3.9 MB',
+    size: '3.8 MB',
+    revision: '34bc9d6d43574841',
   },
   {
     id: 'shape-prior',
@@ -79,7 +88,8 @@ export const recordDocuments: RecordDocument[] = [
     fileName: 'D.6a The shape prior — the canonical geometry fails the primary.docx',
     preview:
       'The first verification attempt against Table I failed three times, and each turned out to be a symptom of the problem.',
-    size: '9.1 KB',
+    size: '8.9 KB',
+    revision: 'f35f2f1136edc339',
   },
 ];
 
@@ -98,7 +108,7 @@ export const artifactFolders: ArtifactFolder[] = [
   },
   {
     id: 'receipts',
-    name: 'receipts',
+    name: 'Supporting documentation',
     files: [
       { fileName: '20260929_135504.jpg', size: '3.6 MB', kind: 'image' },
       { fileName: '600cellauditdiff.r', size: '283 bytes', kind: 'code' },
@@ -115,7 +125,7 @@ export const artifactFolders: ArtifactFolder[] = [
         kind: 'text',
       },
       { fileName: 'codex-transcript.txt', size: '4.6 KB', kind: 'text' },
-      { fileName: 'fisher.flowchart.png', size: '190.2 KB', kind: 'image' },
+      { fileName: 'fisher.flowchart.png', size: '113.6 KB', kind: 'image', revision: '5cace691d928172b' },
       { fileName: 'fisher1936_table1 copy.csv', size: '3.3 KB', kind: 'data' },
       { fileName: 'fisher1936_table1.numbers', size: '230.7 KB', kind: 'numbers' },
       { fileName: 'pdf-mcp-run copy.txt', size: '3.8 KB', kind: 'text' },

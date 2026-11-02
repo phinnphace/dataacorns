@@ -91,7 +91,7 @@ const IrisRecordStage: React.FC<IrisRecordStageProps> = ({ onBack }) => {
             make sense of them now.
           </p>
           <p className="mt-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#556b2f]">
-            Receipts hold. Exhibits show.
+            Exhibits and supporting documentation.
           </p>
         </header>
 
