@@ -468,7 +468,7 @@ const ResearchHub: React.FC = () => {
 
           {visiblePapers.map(paper => (
             <article key={paper.id} className="group border border-stone-300 bg-[#fbfaf7] shadow-[0_4px_14px_rgba(57,45,29,0.06)] hover:border-amber-700">
-              <a href={paperUrl(paper.fileName)} target="_blank" rel="noopener noreferrer" className="grid gap-6 p-6 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-700 sm:grid-cols-[130px_1fr_auto] sm:items-start sm:p-8">
+              <a href={paperUrl(paper.fileName, paper.revision)} target="_blank" rel="noopener noreferrer" className="grid gap-6 p-6 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-700 sm:grid-cols-[130px_1fr_auto] sm:items-start sm:p-8">
                 <span className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-amber-800">Paper</span>
                 <h2 className="font-serif text-2xl font-bold leading-tight text-stone-950 group-hover:text-amber-800 sm:text-3xl">{paper.title}</h2>
                 <span className="inline-flex items-center gap-2 whitespace-nowrap font-mono text-[10px] font-bold uppercase tracking-wide text-stone-700 sm:self-center">Open PDF <FileText className="h-4 w-4" /></span>

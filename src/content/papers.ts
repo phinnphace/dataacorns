@@ -14,7 +14,12 @@ export const PAPERS = [
     id: 'contextual-training-effects',
     title: 'The Effect of Contextual Training on Visual Feature Learning: A Controlled Study Using Chinese Characters',
     fileName: 'Contextual_Training_Effects_on_Visual_Feature_Learning (2).pdf',
+    // Use the SHA-256 prefix to refresh cached copies when the PDF changes.
+    revision: '23723d9e724b',
   },
 ];
 
-export const paperUrl = (fileName: string) => `/papers/${encodeURIComponent(fileName)}`;
+export const paperUrl = (fileName: string, revision?: string) => {
+  const url = `/papers/${encodeURIComponent(fileName)}`;
+  return revision ? `${url}?v=${encodeURIComponent(revision)}` : url;
+};
